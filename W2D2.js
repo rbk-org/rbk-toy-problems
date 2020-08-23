@@ -32,3 +32,48 @@ function convertTo(units, num) {
 // Calling your function should result in:
 // convertToKilometers(50);   ==> 80.467
 // convertToKilometers(361);  ==> 580.973
+//1 average of 13,14,13,15,16,17,19,13,16,15
+function average(){
+
+	var sum =13+14+13+15+16+17+19+13+16+15;
+	return sum/10;
+}
+//2
+function calcuateAge(years,months){
+	var agey=years*31,536,000;
+var agem=(months/12)*31,536,000;
+var age=agey+agem;
+return age;
+}
+
+//3
+function identify(elemant){
+	return elemant;
+}
+//4
+function convertto(str,num){
+	if(str==="cm"){
+	num=num*2.54;
+	}
+	else{
+	num=num/2.54;
+	}
+	return num;
+}
+//5
+function dogsIWouldPet(string){
+	if(string==="I do not like dogs")
+	{
+	return "I would not pet dogs";
+	}
+	else{
+	return "I would pet dogs no bigger than an "+string+"";
+
+	}
+
+}
+//6
+function convertToKilometers(num){
+	var Km=num*1.60934 ;
+	return Km;
+}
