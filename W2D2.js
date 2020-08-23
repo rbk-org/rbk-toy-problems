@@ -1,10 +1,18 @@
 // 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
+console.log(13+14+13+15+16+17+19+13+16+15/10)////137.5
 // 2-using the console calculate your age in seconds.
+console.log(25*365*24*60)//////13140000
 
 // 3- Write a function identity that takes one parameter and returns that input value.
 // Calling your function should result in:
 // identity("hello world");  ==> "hello world"
 // identity(500);  ==> 500
+function identity(n){
+	return n
+}
+console.log(identity("hello world"))
+console.log(identity(500))
+
 
 // 4- Write a function convertTo that takes  a string and a number as parameters.
 // If the string input is "cm", then the function should convert the 2nd argument into centimeters by multiplying it to 2.54 and returning that value.
@@ -14,7 +22,13 @@
 // convertTo('in', 50.8); ==> 20
 
 function convertTo(units, num) {
-  // write your code here
+  if(string==="cm"){
+  	return num*2.54
+  }
+  else if (string==="in"){
+  	return num/2.54
+  }
+  return "false"
 }
 
 //4- Write a function dogsIWouldPet that takes an item (string), 
@@ -25,6 +39,11 @@ function convertTo(units, num) {
 // dogsIWouldPet("Terrier"); //"I would pet dogs no bigger than an Terrier"
 // Bonus (extra): If your function were passed in a string "I do not like dogs", 
 //you can have your function return "I would not pet dogs".
+function dogsIWouldPet(string){
+	if (string==="I do not like dogs"){
+		return "I would not pet dogs"
+	}
+}
 
 
 // 5- Write a function convertToKilometers that takes a number of miles passed in as parameter, 
@@ -32,3 +51,8 @@ function convertTo(units, num) {
 // Calling your function should result in:
 // convertToKilometers(50);   ==> 80.467
 // convertToKilometers(361);  ==> 580.973
+function convertToKilometers(n){
+	return n*1.60934
+}
+console.log(convertToKilometers(50))
+console.log(convertToKilometers(361))
