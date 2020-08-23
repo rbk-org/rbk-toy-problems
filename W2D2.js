@@ -7,7 +7,7 @@ function ageAve()
 	{
 		ave += ageArray[i]
 	}
-	return ave/2
+	return ave/ageArray.length
 }
 
 // 2-using the console calculate your age in seconds.
