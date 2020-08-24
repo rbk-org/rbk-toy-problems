@@ -31,12 +31,11 @@ function convertTo(units, num) {
 // dogsIWouldPet("ottoman"); //"I would pet dogs no bigger than an ottoman"
 // dogsIWouldPet("small horse"); //"I would pet dogs no bigger than an small horse"
 // dogsIWouldPet("Terrier"); //"I would pet dogs no bigger than an Terrier"
+
 // Bonus (extra): If your function were passed in a strasing "I do not like dogs", 
 //you can have your function return "I would not pet dogs".
 function dogsIWouldPet(sentence){
 	return `I would pet dogs no bigger than an ${sentence}`
-
-}
 
 // 5- Write a function convertToKilometers that takes a number of miles passed in as parameter, 
 // and returns that number multiplied by 1.60934 (an accepted approximation of 1 mile in kilometers).
