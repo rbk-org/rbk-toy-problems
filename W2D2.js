@@ -1,11 +1,22 @@
 // 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
+function avg(array){
+for ( var i = 0; i < array.length; i ++){
+    var avg = (array[i] /array.length) * array.length
+}
+}
+console.log(avg[13,14,13,15,16,17,19,13,16,15])
+
 // 2-using the console calculate your age in seconds.
 
 // 3- Write a function identity that takes one parameter and returns that input value.
 // Calling your function should result in:
 // identity("hello world");  ==> "hello world"
 // identity(500);  ==> 500
+function ident(w){
 
+	return result=w
+}
+console.log(ident('hello world'))
 // 4- Write a function convertTo that takes  a string and a number as parameters.
 // If the string input is "cm", then the function should convert the 2nd argument into centimeters by multiplying it to 2.54 and returning that value.
 // If the string input is "in", then the function should convert the 2nd argument into inches by dividing it by 2.54.
@@ -15,7 +26,15 @@
 
 function convertTo(units, num) {
   // write your code here
+for var units="cm"
+{
+  var units=num*2.54
+  return result 
 }
+else units="in"
+return result=num/2.54
+}
+convertTo("cm",100);
 
 //4- Write a function dogsIWouldPet that takes an item (string), 
 //and returns a sentence stating dogs you would pet in comparison to the item (see sample call below).
