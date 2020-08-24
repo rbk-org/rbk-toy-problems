@@ -5,6 +5,19 @@ isTallEnough(72); //true
 isTallEnough(28); //false
 
 
+function isTallEnough (n) {
+	if(n >= 48 ){
+  
+    return true;
+
+} else if(n < 48) {
+
+	}
+return false;
+}
+console.log(isTallEnough(72))
+console.log(isTallEnough(28))
+
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).
 //and returns based on the following criteria:
@@ -18,7 +31,18 @@ isTallEnough(28); //false
 //(this is what the original problem statement means by "exclusive of 1").
 
 // Calling your function should result in:
-
+function isGoodFreethrowShooter(n) {
+	if(n > 0 && n < 0.65) {
+		return "Horrible freethrow shooter";
+	}
+	else if (n > 0.65 && n < 0.80 ) {
+		return "Decent freethrow shooter";
+	}
+	else if ( n > 0.80 && n < 1.00) {
+		return "Great freethrow shooter";
+	}
+	
+}
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
 isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
 isGoodFreethrowShooter(0.75); //"Decent freethrow shooter"
