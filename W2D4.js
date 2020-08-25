@@ -47,7 +47,7 @@ console.log((12,5))
 console.log(max(12,5))
 // 5.Write a function called  min that takes two numbers as parameters,
 // and returns the smaller one.
-function max(y,t){
+function min(y,t){
 	if(y<=t){return y}
 		return t
 }
