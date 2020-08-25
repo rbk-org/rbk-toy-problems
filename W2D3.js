@@ -1,19 +1,18 @@
 //1- Write a function isTallEnough that takes a height (number) in inches, 
 //and returns true if the input is greater than or equal to 48, and false if it's less than 48 inches.
 //Calling your function should result in:
-<<<<<<< HEAD
 
+/*
 
 function isTallEnough(height){
 	if(height>=48){
 		return true;
 	}return false;
 }
-=======
->>>>>>> cb6a4dea8f45a23c1e700c7b3c65706112195144
+
 isTallEnough(72); //true
 isTallEnough(28); //false
-
+*/
 
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).
@@ -29,7 +28,7 @@ isTallEnough(28); //false
 
 // Calling your function should result in:
 
-<<<<<<< HEAD
+/*
 function isGoodFreethrowShooter(shooting){
 	if(shooting>=0 ||shooting <0.65){
 		return "Horrible freethrow shooter";
@@ -43,9 +42,7 @@ function isGoodFreethrowShooter(shooting){
 }
 
 
-
-=======
->>>>>>> cb6a4dea8f45a23c1e700c7b3c65706112195144
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
 isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
 isGoodFreethrowShooter(0.75); //"Decent freethrow shooter"
+*/
