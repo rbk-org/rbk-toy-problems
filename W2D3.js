@@ -8,7 +8,7 @@ function isTallEnough(num){
 }
 
 isTallEnough(72); //true
-isTallEnough(28); //false
+isTallEnough(28); //false.
 
 
 
