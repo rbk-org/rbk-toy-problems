@@ -15,8 +15,12 @@ and you invoke the function with your guess -- if you and the function are think
  } 
  function randInt(n) { 
  return Math.floor(Math.random() * (n + 1)) 
+
+
  }
  /*
+
+
  Read and test both of the functions in your console.
  and then invoke the functions from the console) and affirm that you understand how they work; 
  then, answer the following questions: 
@@ -43,7 +47,41 @@ and you invoke the function with your guess -- if you and the function are think
  
 2. At present, the guessing game picks a new random number every time it is 'played' (invoked). 
 Now that you know how to make information persistent between function invocations, 
-change the guessing game so that it picks a random number once and allows you to guess until you get the correct answer.
+change the guessing game so that it picks a random number once and allows you to guess until you get the correct answer.*/
+
+
+var random = randInt(5);
+var count=0;
+var lossCount=0;
+ function guessMyNumber(n) { 
+ var upperBound = 7;
+ count++;
+ if (n > upperBound) { 
+ return 'Out of bounds! Please try a number between 0 and '+ upperBound;
+
+ } else if (n === random) {
+ if (count === 1){
+  return 'You guessed my number in first guess.'; 
+ } else {
+ upperBound++;
+ return 'You guessed my number in '+ count +' guess';}
+
+ } else if (n !== random){
+ lossCount++;
+ console.log(lossCount);
+ if(lossCount === 3){
+  return "You can't try more than 3 times";
+}
+ return'Nope! The correct number was: '+ random;
+ }
+}
+ 
+  
+
+ function randInt(n) { 
+  /*
+ return Math.floor(Math.random() * (n + 1)) 
+ }
 
 3.it would be really cool if, after the answer was guessed, the message included the number of guesses 
 it had taken to find the answer; for example, 'You guessed my number in 3 guesses.'
@@ -71,23 +109,7 @@ You may want to increase the upperBound on the guess.
 // Your code is here
 */
 
-function guessMyNumber(n, upperBound) {
-  
-  if (n > upperBound) {
-    return "Out of bounds! Please try a number between 0 and " + upperBound;
-  } else if (n === randInt(upperBound)) {
-    return "You guessed my number in" + n + " guess." "/n" + "Congratulations! You guessed my number on the first try!";
 
-    guessMyNumber(n, upperBound + 1)
-
-  }
-  return "Nope! That wasn't it! The correct guess was: " + randInt(upperBound);
-  guessMyNumber(n, upperBound - 1)
-}
-
-function randInt(n) {
-  return Math.floor(Math.random() * (n + 1))
-}
 
 
 
