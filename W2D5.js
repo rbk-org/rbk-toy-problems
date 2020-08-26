@@ -5,23 +5,40 @@ and you invoke the function with your guess -- if you and the function are think
  you win! Otherwise, the function informs you that your guess was incorrect. 
  A version of this game might look like this (the randInt function is included for convenience):
 */
+var random = randInt(5);
+var count=0;
+var lossCount=0;
  function guessMyNumber(n) { 
  var upperBound = 7;
- var random = randInt(5);	
+ count++;
  if (n > upperBound) { 
- console.log('Out of bounds! Please try a number between 0 and '+ upperBound);
- return false;
- } else if (n === random) { 
- console.log('You guessed my number!');
- return false;
+ return 'Out of bounds! Please try a number between 0 and '+ upperBound;
+
+ } else if (n === random) {
+ if (count === 1){
+ 	return 'You guessed my number in first guess.';	
+ } else {
+ upperBound++;
+ return 'You guessed my number in '+ count +' guess';}
+
  } else if (n !== random){
- console.log('Nope! The correct number was: '+ random);
- return false;
- } 
+ lossCount++;
+ console.log(lossCount);
+ if(lossCount === 3){
+	return "You can't try more than 3 times";
+}
+ return'Nope! The correct number was: '+ random;
+ }
+}
+ 
+	
+
  function randInt(n) { 
  return Math.floor(Math.random() * (n + 1)) 
  }
-}
+
+
+
  
  /*
  Read and test both of the functions in your console.
