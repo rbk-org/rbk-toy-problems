@@ -22,14 +22,26 @@ and you invoke the function with your guess -- if you and the function are think
  then, answer the following questions: 
  At present, the guess should be between 0 and 5. 
  We can think of 5 as the upper bound of the guess. 
- How many times is the upper bound repeated? 
- What if we wanted to change the upper bound to 6? 
- How many changes would be required? 
+ How many times is the upper bound repeated? we can't guess the randInt(n)  function return  numbers between 0 and 5 randomly
+ What if we wanted to change the upper bound to 6? we can do that randInt(6)instead of randInt(5)
+ How many changes would be required? 1 change
  Create a variable called upperBound to hold the upper bound, and then reference it instead of the number 5. 
+ var upperBound=5;
  If you were asked to change the upper bound to some other number (e.g. 7), you should only have to make one change. 
  Modify guessMyNumber so that if the guess is incorrect, guessMyNumber includes the correct guess in its output, 
   e.g. 'Nope! The correct number was: X' (where X would have been the correct number).
- 
+ function guessMyNumber(n) { 
+ if (n > 5) { 
+ return 'Out of bounds! Please try a number between 0 and 5.'; 
+ var output=randInt(5);
+ } else if (n === output) { 
+ return 'You guessed my number!'; 
+ } 
+ return 'Nope! The correct number was: '+output; 
+ } 
+ function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1)) 
+ }
 2. At present, the guessing game picks a new random number every time it is 'played' (invoked). 
 Now that you know how to make information persistent between function invocations, 
 change the guessing game so that it picks a random number once and allows you to guess until you get the correct answer.
@@ -55,13 +67,47 @@ include in the message something that indicates that a new high score has been s
 You may want to increase the upperBound on the guess.
 
 .All of the following exercises involve augmenting the guessMyNumber function.
-/*
+*/
 
 // Your code is here
 
+//2
+function guessMyNumber(n) { 
+ 
+if (n>5){
+	return 'Out of bounds! Please try a number between 0 and 5.';}
+	if(n===guess){
+		return 'Congratulations! You guessed my number on the first try!'
+	}
+	car c=1;
+  while (n!==guess){
+	guess=randInt(5);
+	c+1;
+  }
+  return 'You guessed my number in '+c+' numbers';
+ } 
+ function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1)) 
+ }
 
-
-
+function guessMyNumber(n) { 
+ 
+if (n>5){
+	return 'Out of bounds! Please try a number between 0 and 5.';}
+	if(n===guess){
+		return 'Congratulations! You guessed my number on the first try!'
+	}
+	car c=1;
+  while (n!==guess||c!==6){
+	guess=randInt(5);
+	c+1;
+  }
+  if(c===6){
+  	return 'you lost!good luck';
+  }
+  else{
+  return 'You guessed my number in '+c+' numbers';}
+ } 
 
 
 
