@@ -8,7 +8,7 @@ function isTallEnough(num){
 }
 
 isTallEnough(72); //true
-isTallEnough(28); //false.
+isTallEnough(28); //false
 
 
 
@@ -26,16 +26,18 @@ isTallEnough(28); //false.
 
 // Calling your function should result in:
 
-function isGoodFreethrowShooter(num)
-if (num < .65){
+function isGoodFreethrowShooter(num){
+
+if (num < 0.65){
   return "Horrible freethrow shooter"
-  
+
 }
-else if(num < .8){
+ if(num < 0.8){
   return "Decent freethrow shooter"
 }
-else if (num <1){
+if (num <1){
    return "Great freethrow shooter"
+}
 }
 
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
