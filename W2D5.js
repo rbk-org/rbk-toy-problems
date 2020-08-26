@@ -112,27 +112,27 @@ Does it say, 'You guessed my number in 1 guesses.'?
 function guessMyNumber(n) { 
   var upperbound = 5;
   var actualvalue = randInt(upperbound);
+  var highscore = 10
   var count=1
-  var limit=10
- if (n > upperbound) { 
- return 'Out of bounds! Please try a number between 0 and ' + upperbound +'.'; 
- } while (n !== actualvalue && limit>count) { 
+  var limit=1
+  if (n > upperbound) { 
+    return 'Out of bounds! Please try a number between 0 and ' + upperbound +'.';} 
 
- 	var n = parseInt(window.prompt('Guess Again:')) 
- 	count++
- }
- if (count===1) {
- 	return 'Congratulations! You guessed my number on the first try!'
- } 
- return 'You guessed my number in ' + count + 'times.'
+    while (n !== actualvalue && limit>count){ 
+      var n = parseInt(window.prompt('Guess Again:')) 
+      count++}
 
- return 'Nope! The correct number was: '+ actualvalue
- } 
+      if (count===1){
+        return  'Congratulations! You guessed my number on the first try!';} 
+
+        return 'You guessed my number in ' + count + 'times.';
+      } 
+ 
  function randInt(n) { 
- return Math.floor(Math.random() * (n + 1)) 
+ return Math.floor(Math.random() * (n + 1));
  }
 
- guessMyNumber(4)
+ guessMyNumber(4);
 
 /*5.Keep track of a high score (the lowest number of guesses) between games, and, 
 when the correct number has been guessed in a record number of times, 
@@ -142,22 +142,21 @@ function guessMyNumber(n) {
   var actualvalue = randInt(upperbound);
   var highscore = 10
   var count=1
-  var limit=10
- if (n > upperbound) { 
- return 'Out of bounds! Please try a number between 0 and ' + upperbound +'.'; 
- } while (n !== actualvalue && limit>count) { 
+  var limit=8
+  if (n > upperbound) { 
+    return 'Out of bounds! Please try a number between 0 and ' + upperbound +'.';} 
 
- 	var n = parseInt(window.prompt('Guess Again:')) 
- 	count++
- }
- if (count===1){
- 	highscore=1;
- 	return 'Congratulations! You guessed my number on the first try!';
- } 
- return 'You guessed my number in ' + count + 'times.';
+    while (n !== actualvalue && limit>count){ 
+      var n = parseInt(window.prompt('Guess Again:')) 
+      count++}
 
- return 'Nope! The correct number was: '+ actualvalue;
- } 
+      if (count===1){
+        highscore=1;
+        return  'Congratulations! You guessed my number on the first try!';} 
+
+        return 'You guessed my number in ' + count + 'times.';
+      } 
+ 
  function randInt(n) { 
  return Math.floor(Math.random() * (n + 1));
  }
@@ -165,10 +164,44 @@ function guessMyNumber(n) {
  guessMyNumber(4);
 
 /*6.Whenever a player wins, increase the difficulty by increasing the upperBound;
- whenever a player loses, decrease the difficulty by decreasing the upperBound.
+ whenever a player loses, decrease the difficulty by decreasing the upperBound.*/
+ /*7.Implement a high/low hinting system to tell the the user that the guess is either too high or too low. 
+You may want to increase the upperBound on the guess.*/
+ var upperbound = 5;
+ var highscore = 10;
 
-7.Implement a high/low hinting system to tell the the user that the guess is either too high or too low. 
-You may want to increase the upperBound on the guess.
+ function guessMyNumber(n) { 
+  var actualvalue = randInt(upperbound);
+  var count=1;
+  var limit=8;
+  if (n > upperbound) { 
+    return 'Out of bounds! Please try a number between 0 and ' + upperbound +'.';} 
+
+    while (n !== actualvalue && limit>count){ 
+      var n = parseInt(window.prompt('Guess Again:')) 
+      count++}
+
+      if(count > limit){
+        upperbound --
+        return "game over"
+      }
+      if (count < highscore){
+        console.log ("New Record" + highscore)
+      }
+      if (count===1){
+        highscore=1;
+        upperbound++
+        return  'Congratulations! You guessed my number on the first try!';} 
+
+        upperbound++
+        return 'You guessed my number in ' + count + ' times.';
+      } 
+ 
+ function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1));
+ }
+
+ guessMyNumber(4);
 
 .All of the following exercises involve augmenting the guessMyNumber function.
 /*
