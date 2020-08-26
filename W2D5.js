@@ -77,7 +77,8 @@ var count=0
  if (n > upperBound) { 
  return 'Out of bounds! Please try a number between 0 and '+upperBound; 
  } else if (n === num) { 
- return 'You guessed my number!' +n+' after '+count+' times'; 
+ 	if(count>1) return 'You guessed my number!' +n+' in '+count+' guesses'; 
+ 	else return 'Congratulations! You guessed my number on the first try!'; 
  } 
  return guessMyNumber(n,upperBound) ; 
  } 
@@ -117,7 +118,8 @@ var count=0
 when the correct number has been guessed in a record number of times, 
 include in the message something that indicates that a new high score has been set.
 */
-var count=0; rate=[];
+var count=0;  
+var rate=[];
  function guessMyNumber(n,upperBound,limit) {
   var num= randInt(upperBound); 
   count++;
@@ -128,7 +130,7 @@ var count=0; rate=[];
  if (n > upperBound) { 
  return 'Out of bounds! Please try a number between 0 and '+upperBound; 
  } else if (n === num) { rate.push(count); limit=count; count=0;
- return 'You guessed my number!' +n+' after '+limit+' times'; 
+ return 'You guessed my number!' +n+' after '+limit+' times and the highst score for fastest one  is'+Math.min.apply(null,rate); 
  } 
  return guessMyNumber(n,upperBound,limit-1) ; 
  } 
@@ -138,13 +140,42 @@ var count=0; rate=[];
  console.log(guessMyNumber(6,10,3));
  console.log(guessMyNumber(3,11,12));
  console.log(guessMyNumber(2,8,6));
- /*
+/*
 6.Whenever a player wins, increase the difficulty by increasing the upperBound;
  whenever a player loses, decrease the difficulty by decreasing the upperBound.
 
+
+
+
+/*******************************************************
+******************************************************
+******************************************************
+for # 6 what if tha "upperBound" become less than guess number?? it just done manually I think :(  or maybe I don't understand it well :) but I'm gonna try 
+
+****************************************************************
+***************************************************************
+
+
+
 7.Implement a high/low hinting system to tell the the user that the guess is either too high or too low. 
 You may want to increase the upperBound on the guess.
-
+*/
+  function guessMyNumber(n,upperBound) { 
+ var num=randInt(upperBound);
+ if (n > upperBound) { 
+ return 'Out of bounds! Please try a number between 0 and 5.'; 
+ } else if (n === num) { 
+ return 'You guessed my number!' +n; 
+ } 
+ if(num<n)return "you are far by  "+ n- num+" steps down" ; 
+else return "you are far by  "+ n- num+" steps above" ; 
+ 
+ } 
+ function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1)) 
+ }
+ console.log(guessMyNumber(5,10));
+/*
 .All of the following exercises involve augmenting the guessMyNumber function.
 /**/
 
