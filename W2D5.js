@@ -23,16 +23,35 @@ and you invoke the function with your guess -- if you and the function are think
  At present, the guess should be between 0 and 5. 
  We can think of 5 as the upper bound of the guess. 
  How many times is the upper bound repeated? 
+ 4 times.
  What if we wanted to change the upper bound to 6? 
  How many changes would be required? 
+ 5 times
+
  Create a variable called upperBound to hold the upper bound, and then reference it instead of the number 5. 
  If you were asked to change the upper bound to some other number (e.g. 7), you should only have to make one change. 
  Modify guessMyNumber so that if the guess is incorrect, guessMyNumber includes the correct guess in its output, 
   e.g. 'Nope! The correct number was: X' (where X would have been the correct number).
  
-2. At present, the guessing game picks a new random number every time it is 'played' (invoked). 
+ var upperBound;
+  if (upperBound === randInt(n){ 
+ return upperBound' the correct number.'; 
+
+
+
+ 
+/*2. At present, the guessing game picks a new random number every time it is 'played' (invoked). 
 Now that you know how to make information persistent between function invocations, 
 change the guessing game so that it picks a random number once and allows you to guess until you get the correct answer.
+
+function randInt(upperBound) { 
+ if (n> upperBound) { 
+ return "Out of bounds! Please try a number between 0 and" + upperBound + ".";
+ }
+ else if (n === randInt(upperBound))  { 
+ 	upperBound++ 
+ }
+
 
 3.it would be really cool if, after the answer was guessed, the message included the number of guesses 
 it had taken to find the answer; for example, 'You guessed my number in 3 guesses.'
@@ -42,25 +61,88 @@ it had taken to find the answer; for example, 'You guessed my number in 3 guesse
        'You guessed my number in 1 guess.', 
        'Congratulations! You guessed my number on the first try!'
 
+if (x === 1) 
+	{ h=1; x=0; 
+	return "Congratulations! You guessed my number on the first try!"; }   
+
 4.Implement a way to limit the number of guesses that can be made so that a player loses after exceeding the limit.
+return "Nope! That wasn't it!,you have tried " + x + "number of times."
+
 
 5.Keep track of a high score (the lowest number of guesses) between games, and, 
 when the correct number has been guessed in a record number of times, 
 include in the message something that indicates that a new high score has been set.
+if (x>1) { 
+	if (x<h) {h=x}; 
+	i=x; 
+	x=0;
+    return "the correct number has been guessed in a" + i + "number of times, highscore= " + h;}
+ }
+
 
 6.Whenever a player wins, increase the difficulty by increasing the upperBound;
  whenever a player loses, decrease the difficulty by decreasing the upperBound.
+if (x===5) {
+	x=0; 
+	if (upperBound !==0) { 
+		upperBound--; }  
+return "Nope! That wasn't it!, you have tried 5 times,the number has changed."; }
+
 
 7.Implement a high/low hinting system to tell the the user that the guess is either too high or too low. 
 You may want to increase the upperBound on the guess.
 
-.All of the following exercises involve augmenting the guessMyNumber function.
-/*
+ if (n < randInt(upperBound)) { if (upperBound !==0) { upperBound--}
+return "Nope! That wasn't it!, you have tried " + x + "number of times,the guess number is too low.";}
+
+ if (n > randInt(upperBound)) { if (upperBound !==0) { upperBound++}
+return "Nope! That wasn't it!, you have tried " + x + "number of times,the guess number is too high.";}
+}
+
+.All of the following exercises involve augmenting the guessMyNumber function.*/
 
 // Your code is here
 
+ var upperBound;
+ x=0;
+function guessMyNumber(n) { 
+ if (n> upperBound) { 
+ return "Out of bounds! Please try a number between 0 and" + upperBound + ".";
+ }
+ else if (n === randInt(upperBound))  { 
+ 	upperBound++
 
+x++
+if (x === 1) 
+	{ h=1; x=0; 
+	return "Congratulations! You guessed my number on the first try!"; }
 
+if (x>1) { 
+	if (x<h) {h=x}; 
+	i=x; 
+	x=0;
+    return "the correct number has been guessed in a" + i + "number of times, highscore= " + h;}
+ }
+
+x++
+if (x===5) {
+	x=0; 
+	if (upperBound !==0) { 
+		upperBound--; }  
+return "Nope! That wasn't it!, you have tried 5 times,the number has changed."; }
+
+ if (n < randInt(upperBound)) { if (upperBound !==0) { upperBound--}
+return "Nope! That wasn't it!, you have tried " + x + "number of times,the guess number is too low.";}
+return "Nope! That wasn't it!,you have tried " + x + "number of times."
+
+ if (n > randInt(upperBound)) { if (upperBound !==0) { upperBound++}
+return "Nope! That wasn't it!, you have tried " + x + "number of times,the guess number is too high.";}
+return "Nope! That wasn't it!,you have tried " + x + "number of times."
+
+}
+ function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1)) 
+ }
 
 
 
