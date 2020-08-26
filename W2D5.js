@@ -163,14 +163,14 @@ and you invoke the function with your guess -- if you and the function are think
 //             return 'Out of bounds! Please try a number between 0 and '+UpperBound+'.'; 
 //             } if (n === y) { 
 //             x++
-//             console.log(x)
+
 //             y=randInt(UpperBound)
 //             if(x===1){h=1;x=0;return 'You guessed my number in 1 guess, highscore = '+h}
 //             if(x<=5){if(x<h){h=x};r=x;x=0;return 'You guessed my number in '+r+' guesses, highscore = '+h}
 //             if(x>5){return 'You have exceeded the guesses limit'}
 //             } 
 //             x++
-//             console.log(x)
+
 //             if(x<=5){
 //             return "Nope! That wasn't it!, you have tried guessing "+x+" times."}
 //             if(x>5){return 'You have exceeded the guesses limit'}
@@ -185,6 +185,7 @@ and you invoke the function with your guess -- if you and the function are think
 // var UpperBound=7
 // y=randInt(UpperBound)
 // x=0
+// h=0
 //         function guessMyNumber(n) { 
 //             if (n > UpperBound) { 
 //             return 'Out of bounds! Please try a number between 0 and '+UpperBound+'.'; 
@@ -194,22 +195,18 @@ and you invoke the function with your guess -- if you and the function are think
 //               UpperBound++
 //             x++
 //             y=randInt(UpperBound)
-//             if(x===1){h=1;x=0;return 'You guessed my number in 1 guess, highscore = '+h}
-//             if(x<=5){if(x<h){h=x};r=x;x=0;return 'You guessed my number in '+r+' guesses, highscore = '+h}
-//             if(x>5){return 'You have exceeded the guesses limit'}
-//             } 
-
-//            if(UpperBound!==0){UpperBound--}
+//             if(x===1){h=1;x=0;return 'You guessed my number in 1 guess, the difficulty was increased, highscore = '+h}
+//             if(x>1){if(x<h){h=x};r=x;x=0;return 'You guessed my number in '+r+' guesses, the difficulty was increased, highscore = '+h}
+   
+//             }     
 //             x++
-//             if(x>5){return 'You have exceeded the guesses limit'}
-//             return "Nope! That wasn't it!, you have tried guessing "+x+" times, your guess is bigger than the number."
-
+//             if(x===5){x=0;if(UpperBound!==0){UpperBound--};y=randInt(UpperBound); return "Nope! That wasn't it!, you have tried guessing 5 times, the number has changed, and the difficulty was decreased."}
+//             return "Nope! That wasn't it!, you have tried guessing "+x+" times."
 //             } 
      
-
 //             function randInt(n) { 
 //             return Math.floor(Math.random() * (n + 1)) 
-//             }   
+//             }  
 
 // 7.Implement a high/low hinting system to tell the the user that the guess is either too high or too low. 
 // You may want to increase the upperBound on the guess.
@@ -217,6 +214,7 @@ and you invoke the function with your guess -- if you and the function are think
 // var UpperBound=7
 // y=randInt(UpperBound)
 // x=0
+// h=0
 //         function guessMyNumber(n) { 
 //             if (n > UpperBound) { 
 //             return 'Out of bounds! Please try a number between 0 and '+UpperBound+'.'; 
@@ -226,22 +224,28 @@ and you invoke the function with your guess -- if you and the function are think
 //               UpperBound++
 //             x++
 //             y=randInt(UpperBound)
-//             if(x===1){h=1;x=0;return 'You guessed my number in 1 guess, highscore = '+h}
-//             if(x<=5){if(x<h){h=x};r=x;x=0;return 'You guessed my number in '+r+' guesses, highscore = '+h}
-//             if(x>5){return 'You have exceeded the guesses limit'}
-//             } 
+//             if(x===1){h=1;x=0;return 'You guessed my number in 1 guess, the difficulty was increased, highscore = '+h}
+//             if(x>1){if(x<h){h=x};r=x;x=0;return 'You guessed my number in '+r+' guesses, the difficulty was increased, highscore = '+h}}
 
-//             if(n>y){if(UpperBound!==0){UpperBound--}
+//             if(n>y){
 //             x++
-//             if(x>5){return 'You have exceeded the guesses limit'}
-//             return "Nope! That wasn't it!, you have tried guessing "+x+" times, your guess is bigger than the number."
+//             if(x<5){
+//             return "Nope! That wasn't it!, you have tried guessing "+x+" times, your guess is bigger than the number."}
+//                         if(x===5){x=0;if(UpperBound!==0){UpperBound--};y=randInt(UpperBound); return "Nope! That wasn't it!, you have tried guessing 5 times, the number has changed, and the difficulty was decreased."}
+
 //             }
              
-//             if(n<y){if(UpperBound!==0){UpperBound--}
-//             if(x>5){return 'You have exceeded the guesses limit'}
+//             if(n<y){
 //             x++
+//             if(x<5){
 //             return "Nope! That wasn't it!, you have tried guessing "+x+" times, your guess is smaller than the number."}
-//             } 
+//                         if(x===5){x=0;if(UpperBound!==0){UpperBound--};y=randInt(UpperBound); return "Nope! That wasn't it!, you have tried guessing 5 times, the number has changed, and the difficulty was decreased."}
+
+//              }}
+
+//             function randInt(n) { 
+//             return Math.floor(Math.random() * (n + 1)) 
+//             }  
 
              
 
@@ -256,6 +260,7 @@ and you invoke the function with your guess -- if you and the function are think
 var UpperBound=7
 y=randInt(UpperBound)
 x=0
+h=0
         function guessMyNumber(n) { 
             if (n > UpperBound) { 
             return 'Out of bounds! Please try a number between 0 and '+UpperBound+'.'; 
@@ -265,22 +270,24 @@ x=0
               UpperBound++
             x++
             y=randInt(UpperBound)
-            if(x===1){h=1;x=0;return 'You guessed my number in 1 guess, highscore = '+h}
-            if(x<=5){if(x<h){h=x};r=x;x=0;return 'You guessed my number in '+r+' guesses, highscore = '+h}
-            if(x>5){return 'You have exceeded the guesses limit'}
-            } 
+            if(x===1){h=1;x=0;return 'You guessed my number in 1 guess, the difficulty was increased, highscore = '+h}
+            if(x>1){if(x<h){h=x};r=x;x=0;return 'You guessed my number in '+r+' guesses, the difficulty was increased, highscore = '+h}}
 
-            if(n>y){if(UpperBound!==0){UpperBound--}
+            if(n>y){
             x++
-            if(x>5){return 'You have exceeded the guesses limit'}
-            return "Nope! That wasn't it!, you have tried guessing "+x+" times, your guess is bigger than the number."
+            if(x<5){
+            return "Nope! That wasn't it!, you have tried guessing "+x+" times, your guess is bigger than the number."}
+                        if(x===5){x=0;if(UpperBound!==0){UpperBound--};y=randInt(UpperBound); return "Nope! That wasn't it!, you have tried guessing 5 times, the number has changed, and the difficulty was decreased."}
+
             }
              
-            if(n<y){if(UpperBound!==0){UpperBound--}
-            if(x>5){return 'You have exceeded the guesses limit'}
+            if(n<y){
             x++
+            if(x<5){
             return "Nope! That wasn't it!, you have tried guessing "+x+" times, your guess is smaller than the number."}
-            } 
+                        if(x===5){x=0;if(UpperBound!==0){UpperBound--};y=randInt(UpperBound); return "Nope! That wasn't it!, you have tried guessing 5 times, the number has changed, and the difficulty was decreased."}
+
+             }}
 
             function randInt(n) { 
             return Math.floor(Math.random() * (n + 1)) 
