@@ -45,13 +45,14 @@ function loopAString(string) {
 function reverseStr(str) {
   var i = str.length - 1
   var newstr = ''
-  while (i > 0) {
-    newstr += str[i] + (str.length - i)
-    i--
+  if (str !== '') {
+    while (i > 0) {
+      newstr += str[i] + (str.length - i)
+      i--
 
+    }
+    newstr += str[(str.length - 1)]
   }
-  newstr += str[(str.length - 1)]
-
   return newstr
 }
 
