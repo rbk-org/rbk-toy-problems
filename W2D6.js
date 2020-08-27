@@ -28,7 +28,7 @@ function loopAString(string) {
   // create a loop which iterates over the input string
   while(i<string.length){
   // log current string character to the console
-  console.log(x[i])
+  console.log(string[i])
   // increment value of index variable
   i++}
 }
