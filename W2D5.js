@@ -23,8 +23,35 @@ and you invoke the function with your guess -- if you and the function are think
  At present, the guess should be between 0 and 5. 
  We can think of 5 as the upper bound of the guess. 
  How many times is the upper bound repeated? 
+5
+
+
  What if we wanted to change the upper bound to 6? 
  How many changes would be required? 
+2
+
+
+
+
+
+
+
+
+
+
+ function guessMyNumber(n) { 
+ 	var x = upper bound
+ if (n > x) { 
+ return 'Out of bounds! Please try a number between 0 and 5.'; 
+ } else if (n === randInt(5)) { 
+ return 'You guessed my number!'; 
+ } 
+ return "Nope! That wasn't it!"; 
+ } 
+ function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1)) 
+ }
+
  Create a variable called upperBound to hold the upper bound, and then reference it instead of the number 5. 
  If you were asked to change the upper bound to some other number (e.g. 7), you should only have to make one change. 
  Modify guessMyNumber so that if the guess is incorrect, guessMyNumber includes the correct guess in its output, 
@@ -33,6 +60,32 @@ and you invoke the function with your guess -- if you and the function are think
 2. At present, the guessing game picks a new random number every time it is 'played' (invoked). 
 Now that you know how to make information persistent between function invocations, 
 change the guessing game so that it picks a random number once and allows you to guess until you get the correct answer.
+function guessMyNumber(n) { 
+ if (n > 5) { 
+ return 'Out of bounds! Please try a number between 0 and 5.'; 
+ } else if (n === randInt(5)) { 
+ return 'You guessed my number!'; 
+ } 
+ return "try another time"; 
+function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1))
+
+
+ } 
+ 
+ }
+ /*
+
+
+
+
+
+
+
+
+
+
+
 
 3.it would be really cool if, after the answer was guessed, the message included the number of guesses 
 it had taken to find the answer; for example, 'You guessed my number in 3 guesses.'
@@ -42,7 +95,75 @@ it had taken to find the answer; for example, 'You guessed my number in 3 guesse
        'You guessed my number in 1 guess.', 
        'Congratulations! You guessed my number on the first try!'
 
+ function guessMyNumber(n) { 
+ 	var myFuncCalls = 0;
+ 	myFuncCalls++;
+ 	if(myFuncCalls=1) {
+	return "you guess from the first time"
+ 	}
+ 	return you guss in +""+myFuncCalls
+ if (n > 5) { 
+ return 'Out of bounds! Please try a number between 0 and 5.'; 
+ } else if (n === randInt(5)) { 
+ return 'You guessed my number!'; 
+ } 
+ return "try another time"; 
+function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1))
+
+
+ } 
+ 
+ }
+ 
+
+
+
+  
+
+
+
+
+
+
+
+
+
 4.Implement a way to limit the number of guesses that can be made so that a player loses after exceeding the limit.
+
+ function guessMyNumber(n) { for (var myFuncCalls = 0;myFuncCalls<=10;myFuncCalls++; )
+ 	var myFuncCalls = 0;
+ 	myFuncCalls++;
+ 	if(myFuncCalls=1) {
+	return "you guess from the first time"
+ 	}
+ 	return you guss in +""+myFuncCalls
+ if (n > 5) { 
+ return 'Out of bounds! Please try a number between 0 and 5.'; 
+ } else if (n === randInt(5)) { 
+ return 'You guessed my number!'; 
+ } 
+ return "try another time"; 
+function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1))
+
+
+ } 
+ 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 5.Keep track of a high score (the lowest number of guesses) between games, and, 
 when the correct number has been guessed in a record number of times, 
