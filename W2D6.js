@@ -33,7 +33,7 @@ function loopAString(string) {
   i++}
 }
 console.log("Welcome")
-console.log(reverseStr("Welcome"))
+console.log(loopAString("Welcome"))
 
 // 2-Write a function called reverseStr that takes a string as an parameter 
 //and returns the reverse of each letter 
