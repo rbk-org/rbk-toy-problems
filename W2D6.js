@@ -20,9 +20,89 @@ loopAString('abcd');
   // b
   // c
   // d
-
 */
+
 function loopAString(string) {
+var x= string.length
+
+while(x<=string.length){return (console.log( string[0],
+string[string.length-1])
+
+
+)}
+
+}
+
+
+loopAString('hgyt')
+
+
+
+
+function loopAString(string) {
+var x= string.length
+
+while(x<=string.length){retun console.log string}
+}
+
+function loopAString(string) {
+var x= string.length-1
+
+while(x<=string.length){return (string.length-1)&&(console.log (string))}
+}
+
+loopAString('hgyt')
+
+
+
+
+
+
+
+
+
+
+
+
+// function executiveSummary(email) {
+//    if (email.length>15 || str[0]="U"){return  email}
+
+var x= ""
+function loopAString(string) {
+
+while(x<=string.length){return [x]}
+}
+loopAString('hgyt')
+
+// */
+// // function loopAString(string) {
+// // var x= string.length
+
+// while(x<=string.length){return (string.length-1)&&(console.log (string))}
+// x++;
+// }
+
+// loopAString('hgyt')
+
+//-------------------------------------
+function loopAString(string) {
+var x= string.length 
+y=(string[0])
+while(x<=string.length){return 
+ (console.log (y))
+}
+
+}
+
+loopAString('hgyt')
+
+
+
+
+
+
+
+
   // create an index variable
   // create a loop which iterates over the input string
   // log current string character to the console
