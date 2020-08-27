@@ -42,3 +42,6 @@ function rentalCar(name, age){
 		}
 			return n2;
 	}
+
+
+	
