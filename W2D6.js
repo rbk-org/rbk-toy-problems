@@ -16,6 +16,8 @@ loopAString('nodeJS');
 
 loopAString('abcd');
 // console output:
+
+
   // a
   // b
   // c
@@ -29,12 +31,8 @@ function loopAString(string) {
   // increment value of index variable
 }
 
-
-// 2-Write a function called reverseStr that takes a string as an parameter 
-//and returns the reverse of each letter 
+// 2-Write a function called reverseStr that takes a string as an parameter
+//and returns the reverse of each letter
 //followed by a number starting from zero(solve it using while loop).
 // reverseStr('hello'); "o1l2l3e4h"
 // Your code is here
-
-
-
