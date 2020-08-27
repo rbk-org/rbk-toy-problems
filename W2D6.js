@@ -27,6 +27,11 @@ function loopAString(string) {
   // create a loop which iterates over the input string
   // log current string character to the console
   // increment value of index variable
+  var count = 0;
+  while(count < string.length){
+    console.log(string[count]);
+    count++;
+  }
 }
 
 
@@ -35,6 +40,15 @@ function loopAString(string) {
 //followed by a number starting from zero(solve it using while loop).
 // reverseStr('hello'); "o1l2l3e4h"
 // Your code is here
+function reverseStr(string){
+  var count = 1;
+  var newStr = "";
+  while(count <= string.length){
+    newStr += (string[string.length - count] + count);
+    count++;
+  }
+  return newStr;
+}
 
 
 
