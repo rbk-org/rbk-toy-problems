@@ -55,14 +55,149 @@ include in the message something that indicates that a new high score has been s
 You may want to increase the upperBound on the guess.
 
 .All of the following exercises involve augmenting the guessMyNumber function.
-/*
+*/
 
 // Your code is here
+///////1
+ function guessMyNumber(n) {
+   var upperBound = 5;
+   if (n > upperBound) {
+    return 'Out of bounds! Please try a number between 0 and 5.';
+  } 
+   else if (n === randInt(upperBound)) {
+    return 'You guessed my number!';
+  }
+   return `Nope! The correct number was: ${randInt(upperBound)}`;
+ }
+
+ function randInt(n) {
+  return Math.floor(Math.random() * (n + 1))
+ }
+
+ ///////2
+var rand = randInt(5);
+console.log(rand);
+
+function guessMyNumber(n) {
+  var upperBound = n;
+  var guessNumber = prompt("Please enter a number");
+  guessNumber = parseInt(guessNumber, 10);
+  console.log(typeof guessNumber);
+
+  if (guessNumber > upperBound) {
+    return 'Out of bounds! Please try a number between 0 and 5.';
+  }
+  else if (guessNumber == rand) {
+    return 'You guessed my number!';
+
+  }
+  console.log(`Nope! Try again`);
+  return guessMyNumber(upperBound)
+}
+ function randInt(n) {
+  return Math.floor(Math.random() * (n + 1))
+ }
+
+ /////another solution
+function guessMyNumber(n) {
+  var upperBound = n;
+  var rand = randInt(upperBound);
+  console.log(rand);
+
+  while (true) {
+    var guessNumber = prompt("Please enter a number");
+    guessNumber = parseInt(guessNumber, 10);
+    console.log(typeof guessNumber);
+
+    if (guessNumber > upperBound) {
+      console.log('Out of bounds! Please try a number between 0 and 5.');
+    }
+    else if (guessNumber == rand) {
+      console.log('You guessed my number!');
+      break;
+    }
+    console.log(`Nope! Try again`);
+  }
+}
+
+function randInt(n) {
+  return Math.floor(Math.random() * (n + 1))
+}
+
+ ///////// 3
+function guessMyNumber(n) {
+  var timesOfguess = 0;
+  var upperBound = n;
+  var rand = randInt(upperBound);
+  console.log(rand);
+
+  while (true) {
+    var guessNumber = prompt("Please enter a number");
+    guessNumber = parseInt(guessNumber, 10);
+    console.log(typeof guessNumber);
+
+    if (guessNumber > upperBound) {
+      console.log('Out of bounds! Please try a number between 0 and 5.');
+    }
+    else if (guessNumber == rand) {
+      if (timesOfguess == 0){
+        console.log('Congratulations! You guessed my number on the first try!');
+        break;
+      }
+      else{
+      console.log(`You guessed my number in ${timesOfguess + 1} guesses.`);
+      break;
+      }
+    }
+    console.log(`Nope! Try again`);
+    timesOfguess++;
+  }
+}
+
+function randInt(n) {
+  return Math.floor(Math.random() * (n + 1))
+}
 
 
+/////////4
+function guessMyNumber(n) {
+  var timesOfguess = 0;
+  var upperBound = n;
+  var rand = randInt(upperBound);
+  console.log(rand);
 
+  while (true) {
+    var guessNumber = prompt("Please enter a number");
+    guessNumber = parseInt(guessNumber, 10);
+    console.log(typeof guessNumber);
 
+    if (guessNumber > upperBound) {
+      console.log('Out of bounds! Please try a number between 0 and 5.');
+    }
+    else if (guessNumber == rand) {
+      if (timesOfguess == 0) {
+        console.log('Congratulations! You guessed my number on the first try!');
+        break;
+      }
+      else {
+        console.log(`You guessed my number in ${timesOfguess + 1} guesses.`);
+        break;
+      }
+    }
+    console.log(`Nope! Try again`);
+    timesOfguess++;
+    if (timesOfguess >= upperBound - 1){
+      console.log(`You excedded the allowed number of guesses.You guessed ${timesOfguess}`);
+      break;
+    }
+  }
+}
 
+function randInt(n) {
+  return Math.floor(Math.random() * (n + 1))
+}
+
+///////5
 
 
 
