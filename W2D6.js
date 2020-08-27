@@ -5,6 +5,7 @@ Your function should use a while loop to log each character
 from the beginning to the end of the string, then return nothing. 
 Below is an example of the code running.
 
+
 loopAString('nodeJS');
 // console output:
   // n
@@ -27,7 +28,14 @@ function loopAString(string) {
   // create a loop which iterates over the input string
   // log current string character to the console
   // increment value of index variable
+  var index = 0;
+  var l = string.length;
+  while (index < l){
+  	console.log(string[index])
+  	index++;
+  }
 }
+loopAString('abcd');
 
 
 // 2-Write a function called reverseStr that takes a string as an parameter 
@@ -36,5 +44,14 @@ function loopAString(string) {
 // reverseStr('hello'); "o1l2l3e4h"
 // Your code is here
 
-
+function reverseStr(string){
+	var index= string.length - 1;
+	var reverseString = '';
+	while(index >= 0){
+		reverseString = reverseString + string[index];
+		index--;
+	}
+	return reverseString;
+}
+reverseStr('hello');
 
