@@ -23,11 +23,15 @@ loopAString('abcd');
 
 */
 function loopAString(string) {
-  // create an index variable
-  // create a loop which iterates over the input string
-  // log current string character to the console
-  // increment value of index variable
+	var i = 0
+	
+	while (i < string.length)
+	{
+		console.log(string[i])
+		i++
+	}
 }
+  
 
 
 // 2-Write a function called reverseStr that takes a string as an parameter 
@@ -35,6 +39,37 @@ function loopAString(string) {
 //followed by a number starting from zero(solve it using while loop).
 // reverseStr('hello'); "o1l2l3e4h"
 // Your code is here
+
+function reverseStr(string)
+{
+	var i = 0
+	var reverse = ""
+	var stringLength = string.length
+	
+	while (i < stringLength)
+	{
+		console.log(i)
+		reverse = reverse.concat(string[stringLength - i -1],i+1)
+		i++
+	}
+	return reverse.slice(0, -1)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
