@@ -4,14 +4,6 @@
 isTallEnough(72); //true
 isTallEnough(28); //false
 
-function isTallEnough(number){
-	if(number>=48){
-		return true
-	}
-	else return false
-}
-isTallEnough(72); 
-isTallEnough(28);
 
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).
@@ -25,23 +17,7 @@ isTallEnough(28);
 //Additionally, you can get a number as high as 0.99, but never 1 
 //(this is what the original problem statement means by "exclusive of 1").
 
-
-function isGoodFreethrowShooter(percentage){
-	if(percentage>=0 && percentage<0.65){
-		return "Horrible freethrow shooter"
-	}
-	if(percentage>=0.65 && percentage<0.80){
-		return "Decent freethrow shooter"
-	}
-if(percentage>=0.80 && percentage<1.00){
-		return "Great freethrow shooter"
-	}
-
-}
-isGoodFreethrowShooter(0.90); 
-isGoodFreethrowShooter(0.09); 
-isGoodFreethrowShooter(0.75);
-
+// Calling your function should result in:
 
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
 isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
