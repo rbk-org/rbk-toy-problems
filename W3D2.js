@@ -25,3 +25,27 @@ interesting!';
 var output = flipPairs(input);
 console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei
 ,si 't sniasenyli tnreseitgn!*/
+
+//1
+function countNumOfStrings(arr){
+	var l=arr.length;
+	var array=[];
+	var c=0;
+	for(var i=0;i<l;i++){
+		if(typeof arr[i] ==="string"){
+			c+=1;
+
+		}
+	}
+	return c;
+}
+//2
+function listLengthOfAllWords(array){
+	var arr=[];
+	var l=array.length;
+	for(var i=0;i<l;i++){
+		arr[i]=array[i].length;
+	}
+	return arr;
+
+}
