@@ -6,8 +6,47 @@ Calling your function should result in:
 countNumOfStrings(["hello", "world", 5, true, {}]); //2
 countNumOfStrings(["foo", 2, 10, "bar", 5, false, {}, "baz"]); //3
 countNumOfStrings(["There is only one string in this example"]); //1
-Hint: Recall typeof? If not: check it out on MDN. :-)
-*/
+Hint: Recall typeof? If not: check it out on MDN. :-)*/
+
+var countNumOf=""
+function countNumOfStrings([animal, fales,id ,priced,hfv]){
+
+
+for (let i=0; i<countNumOfStrings.length; i++){
+countNumOf=	countNumOfStrings.splice(countNumOf)
+}
+}
+countNumOfStrings("rd","tfvf")
+
+countNumOf=	countNumOfStrings.splice(countNumOf)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 2- Write a function called listLengthOfAllWords that takes an array
 of words (strings),
