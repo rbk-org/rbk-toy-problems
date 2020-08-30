@@ -61,7 +61,7 @@ Now that you know how to make information persistent between function invocation
 change the guessing game so that it picks a random number once and allows you to guess until you get the correct answer.
 */
 
-unction guessMyNumber(n,upperBound ) { 
+function guessMyNumber(n,upperBound ) { 
   var f = -1;
   var c; 
   if (f === -1){
