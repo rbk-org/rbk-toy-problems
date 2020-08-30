@@ -43,19 +43,15 @@ function loopAString(string) {
 
 function reverseStr(string){
   var i =string.length-1
-  var j=1
   var k=1
-  var str=[]
+  var str=''
   while(i>=0){
-    console.log(i,j)
     console.log(str)
-    str[j-1]=string[i];
-    if(k<string.length)str[j]=k++;
-    j+=2;
+    str+=string[i]
+    if(k<string.length)str+=k++;
     i--;
-    
   }
-  return str.join('')
+  return str
 }
 reverseStr('hello')
 
