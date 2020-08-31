@@ -11,3 +11,23 @@ Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 */
+
+function favoriteDessert(){
+  return {
+    name:'gelato',
+    countryOfOrigin:'italy',
+    flavor:'Chocolate Chip',
+  }
+}
+
+/*
+function favoriteDessert(){
+  var dess='';
+	return {
+    myDessert:function(name,countryOfOrigin,flavor){
+     return 'my favoriteDessert is  '+name+' ,'+ 'this dessert come from '+ countryOfOrigin+' ,'+ 'it is have '+ flavor+' flavor';
+    },
+}
+}
+var myDESS= favoriteDessert();
+*/// i tried to do clouser to add any dessert detail but it //didt work .
