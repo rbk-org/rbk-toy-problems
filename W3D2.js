@@ -41,22 +41,27 @@ console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei
 ,si 't sniasenyli tnreseitgn!*/
 function flipPairs(string){
 	
-	var container="";
-	for(var i = 0; i < string.length; i++){
-		if(!(string[i]==='') && !(string[i+1]==='') ){
-			container = string[i];
-			string[i] = string[1+i];
-			string[1+i]= container;
-			i++
+	var stringToChar = string.split('');
+	
+	for(var i = 0; i < stringToChar.length-1; i++){
+
+		if(!(stringToChar[i] === '') && !(stringToChar[i+1] === '')){
+			container = stringToChar[i];
+			stringToChar[i] = stringToChar[i+1];
+			stringToChar[i+1] = container;
+			i++;
 		}
-	    else if(!(string[i] === '') && string[i+1] ===' '){
-	    	
-	    	container = string[i];
-	    	string[i] = string[i+2];
-	    	string[i+2] = container;
-	    	i+=2;
-	    }}
-	    return string}
+		
+		else if (!(stringToChar[i] === '') && (stringToChar[i+1] === ' ')){
+			container = stringToChar[i];
+			stringToChar[i] = stringToChar[i+2];
+			stringToChar[i+2] = container;
+			i++;
+
+		}
+	}
+	return stringToChar.join('');
+}
 
 var input = 'check out how interesting this problem is, it\'s insanely interesting!';
 var output = flipPairs(input);	
