@@ -11,3 +11,8 @@ Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 */
+function favoriteDessert(){
+	console.log("My favorite dessert decribtion","\n")
+	var desert={name:"Kunafa",countryOfOrigin:"Palestine-Nablus",ovenTemp:"180"};
+	return desert;
+}
