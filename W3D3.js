@@ -11,3 +11,28 @@ Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 */
+function favoriteDessert(){
+      var flavor=" ";
+	return{
+	Markez:function(){
+    return{
+      name: "Markez",
+      flavor: "Chocolate Chip" }
+},
+
+	Cheesecake :function(){
+    return{
+      name: "Cheesecake ",
+      flavor: "Chocolate Mousse Cheesecake" }
+},
+ lazyCake :function(){
+    return{
+      name: "lazyCake ",
+      flavor: "Chocolate " }
+}
+}
+}
+var x=favoriteDessert();
+console.log(x.Markez());
+console.log(x.Cheesecake());
+console.log(x.lazyCake());
