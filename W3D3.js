@@ -11,3 +11,19 @@ Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 */
+function favoriteDessert() {
+		return {
+    type: 'T-shirt',
+    color: 'Purpel',
+    material: 'Coton',
+  };
+}
+favoriteDessert();
+
+
+
+
+
+
+
+	
