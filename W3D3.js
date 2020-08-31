@@ -11,3 +11,12 @@ Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 */
+
+function favoriteDessert(){
+	var obj = {};
+	obj.name = 'Lentil soup';
+	obj.counteryOfOrigin = 'Europe, Middle East, North Africa';
+	obj.flavor = 'garlic, bay leaf, cumin, olive oil';
+	obj.main = 'Lentils'
+	return obj;
+}
