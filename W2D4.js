@@ -8,7 +8,7 @@ console.log(("hello","banana"))
 console.log(sameLength("hello","banana"))
 console.log(("airplane","elephant"))
 console.log(sameLength("airplane","elephant"))
-
+ 
 //2.Write a function called passwordLongEnough that takes a 'password' as a parameter 
 //and returns true if that password is long enough -- you get to decide what constitutes long enough.
 function passwordLongEnough(password){

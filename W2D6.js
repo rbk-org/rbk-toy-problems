@@ -21,7 +21,7 @@
   // c
   // d
 
-
+ 
 function loopAString(string) {
   // create an index variable
   i=0
