@@ -10,9 +10,10 @@ For example, one could return an object such as:
 Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
+<<<<<<< HEAD
 */
 
-function facvoriteDessert(){
+function favoriteDessert(){
 	return {
 		name: Teramisu
 		country: Italy
