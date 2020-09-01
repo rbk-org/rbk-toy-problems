@@ -5,7 +5,7 @@ and you invoke the function with your guess -- if you and the function are think
  you win! Otherwise, the function informs you that your guess was incorrect. 
  A version of this game might look like this (the randInt function is included for convenience):
 */
- function guessMyNumber(n) { 
+ /*function guessMyNumber(n) { 
  if (n > 5) { 
  return 'Out of bounds! Please try a number between 0 and 5.'; 
  } else if (n === randInt(5)) { 
@@ -15,7 +15,7 @@ and you invoke the function with your guess -- if you and the function are think
  } 
  function randInt(n) { 
  return Math.floor(Math.random() * (n + 1)) 
- }
+ }*/
  /*
  Read and test both of the functions in your console.
  and then invoke the functions from the console) and affirm that you understand how they work; 
@@ -55,11 +55,64 @@ include in the message something that indicates that a new high score has been s
 You may want to increase the upperBound on the guess.
 
 .All of the following exercises involve augmenting the guessMyNumber function.
-/*
+*/
 
 // Your code is here
 
+var guessingsTry = 0;
+var highScore = 10;
+var flag = 0;
+var myNum = randInt(upperBound);
+ function guessMyNumber(n) { 
 
+ 	let upperBound = 15;
+ 	guessingsTry += 1;
+
+ 	
+ 	if (n > upperBound) { 
+ 	return 'Out of bounds! Please try a number between 0 and 5.'; 
+	 } 
+
+	else if (n === myNum) { 
+ 		if(guessingsTry < highScore){
+ 			highScore = guessingsTry
+ 			console.log("Congratulations u made a record")
+    	}
+ 		if(guessingsTry === 1){
+ 			return 'Congratulations! You guessed my number on the first try!'
+ 		}
+
+ 		console.log( 'You guessed my number in ' + guessingsTry+ " guesses"); 
+ 		upperBound++;
+ 		guessingsTry = 0
+ 		return "OKK so How about more difficult guessing challenge! Go ahead"
+ 	} 
+
+ 	else{
+ 		while(guessingsTry< 10){
+ 
+ 		console.log("Nope! The correct number was "+ myNum);
+		 if(n >= 1.5*myNum){
+		 console.log("OOoh , your guess is too high")}
+		 else if(n < 0.5*myNum){
+		 	console.log("OOoh , your guess is too low")
+		 }
+		 return "Make another guess";
+	 //return guessMyNumber()
+	  }
+	  
+	  if(guessingsTry === 10){
+	  	console.log("exceeding allowed number of guessing, Have a nice day");
+	  	upperBound--;
+  		guessingsTry = 0
+  		return "The difficulty decreased, START another 10 guesses :D ";
+  	}
+	}
+  
+ } 
+ function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1)) 
+ }
 
 
 

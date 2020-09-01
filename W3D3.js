@@ -1,6 +1,7 @@
 /*
 Write a function  called favoriteDessert that takes no paremeters
 and returns an object with 3 key-value pairs.
+
 The names of each property and their respective values are up to you, 
 but the values cannot be undefined. How would you describe your favorite dessert?
 
@@ -11,3 +12,15 @@ Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 */
+
+
+
+function favoriteDessert(){
+	return {
+		name: 'Chocolate Balls',
+		prepTime: '30min',
+		temp_suggestedDrink: 'cold, coffee'
+	}
+}
+
+console.log(favoriteDessert())

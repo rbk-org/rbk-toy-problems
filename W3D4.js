@@ -3,7 +3,17 @@
 and returns a an array of names of people who are greater than or equal to 48 inches in height.
 
 You can assume an input which looks like this:
+*/
+function tallEnoughToRide(people){
 
+  var ApprovedPeopleNames = [];
+  for( var i = 0; i < people.length; i++){
+    if(people[i]['heightInInches'] >= 48){
+      ApprovedPeopleNames.push(people[i]['name']);
+    }
+  }
+  return ApprovedPeopleNames;
+}
 var groupA = [
   {
     name: "Mia",
@@ -26,9 +36,9 @@ var groupA = [
     heightInInches: 48
   }
 ]
-Calling your function should result in:
-tallEnoughToRide(groupA); //["Mia", "Kiana", "Alex"];
-
+//Calling your function should result in:
+console.log(tallEnoughToRide(groupA)); //["Mia", "Kiana", "Alex"];
+/*
 Remember: your function should work off of the data it receives, 
 not a global variable or only the specific example above. 
 I.e. If someone called your function with 10 objects 
@@ -49,5 +59,17 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 
 */
-
+//'problem solved'
 // your answer is here
+function tallestPerson(people){
+  var tallestPerson= people[0];
+  for( var i = 0; i < people.length; i++){
+    if(people[i]['heightInInches'] >= tallestPerson['heightInInches']){
+      tallestPerson = people[i];
+    }
+  }
+  return 'The tallest-Person Is  : '+ tallestPerson['name']+'\n'+ 'His height-In-Inches is: '+ tallestPerson['heightInInches'] ;
+
+}
+
+console.log(tallestPerson(groupA));

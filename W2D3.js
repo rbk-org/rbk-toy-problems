@@ -1,9 +1,16 @@
 //1- Write a function isTallEnough that takes a height (number) in inches, 
 //and returns true if the input is greater than or equal to 48, and false if it's less than 48 inches.
 //Calling your function should result in:
-isTallEnough(72); //true
-isTallEnough(28); //false
-
+function isTallEnough(height){
+	if(height >= 48){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+console.log(isTallEnough(72)); //true
+console.log(isTallEnough(28)); //false
 
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).
@@ -16,9 +23,24 @@ isTallEnough(28); //false
 //and 0.80 is considered a "Great freethrow shooter" (not "Decent freethrow shooter"). 
 //Additionally, you can get a number as high as 0.99, but never 1 
 //(this is what the original problem statement means by "exclusive of 1").
+function isGoodFreethrowShooter(shootPercentage){
+	if(shootPercentage >= 0 && shootPercentage <  0.65){
+		return "Horrible freethrow shooter";
+	}
+	else if(shootPercentage >= 0.65 && shootPercentage < 0.80){
+		return "Decent freethrow shooter";
+	}
+	else if(shootPercentage >= 0.80 && shootPercentage < 1.00){
+		return "Great freethrow shooter";
+	}
+	else{
+		return "out of range percentage";
+	}
+}
+
 
 // Calling your function should result in:
 
-isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
-isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
-isGoodFreethrowShooter(0.75); //"Decent freethrow shooter"
+console.log(isGoodFreethrowShooter(0.90)); //"Great freethrow shooter"
+console.log(isGoodFreethrowShooter(0.09)); //"Horrible freethrow shooter"
+console.log(isGoodFreethrowShooter(0.75)); //"Decent freethrow shooter"
