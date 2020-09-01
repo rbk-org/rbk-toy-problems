@@ -26,6 +26,7 @@ var groupA = [
     heightInInches: 48
   }
 ]
+
 Calling your function should result in:
 tallEnoughToRide(groupA); //["Mia", "Kiana", "Alex"];
 
@@ -36,6 +37,23 @@ I.e. If someone called your function with 10 objects
 */
 
 // your answer is here
+var newarr=[];
+function isTallEnough(groupA){
+
+  function tall(){
+    for(var i=0;i<groupA.length;i++){
+      for(var key in groupA[i]){
+        if(groupA[i][key].heightInInches>=48){
+          newarr.push(groupA[i][key].name)
+        }
+      }
+    }
+    return newarr;
+  }
+  return tall;
+}
+var ta=isTallEnough(groupA);
+console.log(ta.tall);
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
