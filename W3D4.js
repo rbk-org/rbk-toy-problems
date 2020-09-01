@@ -1,8 +1,7 @@
-/*
-1-Write a function called tallEnoughToRide  that takes an array of people objects, 
-and returns a an array of names of people who are greater than or equal to 48 inches in height.
 
-You can assume an input which looks like this:
+// 1-Write a function called tallEnoughToRide  that takes an array of people objects,  and returns a an array of names of people who are greater than or equal to 48 inches in height.
+
+// You can assume an input which looks like this:
 
 var groupA = [
   {
@@ -26,16 +25,35 @@ var groupA = [
     heightInInches: 48
   }
 ]
-Calling your function should result in:
-tallEnoughToRide(groupA); //["Mia", "Kiana", "Alex"];
+// Calling your function should result in:
+// tallEnoughToRide(groupA); //["Mia", "Kiana", "Alex"];
 
-Remember: your function should work off of the data it receives, 
-not a global variable or only the specific example above. 
-I.e. If someone called your function with 10 objects 
-(with all safely have the same properties), it should work just as well.
-*/
+// Remember: your function should work off of the data it receives, 
+// not a global variable or only the specific example above. 
+// I.e. If someone called your function with 10 objects 
+// (with all safely have the same properties), it should work just as well.
+// */
 
 // your answer is here
+
+function tallEnoughToRide(array)
+{
+  var res=[];
+  for(var i=0;i<array.length;i++)
+  {
+    if(array[i]['heightInInches'] >= 48)
+    {
+    res.push(array[i].name);
+    }
+  }
+  return res;
+} 
+tallEnoughToRide(groupA)
+
+
+
+
+
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
@@ -51,3 +69,20 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 */
 
 // your answer is here
+
+function tallestPerson(array)
+{
+  var max=array[0]['heightInInches'];
+  var res=''
+  for(var i=1;i<array.length;i++)
+  {
+    if(array[i]['heightInInches'] > max)
+    {
+      max=array[i]['heightInInches'];
+      res=array[i]['name'] + " at " +max +" inches ";
+    }
+  }
+  return res;
+}
+
+tallestPerson(groupA)
