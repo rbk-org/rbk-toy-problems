@@ -22,9 +22,9 @@ and you invoke the function with your guess -- if you and the function are think
  then, answer the following questions: 
  At present, the guess should be between 0 and 5. 
  We can think of 5 as the upper bound of the guess. 
- How many times is the upper bound repeated? 
- What if we wanted to change the upper bound to 6? 
- How many changes would be required? 
+ How many times is the upper bound repeated?  1/5+1
+  What if we wanted to change the upper bound to 6? 1/6+1
+ How many changes would be required? 2
  Create a variable called upperBound to hold the upper bound, and then reference it instead of the number 5. 
  If you were asked to change the upper bound to some other number (e.g. 7), you should only have to make one change. 
  Modify guessMyNumber so that if the guess is incorrect, guessMyNumber includes the correct guess in its output, 

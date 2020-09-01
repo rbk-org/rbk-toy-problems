@@ -35,6 +35,17 @@ I.e. If someone called your function with 10 objects
 (with all safely have the same properties), it should work just as well.
 */
 
+function tallEnoughToRide(array){
+  var result = [];
+  for(var i = 0 ; i < array.length ; i++ ){
+    if(array[i]['heightInInches'] >= 48 ){
+    result.push(array[i]['name'])
+    }
+  }
+  return result;
+}
+tallEnoughToRide(groupA);
+
 // your answer is here
 
 /*
@@ -49,5 +60,18 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 
 */
+  var max = arrayP[0]
+  for(var i = 0 ; i < arrayP.length ; i++ ){
+    if(arrayP[i]['heightInInches'] > 
+    max.heightInInches) {
+      max=arrayP[i]
+    }
+  }
+   return  max['name'] + " at " +  max['heightInInches'] + " inches ";
+   
+  }
+ 
+tallestPerson(groupA)
+
 
 // your answer is here
