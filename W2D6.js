@@ -20,9 +20,23 @@ loopAString('abcd');
   // b
   // c
   // d
+function loopAString(string) {
+	for (var i = 0;i<str.length;i++)
+	console.log(str.charAt(i));
+}
+
+
+
 
 */
 function loopAString(string) {
+for (var index=0;index<str.length;index++)
+	console.log(str.charAt(i));
+
+
+
+
+
   // create an index variable
   // create a loop which iterates over the input string
   // log current string character to the console
@@ -38,3 +52,12 @@ function loopAString(string) {
 
 
 
+function reverseStr(str) {
+	var x = 0;
+	var y =""
+	for (var i =str.length-1;i>=0;i--){
+	y+=str[i];
+	x++
+}
+return y+x
+}
