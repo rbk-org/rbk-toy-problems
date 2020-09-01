@@ -62,3 +62,8 @@ var str2 = 'hello world'
 console.log()
 console.log(flipPairs(str1))
 console.log(flipPairs(str2))
+
+
+
+
+
