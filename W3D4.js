@@ -59,7 +59,7 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 
 */
-
+//'problem solved'
 // your answer is here
 function tallestPerson(people){
   var tallestPerson= people[0];
