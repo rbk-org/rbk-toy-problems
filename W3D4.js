@@ -35,7 +35,39 @@ I.e. If someone called your function with 10 objects
 (with all safely have the same properties), it should work just as well.
 */
 
-// your answer is here
+var names = []
+function tallEnoughToRide(){
+  for(var i = 0; i < groupA.length; i++){
+    if(groupA[i]['heightInInches'] >= 48){
+      names.push(groupA[i]['name'])
+       }
+  }
+
+return names
+}
+var groupA = [
+  {
+    name: "Mia",
+    age: 10,
+    heightInInches: 52
+  },
+  {
+    name: "Jaya",
+    age: 9,
+    heightInInches: 45
+  },
+  {
+    name: "Kiana",
+    age: 10,
+    heightInInches: 55
+  },
+  {
+    name: "Alex",
+    age: 11,
+    heightInInches: 48
+  }
+]
+console.log(tallEnoughToRide(groupA))
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
@@ -50,4 +82,36 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 */
 
-// your answer is here
+var names = []
+function tallEnoughToRide(){
+  for(var i = 0; i < groupA.length; i++){
+    if(groupA[i+1]['heightInInches'] > groupA[i]['heightInInches']){
+      return groupA[i+1]['name'] + " at " + groupA[i+1]['heightInInches'] + " inches."
+       }
+  }
+
+return names
+}
+var groupA = [
+  {
+    name: "Mia",
+    age: 10,
+    heightInInches: 52
+  },
+  {
+    name: "Jaya",
+    age: 9,
+    heightInInches: 45
+  },
+  {
+    name: "Kiana",
+    age: 10,
+    heightInInches: 55
+  },
+  {
+    name: "Alex",
+    age: 11,
+    heightInInches: 48
+  }
+]
+console.log(tallEnoughToRide(groupA))
