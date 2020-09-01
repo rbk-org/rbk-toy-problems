@@ -34,8 +34,38 @@ not a global variable or only the specific example above.
 I.e. If someone called your function with 10 objects 
 (with all safely have the same properties), it should work just as well.
 */
+var groupA = [
+  {
+    name: "Mia",
+    age: 10,
+    heightInInches: 52
+  },
+  {
+    name: "Jaya",
+    age: 9,
+    heightInInches: 45
+  },
+  {
+    name: "Kiana",
+    age: 10,
+    heightInInches: 55
+  },
+  {
+    name: "Alex",
+    age: 11,
+    heightInInches: 48
+  }
+];
 
-// your answer is here
+function tallEnoughToRide(arrObj){
+	var tall = [];
+	for (var i=0;i<arrObj.length;i++){
+		if(arrObj[i]['heightInInches']>=48){
+			tall.push(arrObj[i]['name']);
+		}
+	}
+	return tall;
+}
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
@@ -51,3 +81,12 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 */
 
 // your answer is here
+function tallestPerson(arrObj){
+	var max = arrObj[0];
+	for (var i=0;i<arrObj.length;i++){
+		if(arrObj[i]['heightInInches']>max.heightInInches){
+			max = arrObj[i];
+		}
+	}
+	return max.name +' at '+ max.heightInInches+' inches ';
+}
