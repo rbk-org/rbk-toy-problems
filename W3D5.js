@@ -5,6 +5,11 @@ Write a function called orderAVegetarianDish that takes  an array of empoloyee o
 and returns true if at least 1 person is listed "vegetarian" on their "mealPreferences". 
 Otherwise, your function should return false.
 
+
+function  orderAVegetarianDish (array of empoloyee){
+*/
+
+
 var staffA = [
   {
     name: "Lia",
@@ -31,9 +36,24 @@ var staffA = [
     mealPreferences: "non-vegetarian"
   }
 ];
-Calling your function should result in:
+//Calling your function should result in:
 
-orderAVegetarianDish(staffA); //true
-*/
+//orderAVegetarianDish(staffA); //true
+
 
 // your answer is here 
+
+
+function  orderAVegetarianDish (arrayOfEmpoloyee){
+  for(var i = 0 ; i < arrayOfEmpoloyee.length ; i++ ){
+    if(arrayOfEmpoloyee[i]. mealPreferences === "vegetarian") {
+      return true;
+
+    }
+  }
+    return false;
+  
+}
+
+orderAVegetarianDish(staffA); 
+
