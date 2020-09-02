@@ -37,3 +37,20 @@ orderAVegetarianDish(staffA); //true
 */
 
 // your answer is here 
+
+
+function orderAVegetarianDish(array)
+{
+  var res =false;
+  for(var i=0;i<array.length;i++)
+  {
+    if(array[i].mealPreferences === 'vegetarian')
+    {
+      res= true;
+    }  
+  } 
+  return res;
+}
+
+
+orderAVegetarianDish(staffA);
