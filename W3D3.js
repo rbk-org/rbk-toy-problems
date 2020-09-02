@@ -27,4 +27,4 @@ Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 */
->>>>>>> 843a4d3baf0be5ff2acf5c73ddc55a5f3021c969
+
