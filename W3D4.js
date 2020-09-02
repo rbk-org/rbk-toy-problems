@@ -35,6 +35,7 @@ I.e. If someone called your function with 10 objects
 (with all safely have the same properties), it should work just as well.
 */
 
+<<<<<<< HEAD
 var newarray=[]
 function tallEnoughToRide(array){
   for (var i=0;i<array.length;i++){
@@ -48,6 +49,9 @@ newarray.push(array[i]['name'])
 }
 tallEnoughToRide(groupA);
 
+=======
+// your answer is here
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
@@ -62,6 +66,7 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 */
 
+<<<<<<< HEAD
 // your answer is here
 
 var newarray=[]
@@ -79,3 +84,6 @@ if (array[i]['heightInInches'] > tallest){
    return tallestname + ' at ' + tallest +' inches';
 }
 tallEnoughToRide(groupA);
+=======
+// your answer is here
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0
