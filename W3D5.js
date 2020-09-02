@@ -37,3 +37,37 @@ orderAVegetarianDish(staffA); //true
 */
 
 // your answer is here 
+var staffA = [
+  {
+    name: "Lia",
+    department: "Human Resources",
+    dietaryRestrictions: [],
+    mealPreferences: "no preferences"
+  },
+  {
+    name: "Sebastian",
+    department: "Engineering",
+    dietaryRestrictions: ["dairy free", "gluten free"],
+    mealPreferences: "vegetarian"
+  },
+  {
+    name: "Ari",
+    department: "Executive",
+    dietaryRestrictions: ["dairy free"],
+    mealPreferences: "vegetarian"
+  },
+  {
+    name: "Martha",
+    department: "Legal",
+    dietaryRestrictions: ["nut allergies"],
+    mealPreferences: "non-vegetarian"
+  }
+];
+function OrderAVegetarianDish(arrayofpeople){
+for(let i =0;i<arrayofpeople.length;i++){
+  if(arrayofpeople[i].mealPreferences==='vegetarian'){return true}
+}
+ return false
+}
+var x=OrderAVegetarianDish(staffA)
+console.log(x)
