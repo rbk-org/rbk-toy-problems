@@ -12,7 +12,7 @@ Another example could be:
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
 <<<<<<< HEAD
 */
-
+ 
 function favoriteDessert(){
 	return {
 		name: Teramisu
