@@ -36,4 +36,38 @@ Calling your function should result in:
 orderAVegetarianDish(staffA); //true
 */
 
+var staffA = [
+  {
+    name: "Lia",
+    department: "Human Resources",
+    dietaryRestrictions: [],
+    mealPreferences: "no preferences"
+  },
+  {
+    name: "Sebastian",
+    department: "Engineering",
+    dietaryRestrictions: ["dairy free", "gluten free"],
+    mealPreferences: "vegetarian"
+  },
+  {
+    name: "Ari",
+    department: "Executive",
+    dietaryRestrictions: ["dairy free"],
+    mealPreferences: "vegetarian"
+  },
+  {
+    name: "Martha",
+    department: "Legal",
+    dietaryRestrictions: ["nut allergies"],
+    mealPreferences: "non-vegetarian"
+  }
+];
+
 // your answer is here 
+function  orderAVegetarianDish(array){
+	for (var i=0;i<array.length;i++){
+		if(array[i]['mealPreferences']==="vegetarian"){
+			return true;
+		}
+	}return false;
+}
