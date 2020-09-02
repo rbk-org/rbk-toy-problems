@@ -26,7 +26,7 @@ var groupA = [
     heightInInches: 48
   }
 ]
-
+ 
 // Calling your function should result in:
 // tallEnoughToRide(groupA); //["Mia", "Kiana", "Alex"];
 

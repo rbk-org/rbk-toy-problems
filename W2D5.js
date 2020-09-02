@@ -5,7 +5,7 @@ and you invoke the function with your guess -- if you and the function are think
  you win! Otherwise, the function informs you that your guess was incorrect. 
  A version of this game might look like this (the randInt function is included for convenience):
 */
-
+ 
  // function guessMyNumber(n) { 
  // if (n > 5) { 
  // return 'Out of bounds! Please try a number between 0 and 5.'; 

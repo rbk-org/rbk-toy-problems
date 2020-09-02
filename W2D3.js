@@ -1,7 +1,7 @@
 //1- Write a function isTallEnough that takes a height (number) in inches, 
 //and returns true if the input is greater than or equal to 48, and false if it's less than 48 inches.
 //Calling your function should result in:
-
+ 
 function isTallEnough(x){
 	if(x>=48){return true}
 		return false

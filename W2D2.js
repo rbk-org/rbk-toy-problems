@@ -1,5 +1,5 @@
 // 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
-
+ 
 function ageAverage(){
 	s=13+14+13+15+16+17+19+13+16+15
 		return s/10
