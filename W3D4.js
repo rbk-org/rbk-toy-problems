@@ -59,7 +59,7 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 */
 
 // your answer is here
-function tallEnoughToRide(array){
+function tallestPerson(array){
   var max=array[0].heightInInches
   var name=array[0].name
 for(var i=0;i<array.length;i++){
