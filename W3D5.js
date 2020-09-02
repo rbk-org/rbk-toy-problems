@@ -35,5 +35,13 @@ Calling your function should result in:
 
 orderAVegetarianDish(staffA); //true
 */
+function orderAVegetarianDish(array)
+{
+	var h=false;
+	for(var i=0;i<array.length;i++){
+		if(array[i].mealPreferences==="vegetarian"){
+			h=true;
+		}
 
-// your answer is here 
+	}return h;
+}
