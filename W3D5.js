@@ -37,3 +37,16 @@ orderAVegetarianDish(staffA); //true
 */
 
 // your answer is here 
+function orderAVegetarianDish(arrayOfObj){
+	arrayCount=[];
+	for (var i=0; i<arrayOfObj.length; i++){     //looping over the arrayOfObj
+		if(arrayOfObj[i]. mealPreferences === "vegetarian"){
+			arrayCount.push(1)
+		}	
+	}
+   if(arrayCount.length>1){
+   	return true;
+   }
+return false;
+}
+orderAVegetarianDish(staffA);
