@@ -51,6 +51,18 @@ Calling your function should result in:
 
 shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
+*/
+function shoppingSummary(shoppingList){
+var budget=100
+var i=0
+while(budget>0){
+  if(budget-shoppingList[i].price){
+  budget-=shoppingList[i].price
+  }
+  i++
+}
+return `I got ${i-1} items at ${100-budget-shoppingList[i-1].price} `
+}
 
 
 /*
@@ -95,4 +107,16 @@ Would return a new array with the following elements:
 /*
 
 
-// your answer is here
+// your answer is here*/
+function removeMostExpensive(shoppingList){
+  var max=shoppingList[0]
+  var x=0
+  for(var i=0;i<shoppingList.length;i++){
+    if(shoppingList[i].price>max.price){
+      max=shoppingList[i]
+      x=i
+    }
+  }
+  shoppingList.splice(x,1)
+  return shoppingList
+}
