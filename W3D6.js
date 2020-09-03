@@ -53,6 +53,48 @@ shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
 
 
+
+
+
+
+
+
+function  shoppingSummary(array)
+{
+  var num=0;
+  var result=[];
+  for(var i=0;i<array.length;i++)
+  {
+    if(array[i]['price'] + num < 100)
+    {
+      num+= array[i]['price'];
+      result.push(array[i]['price']);
+    }
+  } 
+  return " I got " + result.length +" items at $ " + num;
+}
+
+shoppingSummary(shoppingList)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 Exercise 2
 Suppose that you wanted to take out the most expensive item on your shopping list. 
@@ -96,3 +138,26 @@ Would return a new array with the following elements:
 
 
 // your answer is here
+
+
+
+
+
+
+ function removeMostExpensive(array)
+ {
+   var max=0;
+   var newIndex=0;
+   for(var i=0;i<array.length;i++)
+   {
+     if(array[i]['price'] > max)
+     {
+       max=array[i]['price'];
+       newIndex=i;
+       
+     }
+   }
+   array.splice(i,1);
+   return  array;
+ } 
+removeMostExpensive(shoppingList)
