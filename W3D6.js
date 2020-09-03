@@ -50,7 +50,49 @@ var shoppingList = [
 Calling your function should result in:
 
 shoppingSummary(shoppingList); //"I got 3 items at $99.73"
-
+*/
+var sum
+function shoppingSummary(){
+  for (var i in shoppingList){
+    sum = sum + shoppingList.price
+      if(sum <= 100){
+      return "I got " + i + "items at $" + sum 
+    }
+  }
+}
+var shoppingList = [
+  {
+    item: "rice",
+    price: 12.75,
+    weightInPounds: 20
+  },
+  {
+    item: "chicken",
+    price: 6.99,
+    weightInPounds: 1.25
+  },
+  {
+    item: "cookware",
+    price: 79.99,
+    weightInPounds: 35
+  },
+  {
+    item: "celery",
+    price: 3.99,
+    weightInPounds: 2
+  },
+  {
+    item: "carrots",
+    price: 2.85,
+    weightInPounds: 2
+  },
+  {
+    item: "green beans",
+    price: 2.55,
+    weightInPounds: 2
+  }
+];
+console.log(shoppingSummary(shoppingList))
 
 
 /*
@@ -94,5 +136,40 @@ Would return a new array with the following elements:
 
 /*
 
-
-// your answer is here
+*/
+var arr1 = []
+function removeMostExpensive(){
+ for (var i = 0; i < arr.length; i++){
+   if(arr['price'][i] > arr['price'][i+1]){
+     arr1.push(arr['price'][i])
+    }  return arr
+  }
+}
+arr = [
+  {
+    item: "rice",
+    price: 12.75,
+    weightInPounds: 20
+  },
+  {
+    item: "chicken",
+    price: 6.99,
+    weightInPounds: 1.25
+  },
+  {
+    item: "celery",
+    price: 3.99,
+    weightInPounds: 2
+  },
+  {
+    item: "carrots",
+    price: 2.85,
+    weightInPounds: 2
+  },
+  {
+    item: "green beans",
+    price: 2.55,
+    weightInPounds: 2
+  }
+]
+console.log(removeMostExpensive())
