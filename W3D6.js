@@ -1,5 +1,5 @@
-/*
 
+/*
 Exercise 1
 Currently, you have a budget of $100. You have a shopping list in decreasing priority, 
 and you want to report how many items you bought and how much it cost you. 
@@ -53,7 +53,7 @@ shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
 
 
-/*
+
 Exercise 2
 Suppose that you wanted to take out the most expensive item on your shopping list. 
 Write a function called removeMostExpensive 
@@ -91,8 +91,37 @@ Would return a new array with the following elements:
   }
 ];
 //notice that the element with "cookware" is missing
+*/
 
-/*
+
 
 
 // your answer is here
+//=====ex1
+  function shoppingSummary(list){
+  	var sum=0;
+  	var c=0;
+  	for(var i=0;i<list.length;i++){
+if((sum+list[i].price)<=100){
+	sum+=list[i].price;
+	c=i;
+}
+else{
+	return "i get  "+(c+1)+" items at "+sum+" $"
+}
+  	}
+  }
+  //=====ex2
+  function removeMostExpensive(list){
+  	var max=list[0].price;
+  	var maxi=0
+  	for(var i=0;i<list.length;i++){
+if(list[i].price>max){
+	max=list[i].price;
+	maxi=i;
+}
+  	}
+list.splice(maxi,1)
+return list;
+
+  }
