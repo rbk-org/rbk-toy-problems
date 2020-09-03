@@ -49,7 +49,28 @@ var shoppingList = [
 ];
 Calling your function should result in:
 
-shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+shoppingSummary(shoppingList); //"I got 3 items at $99.73"*/
+
+  
+  function shoppingSummary(array){
+   var sum =0;
+   var s=0;
+  for( var i=0; i<array.length;i++){
+  if(sum+array[i]['price']<100){ 
+  sum = sum+array[i]['price'];
+   s=i+1;
+  }
+  } return "I got "+ s +" items at $"+sum;
+
+  }
+
+    shoppingSummary(shoppingList);
+
+
+
+
+
+
 
 
 
@@ -63,7 +84,7 @@ Your function should preserve the order of the items in this array.
 removeMostExpensive(shoppingList);
 Would return a new array with the following elements:
 
-[
+shoppingList1=[
   {
     item: "rice",
     price: 12.75,
@@ -95,4 +116,22 @@ Would return a new array with the following elements:
 /*
 
 
-// your answer is here
+// your answer is here*/
+
+
+
+function removeMostExpensive(array){
+   var sum =0;
+   var s=0;
+   var max =array[0];
+  for( var i=0; i<array.length;i++){
+  if(array[i]>max){ 
+  max=array[i];
+   s=i;
+  }
+  } array.splice(s,1);
+   return array;
+
+  }
+
+    removeMostExpensive(shoppingList1);
