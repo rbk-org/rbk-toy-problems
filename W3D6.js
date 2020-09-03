@@ -50,6 +50,17 @@ var shoppingList = [
 Calling your function should result in:
 
 shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+*/
+function shoppingSummary(array) {
+	var priceSum = 0;
+	var myList = [];
+	for(var i=0; i < array.length; i++) {
+		if(priceSum < 100) {
+			myList.push(array[i]);
+			priceSum = Math.ceil(priceSum + array[i].price);
+		}
+	} return "I got " + myList.length + " items at " + priceSum;
+}
 
 
 
@@ -92,7 +103,16 @@ Would return a new array with the following elements:
 ];
 //notice that the element with "cookware" is missing
 
-/*
+*/
+function removeMostExpensive(array) {
+ var mostExp = array[0].price
+ for (var i=1; i < array.length; i++) {
+ 	if (array[i].price > mostExp) {
+	array.splice(i,1);
+} 
 
+ }return array;
+
+} 
 
 // your answer is here
