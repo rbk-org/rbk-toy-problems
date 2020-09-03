@@ -22,6 +22,7 @@ loopAString('abcd');
   // d
 
 */
+<<<<<<< HEAD
 
 function loopAString(str) {
   var i=0;
@@ -33,6 +34,9 @@ function loopAString(str) {
 
   loopAString("hello");
 
+=======
+function loopAString(string) {
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0
   // create an index variable
   // create a loop which iterates over the input string
   // log current string character to the console
@@ -48,6 +52,7 @@ function loopAString(str) {
 
 
 
+<<<<<<< HEAD
 
 function reverseStr(str) {
   var i=str.length-1;
@@ -65,3 +70,5 @@ function reverseStr(str) {
   reverseStr("hello");
 
 
+=======
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0

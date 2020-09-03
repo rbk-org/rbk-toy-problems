@@ -1,6 +1,7 @@
 //1- Write a function isTallEnough that takes a height (number) in inches, 
 //and returns true if the input is greater than or equal to 48, and false if it's less than 48 inches.
 //Calling your function should result in:
+<<<<<<< HEAD
 
    function isTallEnough (num){
 
@@ -16,6 +17,8 @@
 
 
 
+=======
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0
 isTallEnough(72); //true
 isTallEnough(28); //false
 
@@ -34,6 +37,7 @@ isTallEnough(28); //false
 
 // Calling your function should result in:
 
+<<<<<<< HEAD
 function isGoodFreethrowShooter(x){
 
 if (x >= 0 &&  x<0.65){console.log("Horrible freethrow shooter");}
@@ -49,3 +53,8 @@ else if (x>=0.65 && x<0.80){
 	}
 
 isGoodFreethrowShooter(0.8); //"Great freethrow shooter"
+=======
+isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
+isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
+isGoodFreethrowShooter(0.75); //"Decent freethrow shooter"
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0

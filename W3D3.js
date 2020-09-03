@@ -10,6 +10,7 @@ For example, one could return an object such as:
 Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
+<<<<<<< HEAD
 */
    
    function favoriteDessert(){
@@ -20,3 +21,6 @@ Another example could be:
 
      }; return dessert;}
       console.log(favoriteDessert());
+=======
+*/
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0

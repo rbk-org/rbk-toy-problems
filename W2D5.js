@@ -30,7 +30,7 @@ and you invoke the function with your guess -- if you and the function are think
  Modify guessMyNumber so that if the guess is incorrect, guessMyNumber includes the correct guess in its output, 
   e.g. 'Nope! The correct number was: X' (where X would have been the correct number).*/
 
-function guessMyNumber(n) { 
+function guessMyNumber(n,upperBound) { 
   var upperBound=5;
  if (n > upperBound) { 
  return 'Out of bounds! Please try a number between 0 and upperBound.'; 
