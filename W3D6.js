@@ -79,7 +79,7 @@ var shoppingList = [
   },
   {
     item: "green beans",
-    price: 2.55,
+    price: 100.55,
     weightInPounds: 2
   }
 ];
@@ -138,10 +138,11 @@ Would return a new array with the following elements:
 
 function removeMostExpensive(shoppingList){
   var max = shoppingList[0];
-    for(var i=0;i<shoppingList.length-1;i++){
+  var maxIndex=0
+    for(var i=0;i<shoppingList.length;i++){
       if (shoppingList[i]['price'] > max.price){
         max=shoppingList[i];
-        var maxIndex=i;
+        maxIndex=i;
       }
     }
     shoppingList.splice(maxIndex,1);
