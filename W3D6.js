@@ -98,15 +98,19 @@ Would return a new array with the following elements:
 
 // your answer is here
 *///ex1
-function shoppingSummary(arraylist){
+function shoppingSummary(array){
   var sum = 0;
-  var i = 0;
-  do{
-      sum = sum + arraylist[i]['price'];
-      
-      i++;
-      } while (sum < 99)
-       return "I got " + i +" items at $"+sum;
+  for(var i = 0 ; i < array.length ;i++){
+     sum +=array[i]['price'];
+    if(sum > 100){
+
+     sum = sum - array[i]['price'];
+     x = i;
+     break;
+     //return sum;
+    }
+
+  }return "i got " +x +"at $"+sum 
 }
 ///EX2
 
