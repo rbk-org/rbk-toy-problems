@@ -10,6 +10,57 @@
 // 	-calculate the number of male friends that your class have by writing a function called nbOfMale.
 
 
+
+
+var friend1 = classmatesFactory("Hiba", 24, "Tulkarem", "female")
+var friend2 = classmatesFactory("Rami", 21 , "Nablus", "male")
+
+var classmates = [friend1,friend2]
+
+var malesnum = 0
+
+
+function MyClassmates (){
+	var instance = {}
+		instance.classmatesFactory = classmatesFactory 
+		instance.displayFriend = displayFriend
+		instance.addFriend = addFriend
+		instance.nbOfMale = nbOfMale
+
+
+return instance
+}
+
+function classmatesFactory (name ,age , homeTown, gender){
+	 var classmate = {}
+	 classmate.name = name
+	 classmate.age = age
+	 classmate.homeTown = homeTown
+   classmate.gender = gender 
+	 return classmate
+}
+
+
+function displayFriend (array){
+	var str = ""
+	for (var i = 0 ; i < array.length ; i++){
+		str += "My friend name is " + array[i].name + " and he/she lives in "+ array[i].homeTown + "/n"
+	}
+	return str
+}
+
+function addFriend (mate){
+	classmates.push(mate)
+}
+
+function nbOfMale (classmatesArr){
+  for (var i = 0; i <classmatesArr; i++) {
+  	if( classmatesArr[i].grnder === "male"){
+  		malesnum += 1
+  	}
+  }
+  return malesnum
+}
 //Part2:
 // Using recursion Write a JavaScript function to find the greatest common divisor (gcd) of two positive numbers.
 // Write a function called sum that accepts two numbers as parameters, and sum them together but without suming them togther directly
