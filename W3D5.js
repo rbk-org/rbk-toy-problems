@@ -1,4 +1,4 @@
--/*
+/*
 You were put in charge of ordering for tonight's company get-together, 
 and you were given a data set with people's meal preferences and dietary restrictions. 
 Write a function called orderAVegetarianDish that takes  an array of empoloyee objects, 
@@ -46,3 +46,18 @@ function orderAVegetarianDish(){
   }
 }
 console.log(orderAVegetarianDish())
+
+
+function OrderAVegetarianDish(arrayofpeople){
+  let obj={}
+  return obj;
+  obj.vegetarian=vegetarian;
+}
+function vegetarian(){
+for(let i =0;i<arrayofpeople.length;i++){
+  if(arrayofpeople[i].mealPreferences==='vegetarian'){return true}
+}
+ return false
+}
+
+var x=OrderAVegetarianDish(staffA)
