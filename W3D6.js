@@ -128,3 +128,4 @@ function removeMostExpensive(array){
  
 }
 console.log(removeMostExpensive(shoppingList))
+
