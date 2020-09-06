@@ -8,10 +8,54 @@
 // 	-write a function called displayFriend that takes a mate as an argument and returns the important information in a readable way.
 // 	-write a function called addFriend that takes a mate as an argument and add it to you classMates arraya.
 // 	-calculate the number of male friends that your class have by writing a function called nbOfMale.
+function addClassmate(name,gender,age,){
+	return {
+		name:name,
+		gender:gender
+		age:age
+	}
+}
+var classmate1=addClassmate("ahmad","male","24")
+var classmate2=addClassmate("dima","female","22")
+var classmate3=addClassmate("samir","male","19")
+var classmates=[classmate1,classmate2,classmate3]
+function displayFriend(classmate){
+	return "name: "+classmate.name+"\n"+"gender: "+classmate.gender+"\n"+"age: "+classmate.age
 
+}
+function nbOfMale(array){
+	var counter = 0
+	for(var i=0;i<array.length;i++){
+		if(array[i].gender==="male"){
+			counter++
+		}
+	}
+	return counter
+}
 
 //Part2:
 // Using recursion Write a JavaScript function to find the greatest common divisor (gcd) of two positive numbers.
 // Write a function called sum that accepts two numbers as parameters, and sum them together but without suming them togther directly
 //you can only add one at each summation, you'll need to use recursion in this.
+function greatestCommoNDivisor(num1,num2){
+}
 
+
+
+function sum(number1,number2,counter=0){
+
+	if(number1===0 && number2===0){
+		return 0
+	}
+	else if(number1===0){
+		return number2
+	}
+	else if (number2===0){
+		return number 1
+	}
+	else if (counter===number1){
+		return 0
+	}
+	number2++
+return sum(number1,number2,counter++)
+}
