@@ -54,12 +54,21 @@ shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
 function shoppingSummary (arrayOfObj){
 itemCount=[];
+<<<<<<< HEAD
+itemCost=0;	
+for (var i=0; i<arrayOfObj.length; i++){
+	itemCost=itemCost+arrayOfObj[i].price;
+    itemCount.push(1);
+    if(itemCost > 100){
+    itemCost=itemCost-arrayOfObj[i].price;	
+=======
 itemCost=0; 
 for (var i=0; i<arrayOfObj.length; i++){
   itemCost=itemCost+arrayOfObj[i].price;
     itemCount.push(1);
     if(itemCost > 100){
     itemCost=itemCost-arrayOfObj[i].price;  
+>>>>>>> bf3030eb909a4d65ba30fe1268b9ada4fe3f0c79
     itemCount.pop();
     }
 }
@@ -110,6 +119,19 @@ Would return a new array with the following elements:
 */
 // your answer is here
 function removeMostExpensive(arrayOfObj){
+<<<<<<< HEAD
+	var mostExp
+	var mostExpIndex
+	for (var i=0; i<arrayOfObj.length; i++){
+		if(arrayOfObj[0].price<arrayOfObj[i].price){
+			mostExp=arrayOfObj[i].item;
+			mostExpIndex=i;
+		}
+	}
+  console.log (arrayOfObj[mostExpIndex])
+	arrayOfObj.splice(arrayOfObj[mostExpIndex],1)
+	return arrayOfObj;
+=======
   var mostExp
   var mostExpIndex
   for (var i=0; i<arrayOfObj.length; i++){
@@ -121,5 +143,6 @@ function removeMostExpensive(arrayOfObj){
   console.log (arrayOfObj[mostExpIndex])
   arrayOfObj.splice(arrayOfObj[mostExpIndex],1)
   return arrayOfObj;
+>>>>>>> bf3030eb909a4d65ba30fe1268b9ada4fe3f0c79
 }
 removeMostExpensive(shoppingList);
