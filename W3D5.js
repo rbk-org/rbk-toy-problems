@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 
 // You were put in charge of ordering for tonight's company get-together, 
 // and you were given a data set with people's meal preferences and dietary restrictions. 
 // Write a function called orderAVegetarianDish that takes  an array of empoloyee objects, 
 // and returns true if at least 1 person is listed "vegetarian" on their "mealPreferences". 
 // Otherwise, your function should return false.
+=======
+-/*
+You were put in charge of ordering for tonight's company get-together, 
+and you were given a data set with people's meal preferences and dietary restrictions. 
+Write a function called orderAVegetarianDish that takes  an array of empoloyee objects, 
+and returns true if at least 1 person is listed "vegetarian" on their "mealPreferences". 
+Otherwise, your function should return false.
+>>>>>>> c18c616068673a0cd32e1b88cd99ee2ffc44cb5c
 
 var staffA = [
   {
