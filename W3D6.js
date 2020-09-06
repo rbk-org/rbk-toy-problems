@@ -53,15 +53,13 @@ shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
 */
 function shoppingSummary(shoppingList){
-var budget=100
-var i=0
-while(budget>0){
-  if(budget-shoppingList[i].price){
-  budget-=shoppingList[i].price
+  var budget=100
+  var i=0
+  while(budget-shoppingList[i].price>0){
+    budget-=shoppingList[i].price
+    i++
   }
-  i++
-}
-return `I got ${i-1} items at ${100-budget-shoppingList[i-1].price} `
+  return `I got ${i} items at ${100-budget} `
 }
 
 
