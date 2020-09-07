@@ -57,7 +57,8 @@ function comDiv(num1, num2, num = num1) {
 	return comDiv(num1, num2, --num)
 }
 console.log(comDiv(120, 50)) // 10
-console.log(comDiv(25, 50)) // 25
+console.log(comDiv(150, 50)) // 25
+console.log('\n')
 
 // Write a function called sum that accepts two numbers as parameters, and sum them together but without suming them togther directly
 //you can only add one at each summation, you'll need to use recursion in this.
