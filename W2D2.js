@@ -1,3 +1,4 @@
+
 // 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
 function avgAge(){
 return((13+14+13+15+16+17+19+13+16+15)/10)
@@ -30,16 +31,16 @@ function convertTo(units, num) {
   }else{
   	return("error")
   }
+
 }
 
-//4- Write a function dogsIWouldPet that takes an item (string), 
-//and returns a sentence stating dogs you would pet in comparison to the item (see sample call below).
-// Calling your function should result in:
-// dogsIWouldPet("ottoman"); //"I would pet dogs no bigger than an ottoman"
-// dogsIWouldPet("small horse"); //"I would pet dogs no bigger than an small horse"
-// dogsIWouldPet("Terrier"); //"I would pet dogs no bigger than an Terrier"
-// Bonus (extra): If your function were passed in a string "I do not like dogs", 
-//you can have your function return "I would not pet dogs".
+//2.Write a function called passwordLongEnough that takes a 'password' as a parameter 
+//and returns true if that password is long enough -- you get to decide what constitutes long enough.
+
+//3.Write a function called rentalCar that takes a person's name and age as parmeters, 
+//and returns either 'You cannot have the keys, .', or "Have fun driving", 
+// depending on whether or not the person is old enough. 
+//In the US, most rental car companies do not allow you to rent a car until you are 21.
 
 function dogsIwouldPet(string){
 	if(string==="I do not like dogs"){
@@ -57,3 +58,4 @@ function dogsIwouldPet(string){
 function convertToKilometers(num){
 	return(num*1.60934)
 }
+
