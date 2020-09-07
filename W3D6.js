@@ -1,4 +1,4 @@
-/*
+
 
 Exercise 1
 Currently, you have a budget of $100. You have a shopping list in decreasing priority, 
@@ -50,10 +50,17 @@ var shoppingList = [
 Calling your function should result in:
 
 shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+ 
+function summary(array) {
+  for(vari=0,i<shoppingList.length,i++)
 
+var total   = shoppingList.price [i]*shoppingList.weightInPounds[i]
+if(total<=100) {
+  return  "I got 3 items at" + total;
+}
+return "you dont have enough money"
+}
 
-
-/*
 Exercise 2
 Suppose that you wanted to take out the most expensive item on your shopping list. 
 Write a function called removeMostExpensive 
@@ -92,7 +99,10 @@ Would return a new array with the following elements:
 ];
 //notice that the element with "cookware" is missing
 
-/*
 
 
-// your answer is here
+
+function removeMostExpensive(shoppingList) {
+  Math.max.apply(Math,shoppingList.map( removeMostExpensive(o) { return o.y; }))
+
+}
