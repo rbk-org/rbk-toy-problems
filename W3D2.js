@@ -27,6 +27,7 @@ console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei
 ,si 't sniasenyli tnreseitgn!*/
 
 
+
 //1
 	function countNumOfStrings(arr){
 		var sNum = 0;
@@ -68,5 +69,3 @@ console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei
 	}
 	flipPairs("hello world") 
 
-
-	

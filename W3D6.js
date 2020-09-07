@@ -1,4 +1,3 @@
-
 /*
 Exercise 1
 Currently, you have a budget of $100. You have a shopping list in decreasing priority, 
@@ -50,6 +49,7 @@ var shoppingList = [
 Calling your function should result in:
 
 shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+<<<<<<< HEAD
 */
 
    function shoppingSummary(arr) {
@@ -63,6 +63,7 @@ shoppingSummary(shoppingList); //"I got 3 items at $99.73"
       }
       return "I got " + list.length + " items at " + price;
     }
+
 
 
 
@@ -105,6 +106,7 @@ Would return a new array with the following elements:
 ];
 //notice that the element with "cookware" is missing
 
+<<<<<<< HEAD
 */
 
 
@@ -127,4 +129,7 @@ Would return a new array with the following elements:
 
 
 
+
+
+/*
 

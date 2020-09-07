@@ -1,3 +1,5 @@
+
+
 //Part1:
 
 // create a data model to represent your classmates
@@ -13,7 +15,6 @@
 // Using recursion Write a JavaScript function to find the greatest common divisor (gcd) of two positive numbers.
 // Write a function called sum that accepts two numbers as parameters, and sum them together but without suming them togther directly
 //you can only add one at each summation, you'll need to use recursion in this.
-
 
 
 
@@ -71,3 +72,4 @@
             return sum(n1 += 1, n2 -= 1 )
     }
     sum(6, 12)
+
