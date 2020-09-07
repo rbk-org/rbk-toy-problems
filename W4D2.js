@@ -8,6 +8,14 @@
 // 	-write a function called displayFriend that takes a mate as an argument and returns the important information in a readable way.
 // 	-write a function called addFriend that takes a mate as an argument and add it to you classMates arraya.
 // 	-calculate the number of male friends that your class have by writing a function called nbOfMale.
+function Factory(name,age,nationality,gender){
+return{
+       name:name,
+       age:age,
+       nationality:nationality,
+       gender:gender
+}
+}
 
 
 //Part2:
