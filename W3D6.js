@@ -50,6 +50,33 @@ var shoppingList = [
 Calling your function should result in:
 
 shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+*/
+function shoppingSummary(arrayOfObjects){
+  var container=arrayOfObjects
+  var counter=0
+  var highest=arrayOfObjects[0].price
+  for(var i=0;i<arrayOfObjects.length;i++){
+    counter+=arrayOfObjects[i].price
+    if(arrayOfObjects[i].price>highest){
+      var x=i
+      highest=arrayOfObjects[i].price
+    }
+  }
+  while(counter>100){
+    counter-=highest
+    container.splice(x,1)
+    highest=container[0].price
+    for(var j=0;j<container.length;j++){
+      if(container[j].price>highest){
+        highest=container[j].price
+      }
+    
+    }
+    i--
+  }
+  return "i got "+i+" items at $"+counter
+}
+
 
 
 
@@ -92,7 +119,21 @@ Would return a new array with the following elements:
 ];
 //notice that the element with "cookware" is missing
 
-/*
+*/
+function removeMostExpensive(arrayOfObjects){
+  var counter=0
+  var highest=arrayOfObjects[0].price
+  for(var i=0;i<arrayOfObjects.length;i++){
+    counter+=arrayOfObjects[i].price
+    if(arrayOfObjects[i].price>highest){
+      highest=arrayOfObjects[i].price
+    }
+  }
+  if(counter>100){
+    counter-=highest
+    i--
+  }
+  return "i got"+i+"items at $"+counter
+}
 
 
-// your answer is here

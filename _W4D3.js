@@ -28,6 +28,7 @@ var myCart = [
     nutritionalValue: { lowSugar: true, lowSodium: true },
     price: 0.75 } 
   ];
+
 function onlyPayForHealthyThings(arrayofobj) {
 var totalsumofprices = 0
 var pricearray =[]
@@ -45,7 +46,6 @@ var pricearray =[]
   
 }
 onlyPayForHealthyThings(myCart)
-
 
 
 

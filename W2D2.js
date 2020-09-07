@@ -1,9 +1,37 @@
-//1.Write a function called sameLength that takes two strings as parmeters, 
-//and returns true if those strings have the same length, and false otherwise.
-function sameLength(str1,str2){
-	if (str1.length=str.length){
-		return true
-	}else return false
+
+// 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
+function avgAge(){
+return((13+14+13+15+16+17+19+13+16+15)/10)
+}
+// 2-using the console calculate your age in seconds.
+function myAgeInSec(num){
+	return(num*31536000)
+}
+
+// 3- Write a function identity that takes one parameter and returns that input value.
+// Calling your function should result in:
+// identity("hello world");  ==> "hello world"
+// identity(500);  ==> 500
+function identity(text){
+	return(text)
+}
+
+// 4- Write a function convertTo that takes  a string and a number as parameters.
+// If the string input is "cm", then the function should convert the 2nd argument into centimeters by multiplying it to 2.54 and returning that value.
+// If the string input is "in", then the function should convert the 2nd argument into inches by dividing it by 2.54.
+// Calling your function should result in something like:
+// convertTo('cm', 100);  ==> 254
+// convertTo('in', 50.8); ==> 20
+
+function convertTo(units, num) {
+  if(units==="cm"){
+  	return(num*2.54)
+  }else if(units==="in"){
+  	return(num/2.54)
+  }else{
+  	return("error")
+  }
+
 }
 
 //2.Write a function called passwordLongEnough that takes a 'password' as a parameter 
@@ -14,8 +42,20 @@ function sameLength(str1,str2){
 // depending on whether or not the person is old enough. 
 //In the US, most rental car companies do not allow you to rent a car until you are 21.
 
-// 4.Write a function called max that takes two numbers as parameters, 
-//and returns the larger one.
+function dogsIwouldPet(string){
+	if(string==="I do not like dogs"){
+		return("I would not pet dogs")
+	}else{
+	    return("I would pet dogs no bigger than an "+string)
 
-// 5.Write a function called  min that takes two numbers as parameters,
-// and returns the smaller one.
+	}
+}
+// 5- Write a function convertToKilometers that takes a number of miles passed in as parameter, 
+// and returns that number multiplied by 1.60934 (an accepted approximation of 1 mile in kilometers).
+// Calling your function should result in:
+// convertToKilometers(50);   ==> 80.467
+// convertToKilometers(361);  ==> 580.973
+function convertToKilometers(num){
+	return(num*1.60934)
+}
+
