@@ -1,9 +1,11 @@
 /*
+>>>>>>> cfe964db98c8907a6d4d515df9d68ebab44d1f91
 You were put in charge of ordering for tonight's company get-together, 
 and you were given a data set with people's meal preferences and dietary restrictions. 
 Write a function called orderAVegetarianDish that takes  an array of empoloyee objects, 
 and returns true if at least 1 person is listed "vegetarian" on their "mealPreferences". 
 Otherwise, your function should return false.
+
 var staffA = [
   {
     name: "Lia",
@@ -31,10 +33,15 @@ var staffA = [
   }
 ];
 Calling your function should result in:
+<<<<<<< HEAD
+=======
+
+>>>>>>> cfe964db98c8907a6d4d515df9d68ebab44d1f91
 orderAVegetarianDish(staffA); //true
 */
 
 // your answer is here 
+
 
 
   function orderAVegetarianDish(array){
