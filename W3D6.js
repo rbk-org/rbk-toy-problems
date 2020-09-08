@@ -14,7 +14,7 @@ so there's no item limit -- your only limit is your budget.
 The list is mentioned to be in "decreasing priority" simply because you do not have to sort the input array to optimize for anything else.
  So do not worry about coming up with any other sorting algorithm for the most "bang for your buck" or what not :-)
 Take for example the data below:
-
+*/
 var shoppingList = [
   {
     item: "rice",
@@ -47,14 +47,31 @@ var shoppingList = [
     weightInPounds: 2
   }
 ];
-Calling your function should result in:
 
-shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+//shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+
+function shoppingSummary(array){
+  var initial=100;
+  var count =0;
+  var allprice=0;
+  
+  for(var i=0;i< array.length;i++){
+    if(array[i].price <= initial){
+    allprice = allprice + array[i].price;
+    count++;
+    initial = initial - array[i].price;
+    }
+  }
+    
+  return 'I got  '+ count + ' items at  $' + allprice;
+
+}
+
 
 
 
 /*
-Exercise 2
+ Exercise 2
 Suppose that you wanted to take out the most expensive item on your shopping list. 
 Write a function called removeMostExpensive 
 which returns a new array without the most expensive thing in the list. 
@@ -90,9 +107,19 @@ Would return a new array with the following elements:
     weightInPounds: 2
   }
 ];
-//notice that the element with "cookware" is missing
+notice that the element with "cookware" is missing
 
-/*
+*/
 
 
-// your answer is here
+function removeMostExpensive(array){
+  var res = [];
+  var most=array[0].price;
+  for(var i=0;i< array.length;i++){
+    if(most < array[i].price){
+      most = array[i].price;
+      array.splice(i,1)
+
+    }
+  } return array;
+}
