@@ -14,7 +14,13 @@ Calling your function should result in something like:
 myFavoriteSong(); //{title: "Countdown", artist: "Beyonce", durationInSeconds: 212}
 
 */
-
+function myFavoriteSong() {
+    return {
+        title: "Roar", 
+        artist: "katy perry", 
+        durationInSeconds: 230
+    }
+}
 /*
 2-Write a function called nextTwoBusTimes that takes an array of numbers representing (in minutes) 
 when the busses come for the day. 
@@ -29,6 +35,10 @@ var bus10Schedule = [12, 24, 35, 47, 60];
 nextTwoBusTimes(bus10Schedule); //"The next 2 busses arrive in 12 and 24 minutes."
 */
 
+function nextTwoBusTimes(timesArr) {
+    var arr = timesArr.sort(function(a, b){ return a - b});
+    return `The next 2 busses arrive in ${arr[0]} and ${arr[1]} minutes`;
+}
 
 /*
 
@@ -45,4 +55,7 @@ var bus10Schedule = [12, 24, 35, 47, 60];
 nextAndLastBusTimes(bus10Schedule); //"The next bus is in 12 minutes. The last bus is in 60 minutes.
 */
 
-
+function nextAndLastBusTimes(timesArr) {
+    var arr = timesArr.sort(function (a, b) { return a - b });
+    return `The next 2 busses arrive in ${arr[0]} and ${arr[arr.length - 1]} minutes`;
+}
