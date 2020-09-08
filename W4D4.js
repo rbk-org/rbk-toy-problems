@@ -7,13 +7,24 @@ but these three properties should exist within the object your function returns.
 
 function myFavoriteSong() {
 
+
 }
 
 Calling your function should result in something like:
 
 myFavoriteSong(); //{title: "Countdown", artist: "Beyonce", durationInSeconds: 212}
 
+
 */
+function myFavoriteSong() {
+	return {
+		title : "Ya mhawn Al mashaweer",
+		artist : "Hamza namera",
+		durationInSeconds : 300
+	}
+
+}
+myFavoriteSong()
 
 /*
 2-Write a function called nextTwoBusTimes that takes an array of numbers representing (in minutes) 
@@ -28,7 +39,9 @@ Calling your function should result in something like:
 var bus10Schedule = [12, 24, 35, 47, 60];
 nextTwoBusTimes(bus10Schedule); //"The next 2 busses arrive in 12 and 24 minutes."
 */
-
+function nextTwoBusTimes(timesArr) {
+ return "The next 2 busses arrive in " +timesArr[0] +" and "+timesArr[1] +" minutes."
+}
 
 /*
 
@@ -46,3 +59,6 @@ nextAndLastBusTimes(bus10Schedule); //"The next bus is in 12 minutes. The last b
 */
 
 
+function nextAndLastBusTimes(bus10Schedule) {
+return "The next bus is in "+bus10Schedule[0]+" minutes. "+"The last bus is in "+bus10Schedule[bus10Schedule.length-1] +" minutes."
+}
