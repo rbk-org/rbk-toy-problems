@@ -6,15 +6,19 @@ and you can explicitly type out these values,
 but these three properties should exist within the object your function returns.
 
 function myFavoriteSong() {
-
+	
 }
-
-Calling your function should result in something like:
+//Calling your function should result in something like:
 
 myFavoriteSong(); //{title: "Countdown", artist: "Beyonce", durationInSeconds: 212}
-
 */
-
+function myFavoriteSong() {
+	return{title: "Countdown", 
+	artist: "Beyonce", 
+	durationInSeconds: 212
+	}
+}
+console.log(myFavoriteSong()) // result = {title: "Countdown", artist: "Beyonce", durationInSeconds: 212}
 /*
 2-Write a function called nextTwoBusTimes that takes an array of numbers representing (in minutes) 
 when the busses come for the day. 
@@ -28,8 +32,11 @@ Calling your function should result in something like:
 var bus10Schedule = [12, 24, 35, 47, 60];
 nextTwoBusTimes(bus10Schedule); //"The next 2 busses arrive in 12 and 24 minutes."
 */
-
-
+var bus10Schedule = [12, 24, 35, 47, 60]
+function nextTwoBusTimes(timesArr) {
+ return "The next 2 busses arrive in " + bus10Schedule[0] + " and " + bus10Schedule[1] + " minutes."
+}
+console.log(nextTwoBusTimes(bus10Schedule)) // result = "The next 2 busses arrive in 12 and 24 minutes."
 /*
 
 3-Write a function called nextAndLastBusTimes that takes an array of numbers representing (in minutes) 
@@ -44,5 +51,9 @@ Calling your function should result in something like:
 var bus10Schedule = [12, 24, 35, 47, 60];
 nextAndLastBusTimes(bus10Schedule); //"The next bus is in 12 minutes. The last bus is in 60 minutes.
 */
-
+var bus10Schedule = [12, 24, 35, 47, 60]
+function nextAndLastBusTimes(timesArr) {
+ return "The next 2 busses arrive in " + bus10Schedule[0] + " and " + bus10Schedule[bus10Schedule.length-1] + " minutes."
+}
+console.log(nextAndLastBusTimes(bus10Schedule)) // result = "The next bus is in 12 minutes. The last bus is in 60 minutes."
 
