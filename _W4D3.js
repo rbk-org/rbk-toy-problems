@@ -6,10 +6,21 @@ The nutritionalValue is also an object, which has the following properties: lowS
 Your function should add the prices of all the items in the array if the item is true for both lowSugar and lowSodium
 
 Finally, your function should return the sum total of all the healthy items
-
+*/
 function onlyPayForHealthyThings(foodList) {
+  var addPrice=0;
+   for(var i=0;i<foodList.length;i++){
+    for(var key in foodList[i]){
+      for(var k in key[i]){
+        if(foodList[i][key]["lowSugar"] === true && foodList[i][key]["lowSodium"] === true){
+          addPrice+=foodList[i]["price"];
 
-}
+        }// if 
+      }// third loop
+    }//second loop
+   }//first loop
+   return addPrice;
+}//function 
 var myCart = [ 
   { name: 'chips',
     nutritionalValue: { lowSugar: true, lowSodium: false },
@@ -30,5 +41,5 @@ var myCart = [
     nutritionalValue: { lowSugar: true, lowSodium: true },
     price: 0.75 } 
   ];
-Calling onlyPayForHealthyThings(myCart) should return 2.85 from adding the prices of "carrots", "apples", and "avocados"
-*/
+console.log(onlyPayForHealthyThings(myCart))// should return 2.85 from adding the prices of "carrots", "apples", and "avocados"
+// i hope you see my solution even if i am late for doing it 
