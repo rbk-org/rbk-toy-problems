@@ -82,12 +82,12 @@ function gcd ( num1,num2,num22=num2){
 // Write a function called sum that accepts two numbers as parameters, and sum them together but without suming them 
 // togther directly
 //you can only add one at each summation, you'll need to use recursion in this.
- function sum  (num1, num2,x=0,){
- 	if(num2 < x)
- 		return 0
-
+ function sum  (num1, num2, x=0){
+ 	if(num2 <= x)
+ 		return num1
+  x = x + 1
  	num1 += 1
 
- 	return sum(num1,num2) + num1
+ 	return sum(num1,num2,x)
  }
 
