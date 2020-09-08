@@ -1,13 +1,21 @@
-/*
-Write a function  called favoriteDessert that takes no paremeters
-and returns an object with 3 key-value pairs.
-The names of each property and their respective values are up to you, 
-but the values cannot be undefined. How would you describe your favorite dessert?
 
-For example, one could return an object such as:
+// Write a function  called favoriteDessert that takes no paremeters
+// and returns an object with 3 key-value pairs.
+// The names of each property and their respective values are up to you, 
+// but the values cannot be undefined. How would you describe your favorite dessert?
 
-{ name: "Flan", ovenTemp: 350, prepTime: "25 minutes + 50 minutes chilling" }
-Another example could be:
+// For example, one could return an object such as:
 
-{ name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
-*/
+// { name: "Flan", ovenTemp: 350, prepTime: "25 minutes + 50 minutes chilling" }
+// Another example could be:
+
+// { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
+
+function favoriteDessert(){
+	return {
+		name : 'kunnafa',
+		shop:'alaqsa-dessert',
+		price : '30 nis per 1 kello'
+
+	}
+}
