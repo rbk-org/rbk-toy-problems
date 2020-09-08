@@ -1,5 +1,6 @@
 //1.Write a function called sameLength that takes two strings as parmeters, 
 //and returns true if those strings have the same length, and false otherwise.
+
 function sameLength(string1,string2){
 	if(string1.length===string2.length){
 		return true
@@ -11,16 +12,22 @@ function passwordLongEnough(password){
 	if(password.length>8){
 		return true
 	}
+
 }
 //3.Write a function called rentalCar that takes a person's name and age as parmeters, 
 //and returns either 'You cannot have the keys, .', or "Have fun driving", 
 // depending on whether or not the person is old enough. 
 //In the US, most rental car companies do not allow you to rent a car until you are 21.
-function rentalCar(name,age){
-	if(age>18){
-		return("have fun driving")
-	}return("you cannot have the keys")
+
+function rentalCar(personsname, age){
+	var c=personsname
+	var i=age
+	if (i>=21){ return c && "Have fun driving"}
+		else if (i<21){return  (c &&'You cannot have the keys')}
+
 }
+
+
 // 4.Write a function called max that takes two numbers as parameters, 
 //and returns the larger one.
 function max(num1,num2){
