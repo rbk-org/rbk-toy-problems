@@ -10,4 +10,19 @@ For example, one could return an object such as:
 Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
+
 */
+function favoriteDessert(){
+
+
+
+return {
+	     name :"Gelato",
+         countryOfOrigin :"Italy",
+         flavor:"Chocolate Chip",
+
+}
+
+}
+
+favoriteDessert()

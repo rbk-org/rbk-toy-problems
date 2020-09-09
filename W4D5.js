@@ -18,17 +18,18 @@ Would return:
 ["Ben Bitdiddle: August 19, 1984", "Lem Tweakit: August 11, 1989"]
 
 */
-
-function getPeopleBornIn(array,string){
-var arr =[]
-for(var i = 0 ; i < array.length ; i++){
-	if(array[i].birthday.month === 'string'){
-		return array[i].name + " Bitdiddle: " + 
-		
+function getPeopleBornIn(array, month) {
+	var arr= []
+	for (var i = 0; i < arr.length; i++) {
+		if (array[i]['birthDay']['month'] === month) {
+			arr.push(array[i]['name']['first'] + ' ' + array[i]['name']['last'] + ': ' + array[i]['birthDay']['month'] + ' ' + array[i]['birthDay']['day'] + ', ' + array[i]['birthDay']['year'])
+		}
 	}
+	return arr
 }
+console.log(getPeopleBornIn(staff, 'August'))
 
-}
+
 var staff = [
   {name: {first: "Alyssa", last: "Hacker"}, birthDay: {month: "June", day: 5, year: 1987}},
   {name: {first: "Ben", last: "Bitdiddle"}, birthDay: {month: "August", day: 19, year: 1984}},
