@@ -28,3 +28,10 @@ function getPeopleBornIn(array,month){
   return res
 }
 
+function getPeopleBornIn(array,month){
+  return array.filter(element=>{
+    return element['birthDay']['month']===month
+  } )
+}
+
+
