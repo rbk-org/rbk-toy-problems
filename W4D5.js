@@ -18,4 +18,14 @@ Would return:
 ["Ben Bitdiddle: August 19, 1984", "Lem Tweakit: August 11, 1989"]
 
 */
+function getPeopleBornIn(array , string){
+	var str = '';
+	var newarray = [];
+	for(var i = 0 ; i < array.length ; i++){
+		if(array[i]['birthDay']['month'] === string){
+            newarray.push(array[i]['name']['first']+' '+array[i]['name']['last'] + ' : '+ array[i]['birthDay']['month']+' '+array[i]['birthDay']['day']+', ' +array[i]['birthDay']['year']);
+		}
+	} 
+  return newarray;
+}
 
