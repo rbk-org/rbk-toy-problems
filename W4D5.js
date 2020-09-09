@@ -1,9 +1,3 @@
-/*
-1-Write a function called getPeopleBornIn that takes an array and string month,
-and returns a new array of people and their birthday information who were all born in the given month.
-
-A sample input array would look like:
-
 var staff = [
   {name: {first: "Alyssa", last: "Hacker"}, birthDay: {month: "June", day: 5, year: 1987}},
   {name: {first: "Ben", last: "Bitdiddle"}, birthDay: {month: "August", day: 19, year: 1984}},
@@ -11,11 +5,15 @@ var staff = [
   {name: {first: "Lem", last: "Tweakit"}, birthDay: {month: "August", day: 11, year: 1989}},
   {name: {first: "Louis", last: "Reasoner"}, birthDay: {month: "November", day: 17, year: 1992}}
 ];
-A call to your function getPeopleBornIn(staff, 'August');
 
-Would return:
+function  getPeopleBornIn (array,months){
+  var arr=[];
+  for(var i=0; i<array.length; i++){
+    if(array[i]['birthDay'].month === months ){
+      arr.push(months[i]);
+    }
+  }
+  return arr;
+}
 
-["Ben Bitdiddle: August 19, 1984", "Lem Tweakit: August 11, 1989"]
-
-*/
-
+getPeopleBornIn(staff, 'August')
