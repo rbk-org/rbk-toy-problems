@@ -36,6 +36,16 @@ I.e. If someone called your function with 10 objects
 */
 
 // your answer is here
+function tallEnoughToRide(arrayOfObj){
+  arrName=[];
+  for(var i=0; i<arrayOfObj.length; i++){
+    if (arrayOfObj[i].heightInInches >= 48){
+      arrName.push(arrayOfObj[i].name);
+    }
+  }
+  return arrName; 
+}
+tallEnoughToRide(groupA);
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
@@ -51,3 +61,16 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 */
 
 // your answer is here
+function tallestPerson(array){
+  arrTall=array[0].heightInInches;
+  //console.log  (arrTall); 
+  for(var i=1; i<array.length; i++){
+    if (arrTall < array[i].heightInInches){
+      arrTall=[];
+      arrTall.push(array[i].name);
+      arrTall.push(array[i].heightInInches);
+    }
+  }
+  return arrTall[0]+" at "+arrTall[1];
+}
+tallestPerson(groupA);
