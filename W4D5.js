@@ -1,8 +1,7 @@
-/*
-1-Write a function called getPeopleBornIn that takes an array and string month,
-and returns a new array of people and their birthday information who were all born in the given month.
+// 1-Write a function called getPeopleBornIn that takes an array and string month,
+// and returns a new array of people and their birthday information who were all born in the given month.
 
-A sample input array would look like:
+// A sample input array would look like:
 
 var staff = [
   {name: {first: "Alyssa", last: "Hacker"}, birthDay: {month: "June", day: 5, year: 1987}},
@@ -11,11 +10,38 @@ var staff = [
   {name: {first: "Lem", last: "Tweakit"}, birthDay: {month: "August", day: 11, year: 1989}},
   {name: {first: "Louis", last: "Reasoner"}, birthDay: {month: "November", day: 17, year: 1992}}
 ];
-A call to your function getPeopleBornIn(staff, 'August');
+// A call to your function getPeopleBornIn(staff, 'August');
 
-Would return:
 
-["Ben Bitdiddle: August 19, 1984", "Lem Tweakit: August 11, 1989"]
+// Would return:
 
-*/
+// ["Ben Bitdiddle: August 19, 1984", "Lem Tweakit: August 11, 1989"]
 
+function each(coll,f){
+  if(Array.isArray(coll)){
+    for(var i=0; i< coll.length ; i++){
+      f(coll[i],i);
+
+    }
+  }else {
+    for(var key in coll){
+      f(coll[key],key);
+    }
+  }
+}
+function filter(array, predicate) {
+ var acc = [];
+ each(array,function(element){
+   if(predicate(element)){
+     acc.push(element)
+   }
+ });
+ return acc;
+}
+
+
+function getPeopleBornIn(array,month){
+
+ return filter(array,function(month)
+    array[i]["month"]
+}	
