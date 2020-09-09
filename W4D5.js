@@ -22,6 +22,6 @@ Would return:
 function getPeopleBornIn(array, month){
 	var x=[]
 	for(var i=0;i<array.length;i++){
-	if(array[i]['birthDay']['month']===month){x.push(array[i])}}
+	if(array[i]['birthDay']['month']===month){x.push(array[i]['name']['first']+" "+array[i]['name']['last']+": "+array[i]['birthDay']['month']+" "+array[i]['birthDay']['day']+", "+array[i]['birthDay']['year'])}}
 return x
 }
