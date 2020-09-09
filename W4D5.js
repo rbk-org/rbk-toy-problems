@@ -19,3 +19,14 @@ Would return:
 
 */
 
+function getPeopleBornIn(staff, str){
+	birth = [];
+	for (var i = 0; i < staff.length; i++){
+		if ( staff[i]["birthday"]["month"] === str){ 
+			birth.push(staff[i]["birthday"]["month"]);
+          }
+		}
+     return birth;
+	}
+	
+	getPeopleBornIn(staff, 'August');
