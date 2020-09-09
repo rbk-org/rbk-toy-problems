@@ -3,7 +3,7 @@
 and returns a new array of people and their birthday information who were all born in the given month.
 
 A sample input array would look like:
-
+*/
 var staff = [
   {name: {first: "Alyssa", last: "Hacker"}, birthDay: {month: "June", day: 5, year: 1987}},
   {name: {first: "Ben", last: "Bitdiddle"}, birthDay: {month: "August", day: 19, year: 1984}},
@@ -11,6 +11,9 @@ var staff = [
   {name: {first: "Lem", last: "Tweakit"}, birthDay: {month: "August", day: 11, year: 1989}},
   {name: {first: "Louis", last: "Reasoner"}, birthDay: {month: "November", day: 17, year: 1992}}
 ];
+
+
+/*
 A call to your function getPeopleBornIn(staff, 'August');
 
 Would return:
@@ -18,4 +21,75 @@ Would return:
 ["Ben Bitdiddle: August 19, 1984", "Lem Tweakit: August 11, 1989"]
 
 */
+
+// function each(coll, fun)
+// {
+	
+	// if(Array.isArray(coll))
+	// {
+		// for(i = 0; i < coll.length; i++)
+		// {
+			// fun(coll[i],i)
+		// }
+	// }else 
+	// {
+		// for(var key in coll)
+		// {
+			// fun(coll[key],key)
+		// }
+	// }
+// }
+
+// function map(coll, fun)
+// {
+	// var acc = []
+	
+	// if(Array.isArray(coll))
+	// {
+		 // each(coll,function(element, i)
+		// {
+			// acc.push(fun(element,i))
+		// })
+	// }else
+	// {
+		// acc = {}
+		 // each(coll, function(element, key)
+		// {
+			// acc[key] = fun(element,key)
+		// })
+	// }
+	// return acc		
+// }
+
+// function filter(coll, predicate)
+// {
+	// var acc = []
+	
+	// if(Array.isArray(coll))
+	// {
+		 // each(coll,function(element, i)
+		// {
+			// if(predicate(element))
+			// {
+				// acc.push(element)
+			// }
+		// })
+	// }
+	// return acc		
+// }
+
+
+function getPeopleBornIn(arr, str)
+{
+	var res = []
+	for(i = 0; i< arr.length; i++)
+	{
+		if(arr[i].birthDay.month === str)
+		{
+			res.push(`${arr[i].name.first} ${arr[i].name.last} : ${arr[i].birthDay.month} ${arr[i].birthDay.day}, ${arr[i].birthDay.year}`) 
+		}
+	}
+	return res
+}
+
 
