@@ -7,8 +7,6 @@ Your function should add the prices of all the items in the array if the item is
 
 Finally, your function should return the sum total of all the healthy items
 
-function onlyPayForHealthyThings(foodList) {
-
 }
 var myCart = [ 
   { name: 'chips',
@@ -30,5 +28,10 @@ var myCart = [
     nutritionalValue: { lowSugar: true, lowSodium: true },
     price: 0.75 } 
   ];
+
 Calling onlyPayForHealthyThings(myCart) should return 2.85 from adding the prices of "carrots", "apples", and "avocados"
 */
+
+
+
+

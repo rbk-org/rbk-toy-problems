@@ -3,7 +3,7 @@
 and returns a an array of names of people who are greater than or equal to 48 inches in height.
 
 You can assume an input which looks like this:
-
+*/
 var groupA = [
   {
     name: "Mia",
@@ -26,6 +26,7 @@ var groupA = [
     heightInInches: 48
   }
 ]
+/*
 Calling your function should result in:
 tallEnoughToRide(groupA); //["Mia", "Kiana", "Alex"];
 
@@ -34,9 +35,16 @@ not a global variable or only the specific example above.
 I.e. If someone called your function with 10 objects 
 (with all safely have the same properties), it should work just as well.
 */
-
-// your answer is here
-
+function tallEnoughToRide(arr) {
+  var names = []
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i].heightInInches >= 48) {
+      names.push(arr[i].name)
+    }
+  }
+  return names
+}
+console.log(tallEnoughToRide(groupA))
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
 write a function called tallestPerson that takes  an array of people objects as well, 
@@ -49,5 +57,13 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 
 */
-
-// your answer is here
+function tallestPerson(arr) {
+  var tall = arr[0]
+  for (var i = 1; i < arr.length; i++) {
+    if (arr[i].heightInInches > tall.heightInInches) {
+      tall = arr[i]
+    }
+  }
+  return tall.name + ' at ' + tall.heightInInches + ' inches'
+}
+console.log(tallestPerson(groupA))

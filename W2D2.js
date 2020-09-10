@@ -1,12 +1,29 @@
 // 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
-console.log((13+14+13+15+16+17+19+13+16+15)/10)
+
+function average(arr){
+	var sum = 0
+	for (var i = 0; i < arr.length; i++) {
+		sum += arr[i]
+	} return sum / i
+}
+console.log(average([13,14,13,15,16,17,19,13,16,15])) // result = 15.1
+
 // 2-using the console calculate your age in seconds.
-console.log(21 * 31556952)
+function yearsToSeconds(age) {
+	return age * 525600 * 60
+}
+console.log(yearsToSeconds(21)) // result = 662256000
+
 
 // 3- Write a function identity that takes one parameter and returns that input value.
 // Calling your function should result in:
 // identity("hello world");  ==> "hello world"
 // identity(500);  ==> 500
+function identity(param) {
+	return param
+}
+console.log(identity("hello world"))
+console.log(identity(500))
 
 function identity(input) {
 	// returns input
@@ -23,14 +40,17 @@ console.log(identity('hello world'))
 // convertTo('cm', 100);  ==> 254
 // convertTo('in', 50.8); ==> 20
 function convertTo(units, num) {
-	// check units input
+
   if (units === 'cm') {
-  	// if cm return num multipied by 2.54
-  	return num * 2.54
+  	num *= 2.54
+  } else {
+  	num /= 2.54
   }
-  // otherwise return the number divided by 2.54
-  return num / 2.54
+  return num
+
 }
+console.log(convertTo('cm', 100)) // result = 254
+console.log(convertTo('in', 50.8)) // result = 20
 
 //5- Write a function dogsIWouldPet that takes an item (string), 
 //and returns a sentence stating dogs you would pet in comparison to the item (see sample call below).
@@ -52,12 +72,32 @@ function dogsIWouldPet(pet) {
 console.log(dogsIWouldPet('rami'))
 console.log(dogsIWouldPet('i do not like dogs'))
 
-// 6- Write a function convertToKilometers that takes a number of miles passed in as parameter, 
+
+function dogsIWouldPet(input) {
+	if (input === 'I do not like dogs') {
+		return 'I would not pet dogs'
+	}
+	return 'I would pet dogs no bigger than an ' + input
+}
+console.log(dogsIWouldPet('ottoman'))
+
+// 5- Write a function convertToKilometers that takes a number of miles passed in as parameter, 
+
 // and returns that number multiplied by 1.60934 (an accepted approximation of 1 mile in kilometers).
 // Calling your function should result in:
 // convertToKilometers(50);   ==> 80.467
 // convertToKilometers(361);  ==> 580.973
+
 function convertToKilometers(mile) {
 	//convert miles to km and return it.
 	return mile * 1.60934;
 }
+
+function convertToKilometers(miles) {
+	return miles * 1.60934
+}
+console.log(convertToKilometers(50)) // result = 80.467
+console.log(convertToKilometers(361)) // result = 580.97174
+
+
+
