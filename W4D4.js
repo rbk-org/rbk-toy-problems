@@ -15,6 +15,16 @@ myFavoriteSong(); //{title: "Countdown", artist: "Beyonce", durationInSeconds: 2
 
 */
 
+function myFavoriteSong(){
+	return{
+		title: "ya nabi salam alayka" ,
+		artist: "Maher Zain" ,
+		durationInSeconds: 300
+	} ;
+} 
+
+myFavoriteSong()
+
 /*
 2-Write a function called nextTwoBusTimes that takes an array of numbers representing (in minutes) 
 when the busses come for the day. 
@@ -29,6 +39,18 @@ var bus10Schedule = [12, 24, 35, 47, 60];
 nextTwoBusTimes(bus10Schedule); //"The next 2 busses arrive in 12 and 24 minutes."
 */
 
+function nextTwoBusTimes(timesArr) {
+
+	for( var i =0 ; i < timesArr.length ; i++ ){
+		return "The next 2 busses arrive in " + timesArr[i] + " and " + timesArr[i+1] + " minutes."
+		timesArr.splice(0,1)
+		i--
+
+	}
+}
+
+var bus10Schedule = [12, 24, 35, 47, 60];
+nextTwoBusTimes(bus10Schedule )
 
 /*
 
@@ -44,5 +66,15 @@ Calling your function should result in something like:
 var bus10Schedule = [12, 24, 35, 47, 60];
 nextAndLastBusTimes(bus10Schedule); //"The next bus is in 12 minutes. The last bus is in 60 minutes.
 */
+function nextTwoBusTimes(timesArr) {
+
+	for( var i =0 ; i < timesArr.length ; i++ ){
+		return "The next bus is in " + timesArr[i] + " minutes. The last bus is in " + timesArr[timesArr.length - 1] + " minutes."
+		
+	}
+}
+
+var bus10Schedule = [12, 24, 35, 47, 60];
+nextTwoBusTimes(bus10Schedule )
 
 
