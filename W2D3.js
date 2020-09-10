@@ -9,6 +9,17 @@ function isTallEnough(num) {
 isTallEnough(72); //true
 isTallEnough(28); //false
 
+function isTallEnough(num) {
+	//check number
+	if (num > 48) {
+		//if it is larger than 48 return true
+		return true;
+	}
+     //otherwise return false
+	 return false;
+}
+console.log(isTallEnough(72))
+console.log(isTallEnough(28))
 
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).
@@ -31,7 +42,25 @@ function isGoodFreethrowShooter(percent) {
 	}
 }
 // Calling your function should result in:
+function isGoodFreethrowShooter(per) {
+	//if number is out of range 
+	//return wrong input
+	if (per >= 1 && per < 0) {
+		return 'Out of Range';
+	}
+	//if number is between (0 - 0.65) return "Horrible freethrow shooter"
+	else if (per < 0.65) {
+		return "Horrible freethrow shooter";
+	}
+	//if number is between (0.65- 0.8) return "Decent freethrow shooter"
+	else if (per < 0.8) {
+		return "Decent freethrow shooter";
+	}
+	//if number is between (0.8- 1) return "Great freethrow shooter"
+	else return "Great freethrow shooter"
+}
 
-isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
-isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
-isGoodFreethrowShooter(0.75); //"Decent freethrow shooter"
+
+console.log(isGoodFreethrowShooter(0.90)); //"Great freethrow shooter"
+console.log(isGoodFreethrowShooter(0.09)); //"Horrible freethrow shooter"
+console.log(isGoodFreethrowShooter(0.75)); //"Decent freethrow shooter"

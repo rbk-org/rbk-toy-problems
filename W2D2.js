@@ -1,4 +1,5 @@
 // 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
+
 function average(arr){
 	var sum = 0
 	for (var i = 0; i < arr.length; i++) {
@@ -13,6 +14,7 @@ function yearsToSeconds(age) {
 }
 console.log(yearsToSeconds(21)) // result = 662256000
 
+
 // 3- Write a function identity that takes one parameter and returns that input value.
 // Calling your function should result in:
 // identity("hello world");  ==> "hello world"
@@ -23,25 +25,34 @@ function identity(param) {
 console.log(identity("hello world"))
 console.log(identity(500))
 
+function identity(input) {
+	// returns input
+	return input
+}
+console.log('\n')
+console.log(identity(500))
+console.log(identity('hello world'))
+
 // 4- Write a function convertTo that takes  a string and a number as parameters.
 // If the string input is "cm", then the function should convert the 2nd argument into centimeters by multiplying it to 2.54 and returning that value.
 // If the string input is "in", then the function should convert the 2nd argument into inches by dividing it by 2.54.
 // Calling your function should result in something like:
 // convertTo('cm', 100);  ==> 254
 // convertTo('in', 50.8); ==> 20
-
 function convertTo(units, num) {
+
   if (units === 'cm') {
   	num *= 2.54
   } else {
   	num /= 2.54
   }
   return num
+
 }
 console.log(convertTo('cm', 100)) // result = 254
 console.log(convertTo('in', 50.8)) // result = 20
 
-//4- Write a function dogsIWouldPet that takes an item (string), 
+//5- Write a function dogsIWouldPet that takes an item (string), 
 //and returns a sentence stating dogs you would pet in comparison to the item (see sample call below).
 // Calling your function should result in:
 // dogsIWouldPet("ottoman"); //"I would pet dogs no bigger than an ottoman"
@@ -49,6 +60,18 @@ console.log(convertTo('in', 50.8)) // result = 20
 // dogsIWouldPet("Terrier"); //"I would pet dogs no bigger than an Terrier"
 // Bonus (extra): If your function were passed in a string "I do not like dogs", 
 //you can have your function return "I would not pet dogs".
+function dogsIWouldPet(pet) {
+	// check if user likes dogs or not
+	if (pet = 'i do not like dogs') {
+		// return special case if he doesn't
+		return "I would not pet dogs"
+	}
+	// return statement
+	return "I would pet dogs no bigger than an " + pet
+}
+console.log(dogsIWouldPet('rami'))
+console.log(dogsIWouldPet('i do not like dogs'))
+
 
 function dogsIWouldPet(input) {
 	if (input === 'I do not like dogs') {
@@ -59,14 +82,22 @@ function dogsIWouldPet(input) {
 console.log(dogsIWouldPet('ottoman'))
 
 // 5- Write a function convertToKilometers that takes a number of miles passed in as parameter, 
+
 // and returns that number multiplied by 1.60934 (an accepted approximation of 1 mile in kilometers).
 // Calling your function should result in:
 // convertToKilometers(50);   ==> 80.467
 // convertToKilometers(361);  ==> 580.973
+
+function convertToKilometers(mile) {
+	//convert miles to km and return it.
+	return mile * 1.60934;
+}
+
 function convertToKilometers(miles) {
 	return miles * 1.60934
 }
 console.log(convertToKilometers(50)) // result = 80.467
 console.log(convertToKilometers(361)) // result = 580.97174
+
 
 
