@@ -11,6 +11,7 @@ Notes:
 You cannot spend more than your budget ($100).
 You have enough room for all the items (if you end up buying everything), 
 so there's no item limit -- your only limit is your budget.
+
 The list is mentioned to be in "decreasing priority" simply because you do not have to sort the input array to optimize for anything else.
  So do not worry about coming up with any other sorting algorithm for the most "bang for your buck" or what not :-)
 Take for example the data below:
@@ -47,10 +48,43 @@ var shoppingList = [
     weightInPounds: 2
   }
 ];
+
 Calling your function should result in:
 
 shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
+
+
+//Calling your function should result in:
+
+//shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+	 sum=0;
+function shoppingSummary(item){
+
+	var count=0;
+		for(var i=0;i<shoppingList.length;i++){
+			
+		if(shoppingList[i].hasOwnProperty('sold')) count++;
+	}
+
+	for(var i=0;i<shoppingList.length;i++){
+		if(typeof(item)==='string' && shoppingList[i].item===item ){ 
+			if(shoppingList[i].hasOwnProperty('sold')) return "you already buy \""+ item+"\" ";
+			shoppingList[i]['sold']=true; count++; 
+			sum+=shoppingList[i].price;
+			if(sum>100) return "you don't have enough money to buy any more , you have just: "+(100-sum+shoppingList[i].price)
+		}
+
+	}
+	return "I got "+count+ "items at "+sum;
+}
+
+console.log(shoppingSummary("green beans"));
+console.log(shoppingSummary("green beans"));
+console.log(shoppingSummary("carrots"));
+console.log(shoppingSummary("cookware"));
+ console.log(shoppingSummary("chicken"));
+console.log(shoppingSummary("rice"));
 
 
 /*
@@ -63,7 +97,11 @@ Your function should preserve the order of the items in this array.
 removeMostExpensive(shoppingList);
 Would return a new array with the following elements:
 
+
 [
+
+list=[
+
   {
     item: "rice",
     price: 12.75,
@@ -92,7 +130,7 @@ Would return a new array with the following elements:
 ];
 //notice that the element with "cookware" is missing
 
-/*
 
 
 // your answer is here
+

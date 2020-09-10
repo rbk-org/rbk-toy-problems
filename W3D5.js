@@ -1,4 +1,4 @@
--/*
+
 You were put in charge of ordering for tonight's company get-together, 
 and you were given a data set with people's meal preferences and dietary restrictions. 
 Write a function called orderAVegetarianDish that takes  an array of empoloyee objects, 
@@ -31,9 +31,22 @@ var staffA = [
     mealPreferences: "non-vegetarian"
   }
 ];
-Calling your function should result in:
 
-orderAVegetarianDish(staffA); //true
-*/
+//Calling your function should result in:
 
-// your answer is here 
+
+
+function orderAVegetarianDish(staff){
+	//console.log(staff)
+	if(!Array.isArray(staff)) return "Not an Array";
+	for(var i=0;i<staff.length;i++){
+		if(typeof(staff[i])==='object' && !Array.isArray(staff[i])){
+			//console.log("kk",staff[i])
+			if(typeof(staff[i].mealPreferences)==='string' && staff[i]['mealPreferences']==="vegetarian"){
+				return true;
+			} 
+		}
+	}
+
+}
+console.log(orderAVegetarianDish(staffA))

@@ -10,4 +10,23 @@ For example, one could return an object such as:
 Another example could be:
 
 { name: "Gelato", countryOfOrigin: "Italy", flavor: "Chocolate Chip" }
+
 */
+function favoriteDessert()
+{
+  var obj=new Object();
+  return{
+          add:function(a,b)
+          {
+              obj[a]=b;
+             console.log(obj)
+             return obj;
+          }
+  }
+}
+
+var person=favoriteDessert();
+sufyan=person.add("name","sufyan");
+sufyan=person.add("age","37");
+sufyan=person.add("degree","CIS");
+console.log(sufyan);
