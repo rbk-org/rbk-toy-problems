@@ -1,3 +1,4 @@
+
 /*
 1-Write a function called loopAString that takes one parameter, a string of characters, 
 and logs all of its characters (one at a time) to the console. 
@@ -68,3 +69,4 @@ function reverseStrRecursive(s){
   return reverseStrRecursive(s.substr(0,s.length-1))
 }
 loopAStringRecursive("nodeJS");
+

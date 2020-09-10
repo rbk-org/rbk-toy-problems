@@ -1,3 +1,4 @@
+
 /*
 1- Write a function called countNumOfStrings that takes an array of
 mixed elements (different data types)
@@ -59,3 +60,4 @@ s[0]=s[0].split('');
 
 }
 console.log(flipPairs('check out how interesting this problem is, it\'s insanely interesting!'));
+

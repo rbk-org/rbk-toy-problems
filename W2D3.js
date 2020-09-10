@@ -1,6 +1,7 @@
 //1- Write a function isTallEnough that takes a height (number) in inches, 
 //and returns true if the input is greater than or equal to 48, and false if it's less than 48 inches.
 //Calling your function should result in:
+
 console.log(isTallEnough(true)); //true
 console.log(isTallEnough(28)); //false
 
@@ -12,6 +13,7 @@ function isTallEnough(n){
 			else return false
 			}
 }
+
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).
 //and returns based on the following criteria:
@@ -25,6 +27,7 @@ function isTallEnough(n){
 //(this is what the original problem statement means by "exclusive of 1").
 
 // Calling your function should result in:
+
 function isGoodFreethrowShooter(n){
 	if(typeof(n)==='number'){
 		if(n>0 && n<1){
@@ -40,3 +43,4 @@ else return "it is not a number"
 console.log(isGoodFreethrowShooter(0.90)); //"Great freethrow shooter"
 console.log(isGoodFreethrowShooter(0.09)); //"Horrible freethrow shooter"
 console.log(isGoodFreethrowShooter(0.75)); //"Decent freethrow shooter"
+

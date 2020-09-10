@@ -1,3 +1,4 @@
+
 /*
 1-Write a function called tallEnoughToRide  that takes an array of people objects, 
 and returns a an array of names of people who are greater than or equal to 48 inches in height.
@@ -80,4 +81,4 @@ function tallestPerson(groupA){
   }
   return groupA[maxIndex].name + " at "+ groupA[maxIndex].heightInInches +" inches"
 }
-console.log(tallestPerson(groupA));
+

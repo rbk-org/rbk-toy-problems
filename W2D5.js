@@ -29,6 +29,7 @@ and you invoke the function with your guess -- if you and the function are think
  If you were asked to change the upper bound to some other number (e.g. 7), you should only have to make one change. 
  Modify guessMyNumber so that if the guess is incorrect, guessMyNumber includes the correct guess in its output, 
   e.g. 'Nope! The correct number was: X' (where X would have been the correct number).
+
  */
   function guessMyNumber(n,upperBound) { 
  var num=randInt(upperBound);
@@ -89,9 +90,11 @@ var count=0
  /*
  Tangential Problem: What happens if you get the number right on the first try? Does it say, 
  'You guessed my number in 1 guesses.'? 
+
  If so, perhaps the wording should be different? Some better ideas are: 
        'You guessed my number in 1 guess.', 
        'Congratulations! You guessed my number on the first try!'
+
 
 4.Implement a way to limit the number of guesses that can be made so that a player loses after 
 exceeding the limit.
@@ -178,6 +181,7 @@ else return "you are far by  "+ n- num+" steps above" ;
 /*
 .All of the following exercises involve augmenting the guessMyNumber function.
 /**/
+
 
 // Your code is here
 

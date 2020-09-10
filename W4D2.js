@@ -8,6 +8,7 @@
 // 	-write a function called displayFriend that takes a mate as an argument and returns the important information in a readable way.
 // 	-write a function called addFriend that takes a mate as an argument and add it to you classMates arraya.
 // 	-calculate the number of male friends that your class have by writing a function called nbOfMale.
+
 var arrStudent=[]; count=1;
 function counter(){
 	return count++;
@@ -95,6 +96,7 @@ var nbOfMale=function (id){
 
 }
 console.log(nbOfMale(1));
+
 //Part2:
 // Using recursion Write a JavaScript function to find the greatest common divisor (gcd) of two positive numbers.
 // Write a function called sum that accepts two numbers as parameters, and sum them together but without suming them togther directly
