@@ -3,7 +3,12 @@
 //Calling your function should result in:
 isTallEnough(72); //true
 isTallEnough(28); //false
+function isTallEnough(num){
+if(num>=48){
+	return true;
+}else return false;
 
+}
 
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).
@@ -22,3 +27,14 @@ isTallEnough(28); //false
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
 isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
 isGoodFreethrowShooter(0.75); //"Decent freethrow shooter"
+function isGoodFreethrowShooter(num){
+	if(num>=0&&num<0.65){
+		return "Horrible freethrow shooter";
+	}else if(num>=0.65&&num<0.8){
+		return "Decent freethrow shooter";
+	}else if(num>=0.8&&num<1){
+		return "Great freethrow shooter";
+	}
+
+
+}

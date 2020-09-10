@@ -28,9 +28,10 @@ and you invoke the function with your guess -- if you and the function are think
  Create a variable called upperBound to hold the upper bound, and then reference it instead of the number 5. 
  If you were asked to change the upper bound to some other number (e.g. 7), you should only have to make one change. 
  Modify guessMyNumber so that if the guess is incorrect, guessMyNumber includes the correct guess in its output, 
-  e.g. 'Nope! The correct number was: X' (where X would have been the correct number).
+  e.g. 'Nope! The correct number was: X' (where X would have been the correct number).*/
+
  
-2. At present, the guessing game picks a new random number every time it is 'played' (invoked). 
+/*2. At present, the guessing game picks a new random number every time it is 'played' (invoked). 
 Now that you know how to make information persistent between function invocations, 
 change the guessing game so that it picks a random number once and allows you to guess until you get the correct answer.
 
@@ -55,9 +56,48 @@ include in the message something that indicates that a new high score has been s
 You may want to increase the upperBound on the guess.
 
 .All of the following exercises involve augmenting the guessMyNumber function.
-/*
+*/
 
 // Your code is here
+  var upperBound=6;
+    var x=randInt(upperBound);
+    var i=1
+  function guessMyNumber(n) { 
+  	var h=0;
+  	for (i;i<=10;i++)
+  	{
+ 
+         if (n > upperBound) {
+         return 'Out of bounds! Please try a number between 0 and '+upperBound; 
+ } else if (n === x) { 
+ 	if(i===1)
+{
+	return 'Congratulations! You guessed my number on the first try!';
+}
+ else return 'You guessed my number in '+i+' guesses.'; 
+ h++;
+ upperBound++;
+ } 
+ else {
+ 	if(n>=upperBound/2)
+ 	{
+ 	return "Nope! That wasn't it! you are too close to the answer it's "+x; 
+ } else {"Nope! That wasn't it! you are too far from the answer it's "+x
+
+ }
+
+upperBound--;
+
+}
+if(h===h+1){
+	return h+' New high score!!';
+ } 
+}
+
+}
+ function randInt(n) { 
+ return Math.floor(Math.random() * (n + 1)) 
+ }
 
 
 
