@@ -5,16 +5,24 @@ and you invoke the function with your guess -- if you and the function are think
  you win! Otherwise, the function informs you that your guess was incorrect. 
  A version of this game might look like this (the randInt function is included for convenience):
 */
- function guessMyNumber(n) { 
- if (n > 5) { 
- return 'Out of bounds! Please try a number between 0 and 5.'; 
- } else if (n === randInt(5)) { 
- return 'You guessed my number!'; 
- } 
- return "Nope! That wasn't it!"; 
+var upper =5 
+var rand =randInt(upper)
+var count = 0
+ function guessMyNumber(n) {
+
+	 if (n > upper) { 
+	 	return 'Out of bounds! Please try a number between 0 and 5.'; 
+	 } else if (n === rand) {
+	 	 var str = "You guessed my number!" + "after " +count; 
+		 rand = randInt(upper)
+	 	return  str
+	 } 
+	 count++
+	 return "Nope! That wasn't it! " + rand; 
  } 
  function randInt(n) { 
- return Math.floor(Math.random() * (n + 1)) 
+ 	count = 0
+ 	return Math.floor(Math.random() * (n + 1)) 
  }
  /*
  Read and test both of the functions in your console.
@@ -23,8 +31,9 @@ and you invoke the function with your guess -- if you and the function are think
  At present, the guess should be between 0 and 5. 
  We can think of 5 as the upper bound of the guess. 
  How many times is the upper bound repeated? 
+ one time
  What if we wanted to change the upper bound to 6? 
- How many changes would be required? 
+ How many changes would be required? 2
  Create a variable called upperBound to hold the upper bound, and then reference it instead of the number 5. 
  If you were asked to change the upper bound to some other number (e.g. 7), you should only have to make one change. 
  Modify guessMyNumber so that if the guess is incorrect, guessMyNumber includes the correct guess in its output, 
@@ -55,7 +64,7 @@ include in the message something that indicates that a new high score has been s
 You may want to increase the upperBound on the guess.
 
 .All of the following exercises involve augmenting the guessMyNumber function.
-/*
+*/
 
 // Your code is here
 
