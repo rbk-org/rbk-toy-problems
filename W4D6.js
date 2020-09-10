@@ -24,8 +24,18 @@ console.log(displayStudent(myClass[0]))
 console.log(displayStudent(myClass[2]))
 
 function sort(arr) {
-	// not today
-	
+	res = []
+	var j = 0
+	for (var i = 0; i < arr.length; i++) {
+		var pos = j
+		for (var e = 0; e < arr.length; e++) {
+			if (arr[i].age > arr[e].age) {
+				pos++
+			} 
+		} 
+		res[pos] = arr[i]
+	}
+	return res
 }
 console.log('\n')
 console.log(sort(myClass))
