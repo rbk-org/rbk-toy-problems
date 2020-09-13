@@ -40,4 +40,5 @@ function map(coll, fun) {
 		acc[key] = fun(value, key)
 	})
 	return acc
+	
 }
