@@ -32,3 +32,13 @@ var myCart = [
   ];
 Calling onlyPayForHealthyThings(myCart) should return 2.85 from adding the prices of "carrots", "apples", and "avocados"
 */
+
+function onlyPayForHealthyThings(array) {
+  var sum = 0
+  for (var i in array) {
+    if (array[i]['nutritionalValue']['lowSugar'] && array[i]['nutritionalValue']['lowSodium']) {
+      sum += array[i]['price']
+    }
+  }
+  return sum
+}

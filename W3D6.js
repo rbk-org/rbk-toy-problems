@@ -49,7 +49,10 @@ var shoppingList = [
 ];
 Calling your function should result in:
 
-shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+shoppingSummary(shoppingList); //"I got 3 items at $99.73"*/
+
+
+
 
 
 
@@ -92,7 +95,41 @@ Would return a new array with the following elements:
 ];
 //notice that the element with "cookware" is missing
 
-/*
+*/
 
 
 // your answer is here
+
+function shoppingSummary(array) {
+  var count = 0
+  var totalprice = 0.0
+  for (var i in array) {
+    if (totalprice > 100) {
+      count--
+      totalprice -= array[i - 1]['price']
+      return "I got " + count + " items at $" + totalprice
+    }
+    totalprice += array[i]['price']
+    count++
+  }
+  if (totalprice > 100) {
+    count--
+    totalprice -= array[array.length - 1]['price']
+  }
+  return "I got " + count + " items at $" + totalprice
+}
+
+
+function removeMostExpensive(array) {
+  var newarray = array.slice(0)
+  var max = array[0].price
+  var maxi = 0
+  for (var i in array) {
+    if (max < array[i].price) {
+      max = array[i].price
+      maxi = i
+    }
+  }
+  newarray.splice(maxi, 1)
+  return newarray
+}
