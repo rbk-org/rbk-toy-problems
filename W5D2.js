@@ -2,8 +2,18 @@
 1) implement the last version of each 
 */
 
-function each(coll, func) {
+function each(coll, f) {
  //write your code here  
+ if(Array.isArray(coll)){
+ 	for(var i=0; i<coll.length; i++){
+ 		f(coll[i],i)
+ 	}
+ }
+ else{
+ 	for (var key in coll){
+ 		f(coll[key],key)
+ 	}
+ }
 }
 	
 
@@ -13,7 +23,9 @@ function each(coll, func) {
 */
 	function map(array, f) {
 	  var acc = [];
-	  
+	  each(array,function(value,i){
+	  	acc.push(f(value,i))
+	  })
 	  return acc;
 	}
 
@@ -24,6 +36,11 @@ function each(coll, func) {
 
 function map(coll, f) {
 	var acc = [];
-	  
+	if(!Array.isArray(coll)){
+		acc={};
+	}
+	  each(coll,function(value,key){
+	  	acc[key]=f(value,key)
+	  })
 	 return acc;
 }
