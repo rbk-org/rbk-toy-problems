@@ -51,7 +51,3 @@ function CheckPassed(str){
        }
       }
 
-
-
-
-
