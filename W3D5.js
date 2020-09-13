@@ -1,9 +1,9 @@
--/*
+/*
 You were put in charge of ordering for tonight's company get-together, 
 and you were given a data set with people's meal preferences and dietary restrictions. 
 Write a function called orderAVegetarianDish that takes  an array of empoloyee objects, 
 and returns true if at least 1 person is listed "vegetarian" on their "mealPreferences". 
-Otherwise, your function should return false.
+Otherwise, your function should return false.*/
 
 var staffA = [
   {
@@ -31,9 +31,33 @@ var staffA = [
     mealPreferences: "non-vegetarian"
   }
 ];
-Calling your function should result in:
+//Calling your function should result in:
 
-orderAVegetarianDish(staffA); //true
-*/
+//orderAVegetarianDish(staffA); //true
+
 
 // your answer is here 
+function orderAVegetarianDish(){
+  for (var i=0; i<staffA.length; i++) {
+    for (j in staffA[i]) {
+      if (staffA[i]['mealPreferences'] === 'vegetarian') { return true; }
+      else { return false;}
+    }
+  }
+}
+console.log(orderAVegetarianDish())
+
+
+function OrderAVegetarianDish(arrayofpeople){
+  let obj={}
+  return obj;
+  obj.vegetarian=vegetarian;
+}
+function vegetarian(){
+for(let i =0;i<arrayofpeople.length;i++){
+  if(arrayofpeople[i].mealPreferences==='vegetarian'){return true}
+}
+ return false
+}
+
+var x=OrderAVegetarianDish(staffA)

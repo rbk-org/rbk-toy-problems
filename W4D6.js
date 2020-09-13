@@ -50,3 +50,4 @@ function CheckPassed(str){
 		return true;
        }
       }
+

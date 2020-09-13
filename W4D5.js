@@ -20,6 +20,7 @@ Would return:
 */
 
 
+
 function getPeopleBornIn(staff, str){
 	birth = [];
 	for (var i = 0; i < staff.length; i++){

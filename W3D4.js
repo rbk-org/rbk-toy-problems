@@ -36,7 +36,13 @@ I.e. If someone called your function with 10 objects
 */
 
 // your answer is here
-
+function tallEnoughToRide() {
+	var x=[];
+	for (var i=0; i<groupA.length; i++) {
+		for (var key in groupA[i] ) {
+			if (groupA['heightInInches']>= 48) { groupA.push(x[i]); }
+		}} return x;
+		}
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
 write a function called tallestPerson that takes  an array of people objects as well, 
@@ -51,3 +57,11 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 */
 
 // your answer is here
+function tallestPerson(){
+	for (var i=0; i<groupA.length; i++) {
+     for (var key in groupA[i] ) {
+     	if (groupA['heightInInches'] > groupA['heightInInches']){
+     		console.log(groupA['name']['heightInInches'])}
+    } } return ['name'] + 'at' + ' ' + ['heightInInches'] + 'inches';
+}
+     	
