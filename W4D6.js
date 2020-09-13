@@ -1,3 +1,4 @@
+
 //Create a function (class) called Student that return an object that contains the following properties:
 //Name, Date of Birth, Gender, Age
 //Create an array and fill it with 5 students
@@ -64,4 +65,5 @@ Student("Areej", "Sep 3 2003", "female", 17), Student("Yousof", "Jan 6 1996", "m
 info(studentsArray[0])
 sortByAge(studentsArray)
 meleOrFemale(studentsArray, "F")
+
 
