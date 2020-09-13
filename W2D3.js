@@ -36,6 +36,7 @@ function isGoodFreethrowShooter(n) {
 
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
 isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
+
 isGoodFreethrowShooter(0.75); //"Decent freethrow shooter"
 
 function deleteProperty(obj, key) {
@@ -63,4 +64,4 @@ var person2 = {
 console.log(person1.manager)
 obbj(person1, "manager", person2)
 
-
+isGoodFreethrowShooter(0.75); //"Decent freethrow shooter

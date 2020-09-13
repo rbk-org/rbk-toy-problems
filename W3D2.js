@@ -16,6 +16,7 @@ function countNumOfStrings(array) {
     }
     return count
 }
+
 //resolve using each
 function each(coll, f) {
     if (Array.isArray(coll)) {
@@ -53,6 +54,7 @@ function listLengthOfAllWords(array) {
     return arrlength
 }
 
+
 //resolve using each
 function listLengthOfAllWords(array) {
     var arrlength = []
@@ -62,6 +64,8 @@ function listLengthOfAllWords(array) {
     return arrlength
 }
 
+
+=======
 
 /*
 Write a function called flipPairs that takes a string a parameter
@@ -74,6 +78,7 @@ console.log(output); // --> hcce kuo toh wnietertsni ghtsip orlbmei
 ,si 't sniasenyli tnreseitgn!*/
 
 function flipPairs(str) {
+
     var flip = ''
     for (var i = 0; i < str.length - 1; i += 2) {
         flip += str[i + 1] + str[i]
@@ -96,3 +101,12 @@ function flipPairs(str, flip) {
     return flipPairs(str.slice(2), flip)
 
 }
+=======
+	var flip = ''
+	for (var i = 0; i < str.length-1; i+=2) {
+		flip+= str[i+1] + str[i]
+	}
+	
+	return flip
+}
+

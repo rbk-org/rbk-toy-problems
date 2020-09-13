@@ -56,6 +56,7 @@ function reverseStr(str) {
   return newstr
 }
 
+
 //using recursion
 //we declare a variable result to store the reversed string, when the string is empty we will return the result, 
 // otherwise we will pass the last letter of the string into the result string
@@ -68,5 +69,6 @@ function reverseStr(str, res){
    return reverseStr2(str.slice(0, -1), res)
 }
 reverseStr("str")
+
 
 
