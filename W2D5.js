@@ -59,12 +59,21 @@ You may want to increase the upperBound on the guess.
 */
 
 // Your code is here
+
   var upperBound=6;
     var x=randInt(upperBound);
     var i=1
   function guessMyNumber(n) { 
   	var h=0;
   	for (i;i<=10;i++)
+
+  function guessMyNumber(n) { 
+  	var upperBound=6;
+  	var x=randInt(upperBound);
+  	var h=0;
+  	var r=h;
+  	for (var i=1;i<=10;i++)
+
   	{
  
          if (n > upperBound) {
@@ -76,7 +85,11 @@ You may want to increase the upperBound on the guess.
 }
  else return 'You guessed my number in '+i+' guesses.'; 
  h++;
+
  upperBound++;
+
+ upperBound++:
+
  } 
  else {
  	if(n>=upperBound/2)
@@ -90,6 +103,7 @@ upperBound--;
 
 }
 if(h===h+1){
+if(h=r+1){
 	return h+' New high score!!';
  } 
 }

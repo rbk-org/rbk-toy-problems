@@ -1,5 +1,6 @@
-// 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
+
 console.log((13+14+15+16+17+19+13+16+15)/10);
+
 // 2-using the console calculate your age in seconds.
 var age =2020-2001;
 
@@ -23,7 +24,11 @@ function convertTo(units, num) {
 var result=1;
 if(units==='cm'){
 	result=num*2.54;
+
 }else result =num/2.54;
+
+}else result =numm/2.54;
+
 return result;
 
 }
