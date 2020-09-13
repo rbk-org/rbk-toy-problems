@@ -3,7 +3,16 @@
 */
 
 function each(coll, func) {
- //write your code here  
+	acc = []
+	if(Array.isArray(coll)) {
+		for(var i =0; i < coll.length; i++) {
+			func(coll[i],i)
+		}
+	} else {
+		for(var key in coll) {
+			func(coll[key], key)
+		}
+	}  
 }
 	
 
@@ -13,6 +22,9 @@ function each(coll, func) {
 */
 	function map(array, f) {
 	  var acc = [];
+	  each(array , function(ele , i){
+	  	acc.push(f(ele , i))
+	  })
 	  
 	  return acc;
 	}
@@ -24,6 +36,12 @@ function each(coll, func) {
 
 function map(coll, f) {
 	var acc = [];
+	if(!Array.isArray) {
+		acc = {}
+	}
+	each(coll , function(ele,i){
+		acc.push(f(ele, i))
+	})
 	  
 	 return acc;
 }
