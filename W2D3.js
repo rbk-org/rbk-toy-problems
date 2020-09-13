@@ -36,4 +36,32 @@ function isGoodFreethrowShooter(n) {
 
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
 isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
+
 isGoodFreethrowShooter(0.75); //"Decent freethrow shooter"
+
+function deleteProperty(obj, key) {
+    delete obj[key];
+}
+
+var myObject = {
+    animal: 'cat',
+    food: 'turkey',
+    age: 3
+}
+console.log(myObject.age)
+function obbj(object1, key, object2) {
+    object1[key] = object2
+
+}
+var person1 = {
+    name: 'Ahmad',
+    role: 'worker'
+}
+var person2 = {
+    name: 'Fadi',
+    role: 'Supervisor'
+}
+console.log(person1.manager)
+obbj(person1, "manager", person2)
+
+isGoodFreethrowShooter(0.75); //"Decent freethrow shooter

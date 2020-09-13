@@ -57,4 +57,18 @@ function reverseStr(str) {
 }
 
 
+//using recursion
+//we declare a variable result to store the reversed string, when the string is empty we will return the result, 
+// otherwise we will pass the last letter of the string into the result string
+function reverseStr(str, res){
+  var res =  res || ""
+  if (str.length === 0 ){
+    return res;
+  }
+  res += str[str.length - 1]
+   return reverseStr2(str.slice(0, -1), res)
+}
+reverseStr("str")
+
+
 
