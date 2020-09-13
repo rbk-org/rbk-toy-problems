@@ -18,7 +18,7 @@ function each(coll, func) {
 */
 	function map(array, f) {
 	  var acc = [];
-		if (!Array.isArray(coll)) {
+		if (!Array.isArray(array)) {
 		  acc = {}
 		}
 		each(array, function(element, i) {
