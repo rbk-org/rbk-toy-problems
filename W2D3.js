@@ -1,5 +1,6 @@
 //1- Write a function isTallEnough that takes a height (number) in inches, 
 //and returns true if the input is greater than or equal to 48, and false if it's less than 48 inches.
+
 //Calling your function should result in
 function isTallEnough(number)
 {
@@ -8,6 +9,17 @@ function isTallEnough(number)
 		return true
 	}
 	return false
+
+//Calling your function should result in:
+
+function isTallEnough(number){
+	if(number>=48){
+		return(true)
+	}else{
+		return(false)
+	}
+
+
 }
 isTallEnough(72); //true
 isTallEnough(28); //false
@@ -24,8 +36,29 @@ isTallEnough(28); //false
 //and 0.80 is considered a "Great freethrow shooter" (not "Decent freethrow shooter"). 
 //Additionally, you can get a number as high as 0.99, but never 1 
 //(this is what the original problem statement means by "exclusive of 1").
-
+function isGoodFreethrowShooter (number){
+	if(number>=0 && number<0.65){
+		return("Horrible freethrow shooter")
+	}else if(number>=0.65 && number<0.80){
+		return("Decent freethrow shooter")
+	}else if(number>=0.80 && number<1){
+		return("Great freethrow shooter")
+	}else {
+		return("error")
+	}
+}
 // Calling your function should result in:
+function isGoodFreethrowShooter(number ){
+	var result=''
+	var number =i
+	for (var i=0 ;0<=i && i<1 ;i++)
+	if (i>0 && i<0.65){result="Horrible freethrow shooter"}
+else if (i>=0.65 && i<0.80){result="Decent freethrow shooter"}
+else if (i>=0.80 && i<0.99){result="Great freethrow shooter"}
+    
+return result
+
+
 
 function isGoodFreethrowShooter(number)
 {
@@ -43,6 +76,9 @@ function isGoodFreethrowShooter(number)
 	}
 }
 
+
+
+}
 
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
 isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"
