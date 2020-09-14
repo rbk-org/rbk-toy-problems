@@ -23,19 +23,30 @@ console.log('\n')
 console.log(displayStudent(myClass[0]))
 console.log(displayStudent(myClass[2]))
 
+// function sort(arr) {
+// 	res = []
+// 	var j = 0
+// 	for (var i = 0; i < arr.length; i++) {
+// 		var pos = j
+// 		for (var e = 0; e < arr.length; e++) {
+// 			if (arr[i].age > arr[e].age) {
+// 				pos++
+// 			} 
+// 		} 
+// 		res[pos] = arr[i]
+// 	}
+// 	return res
+// }
 function sort(arr) {
-	res = []
-	var j = 0
-	for (var i = 0; i < arr.length; i++) {
-		var pos = j
-		for (var e = 0; e < arr.length; e++) {
-			if (arr[i].age > arr[e].age) {
-				pos++
-			} 
-		} 
-		res[pos] = arr[i]
+	for (var i = 0; i < arr.length - 1; i++) {
+		if (arr[i].age > arr[i + 1].age) {
+			var temp = arr[i]
+			arr[i] = arr[i + 1]
+			arr[i + 1] = temp
+			i = -1
+		}
 	}
-	return res
+	return arr
 }
 console.log('\n')
 console.log(sort(myClass))
