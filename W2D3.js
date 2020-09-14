@@ -1,9 +1,20 @@
 //1- Write a function isTallEnough that takes a height (number) in inches, 
 //and returns true if the input is greater than or equal to 48, and false if it's less than 48 inches.
 //Calling your function should result in:
-isTallEnough(72); //true
-isTallEnough(28); //false
+//isTallEnough(72); //true
+//isTallEnough(28); //false
 
+
+function  isTallEnough(number){
+	if ( number >= 48){
+		return ture
+	} if ( number < 48){
+		return false
+	}
+
+}
+console.log(isTallEnough(72))
+console.log(isTallEnough(72))
 
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).
@@ -18,6 +29,16 @@ isTallEnough(28); //false
 //(this is what the original problem statement means by "exclusive of 1").
 
 // Calling your function should result in:
+function isGoodFreethrowShooter(number){
+
+if(Math.floor((Math.random() * (1 - 0 + 1) + 0 )) > 0 && Math.floor((Math.random() * (1 - 0 + 1) + 0 )) < 0.65){
+	return "Horrible freethrow shooter"
+} else if (Math.floor((Math.random() * (1 - 0 + 1) + 0 )) > 0.65 && Math.floor((Math.random() * (1 - 0 + 1) + 0 )) < 0.80){
+	return "Great freethrow shooter"
+} else if (Math.floor((Math.random() * (1 - 0 + 1) + 0 )) > 0.80 && Math.floor((Math.random() * (1 - 0 + 1) + 0 )) < 1.00){
+	return "Great freethrow shooter"
+
+}
 
 isGoodFreethrowShooter(0.90); //"Great freethrow shooter"
 isGoodFreethrowShooter(0.09); //"Horrible freethrow shooter"

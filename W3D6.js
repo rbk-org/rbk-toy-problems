@@ -49,8 +49,22 @@ var shoppingList = [
 ];
 Calling your function should result in:
 
-shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+shoppingSummary(shoppingList); //"I got 3 items at $99.73" */
 
+function shoppingSummary(array){
+var sum=0;
+var countIndex=0;
+for(var i=0 ;i< array.length ;i++){
+	if(array[i].price +sum < 100){
+		sum+=array[i].price
+			countIndex = i +1;
+		}
+	}
+	
+return countIndex
+
+}
+console.log(shoppingSummary(shoppingList))
 
 
 /*
@@ -90,9 +104,28 @@ Would return a new array with the following elements:
     weightInPounds: 2
   }
 ];
-//notice that the element with "cookware" is missing
-
-/*
+//notice that the element with "cookware" is missing*/
 
 
-// your answer is here
+
+
+function removeMostExpensive(array){
+  var max = array[0].price;
+   var maxIndex = 0;
+
+  
+  for (var i = 1; i < array.length; i++) {
+    
+    if (max < array[i].price) {
+      max = array[i].price;
+      maxIndex = i;
+    }
+  }
+
+ array.splice(maxIndex, 1);
+
+  return array;
+ 
+}
+console.log(removeMostExpensive(shoppingList))
+
