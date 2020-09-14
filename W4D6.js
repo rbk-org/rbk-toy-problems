@@ -5,6 +5,7 @@
 //Create a function that takes the array of students and sort them out based on age (younger-to-older)
 //Create a function that takes the array and a string either “M” or “F” and returns the male students if “M” was passed and female students if “F” was passed
 
+
 function student(name, datebirth, gender,age) {
   return {
     name: name,
@@ -65,3 +66,4 @@ function sortStudent(students){
        return 
    }
    maleOrFemale(students,"M")
+
