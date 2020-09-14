@@ -1,7 +1,6 @@
 //1.Write a function called sameLength that takes two strings as parmeters, 
 //and returns true if those strings have the same length, and false otherwise.
 
-
 function sameLength(str1, str2) {
 	return (str1.length === str2.length)
 }
