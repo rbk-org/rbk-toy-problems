@@ -52,7 +52,7 @@ function reduce(c,f,a){
 
 function sum(x){
   return reduce(x,function(a,item,i){
-    return item*item
+    return a+item*item
   })
 }
 sum([1,2,3])
