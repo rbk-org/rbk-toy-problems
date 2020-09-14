@@ -1,5 +1,6 @@
 //1.Write a function called sameLength that takes two strings as parmeters, 
 //and returns true if those strings have the same length, and false otherwise.
+
 function sameLength(str1, str2) {
 	return (str1.length === str2.length)
 }
@@ -11,6 +12,7 @@ function passwordLongEnough(pass) {
 }
 console.log(passwordLongEnough('12345')) // result = false
 console.log(passwordLongEnough('567890')) // result = true
+
 //3.Write a function called rentalCar that takes a person's name and age as parmeters, 
 //and returns either 'You cannot have the keys, {name} .', or "Have fun driving", 
 // depending on whether or not the person is old enough. 
