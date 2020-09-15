@@ -14,14 +14,33 @@ function each(coll, f) {
 1-write the the filter function
 */
 
-function filter() {
+function filter(array,predicate) {
   // your code is here
+  var acc=[];
+  each(array,function(x){
+  	if(predicate(x)){
+  	acc.push(x);
+  }
+  })
+  return acc;
 }
 
 /*
 2-write the the new version of reduce function
 */
-
-function reduce() {
+///improved
+function reduce(array,f,acc) {
   // your code is here
+  if(acc===undefined){
+  	acc=array[0];
+  	array=array.slice(1);
+  }
+}
+////redunce
+function(array,f,start){
+	var acc=start;
+	each(array,function(x){
+		acc=f(acc,x)
+	})
+	return acc;
 }
