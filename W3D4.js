@@ -1,6 +1,6 @@
 /*
 1-Write a function called tallEnoughToRide  that takes an array of people objects, 
-and returns a an array of names of people who are greater than or equal to 48 inches in height.
+and returns an array of names of people who are greater than or equal to 48 inches in height.
 
 You can assume an input which looks like this:
 
@@ -34,8 +34,17 @@ not a global variable or only the specific example above.
 I.e. If someone called your function with 10 objects 
 (with all safely have the same properties), it should work just as well.
 */
+function tallEnoughToRide(arrayOfPeopleObjects){
+  var array=arrayOfPeopleObjects
+  var container=[]
+  for(var i=0;i<array.length;i++){
+    if(array[i].heightInInches>=48){
+      container.push(array[i].name)
+    }
+  }return container
+}
 
-// your answer is here
+
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
@@ -49,5 +58,14 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 
 */
-
-// your answer is here
+function tallestPerson(arrayOfPeopleObjects){
+  var array=arrayOfPeopleObjects
+  var container=array[0].heightInInches
+  var message=array[0].name+" at "+array[0].heightInInches+" inches"
+  for (var i =1;i<array.length;i++){
+    if(array[i].heightInInches>container){
+      container=array[i].heightInInches
+      message=array[i].name+" at "+array[i].heightInInches+" inches"
+    }
+  }return message
+}
