@@ -4,19 +4,17 @@
 Also, ensure that you only attempt to convert strings to uppercase.
 
 */
-function each(coll, f){
-  if(Array.isArray(coll)){
-    for(var i = 0; i < coll.length; i++){
-      f(coll[i], i)
-    }
-  }
-  else{
-    for(var key in coll){
-      f(coll[key], key)
-    }
-  }
+function each(coll,func){
+	if(Array.isArray(coll)){
+		for(var i=0;i<coll.lenght;i++){
+			func(coll[i],i)
+		}
+	}else{
+		for(var key in coll){
+			func(coll[key],key)
+		}
+	}
 }
-
 
 function map(coll,f){
 	var arr=[]
@@ -31,11 +29,15 @@ function map(coll,f){
 
 
 function reduce(array,f,start){
-  var acc = start
-  each(array ,function(element){
-    acc = f(acc,element)
-  })
-  return acc
+	var acc=start
+	if(acc===undefined){
+		acc=array[0]
+		array=array.slice(1)
+	}
+	each(array,function(element){
+		acc=f(acc,element)
+	})
+	return acc
 }
 
 function uppercaseValues(object){
@@ -50,9 +52,12 @@ function uppercaseValues(object){
 2- Using reduce, write a function that sums the squared values of an array of numbers and returns the sum result.
 */
 function sum(numbers) {
-	return reduce(numbers,function(acc,num){
-           return acc+=num
-	},0)
-​
+	return reduce(numbers,function(value,num){
+		console.log(num)
+				console.log(value)
+
+		return value+=num**2
+	},1)
+
 }
 sum([1,2,3,4,5])
