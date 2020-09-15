@@ -14,14 +14,33 @@ function each(coll, f) {
 1-write the the filter function
 */
 
-function filter() {
-  // your code is here
+function filter(arr, predicate) {
+  var acc = []
+  each(arr, function(elem, i) {
+    if (predicate(elem, i)) {
+      acc.push(elem)
+    }
+  })
+  return acc
 }
+console.log(filter([1, 2, 3, 4, 5, 6], function(elem) { if (elem > 3) { return elem } }))
 
 /*
 2-write the the new version of reduce function
 */
 
-function reduce() {
-  // your code is here
+function reduce(coll, fn, acc) {
+  var arr
+  if (!Array.isArray(coll) && typeof coll === 'object') {
+    arr = Object.values(coll)
+  } else arr = coll.slice(0)
+  if (acc === undefined) {
+    acc = arr.shift()
+  }
+  each(arr, function(elem, i) {
+    acc = fn(acc, elem)
+  })
+  return acc
 }
+
+console.log(reduce([1, 2, 3], function(a,b){return a+b}))
