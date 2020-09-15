@@ -14,7 +14,7 @@ function  isTallEnough(number){
 
 }
 console.log(isTallEnough(72))
-console.log(isTallEnough(72))
+console.log(isTallEnough(28))
 
 //2- Write a function isGoodFreethrowShooter that takes a shooting percentage
 // (a number you can assume will be between 0 and 1 -- exclusive of 1).

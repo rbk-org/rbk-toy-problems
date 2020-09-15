@@ -1,7 +1,7 @@
 // 1-using the console calculate the average age of the follwing ages [13,14,13,15,16,17,19,13,16,15].
 var array = [13,14,13,15,16,17,19,13,16,15];
 var sum = array[0]+array[1]+array[2]+array[3]+array[4]+array[5]+array[6]+array[7]+array[8]+array[9] ;// =151
-var avg = sum / (array.length) // 15.1
+var avg = sum / (array.length) 
 
 // 2-using the console calculate your age in seconds.
 var age= 30;
