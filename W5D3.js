@@ -77,7 +77,7 @@ function reduce(coll, func, start){
 }
 function sum(numbers) {
     return reduce(numbers, function(acc, num){
-      return acc += num;
+      return acc += num*num;
     }, 0) 
 }
 
@@ -92,3 +92,5 @@ function sum2(obj) {
       return acc += val;
     }, 0)
 }
+
+
