@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 function each(coll, func) {
   if (Array.isArray(coll)) {
@@ -11,12 +12,15 @@ function each(coll, func) {
   }
 }
 
+=======
+>>>>>>> 6c296f9251a4d34739e8cf4f3ebfd46051b912dd
 /*
 1- Using map, Write a function called uppercaseValues that, given an object as a parameter,
  returns a new object with all of its string values converted to uppercase. 
 Also, ensure that you only attempt to convert strings to uppercase.
 */
 
+<<<<<<< HEAD
 function map(coll, f) {
   var acc = [];
   if (!Array.isArray(coll)) {
@@ -49,6 +53,8 @@ return map (obj , function(element , key){
     }
 var strArr = {name:'hello', age: 20}
 uppercaseValues(strArr)
+=======
+>>>>>>> 6c296f9251a4d34739e8cf4f3ebfd46051b912dd
 
 
 
@@ -56,6 +62,7 @@ uppercaseValues(strArr)
 2- Using reduce, write a function that sums the squared values of an array of numbers and returns the sum result.
 */
 function sum(numbers) {
+<<<<<<< HEAD
 return reduce(numbers , function(result , num){
 	return result += Math.pow(num, 2)
 
@@ -63,3 +70,8 @@ return reduce(numbers , function(result , num){
 }
 
  sum([1,2,3])
+=======
+	//your code is here 
+
+}
+>>>>>>> 6c296f9251a4d34739e8cf4f3ebfd46051b912dd
