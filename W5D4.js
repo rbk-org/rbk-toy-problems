@@ -14,14 +14,26 @@ function each(coll, f) {
 1-write the the filter function
 */
 
-function filter() {
-  // your code is here
+function filter(c,p) {
+  var x = []
+  if(!Array.isArray(c)){x={}}
+  each(c,function(item,i){
+  if(p(item,i)){x[i]=item}
+  })
+  return x
 }
 
 /*
 2-write the the new version of reduce function
 */
 
-function reduce() {
-  // your code is here
+function reduce(x,f,s) {
+  if(s===undefined){
+  s=array[0]
+  x=x.slice(1)
+  }
+  each(x,function(item,i){
+  s = f(s,item,i)
+  })
+  return s
 }

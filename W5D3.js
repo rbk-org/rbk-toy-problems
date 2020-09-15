@@ -4,34 +4,38 @@
 Also, ensure that you only attempt to convert strings to uppercase.
 */
 
-function each(c,f){
-	if (!Array.isArray(c)) {
-    for(var i in c){
-    	f(c[i],i)
+function each(coll, f) {
+  if (Array.isArray(coll)) {
+    for (var i = 0; i < coll.length; i++) {
+      f(coll[i], i);
+    }
+  } else {
+    for (var key in coll) {
+      f(coll[key], key);
     }
   }
-  else{
-  for(var i=0;i<c.length;i++){
-  	f(c[i],i)}}
 }
 
-function map(c,f) {
-  var a = []
-  if (!Array.isArray(c)) {
-    a = {}
+function map(coll, f) {
+  var acc = []
+  if (!Array.isArray(coll)) {
+    acc = {}
   }
-  each(c, function(item, i) {
-    a[i] = f(item, i)
+  each(coll, function(element, i) {
+    // acc.push(f(element, i))
+    acc[i] = f(element, i)
   })
-  return a
-}
+  return acc}
 
 function uppercaseValues(o){
-	return map(o,function(item,i){
-		if(typeof(item)==="string"){
-		return item.toUpperCase()}
+
+return map (o, function(item,i){
+
+	if(typeof(item)==="string"){return item.toUpperCase()}
+
 		return item
-	})
+})
+
 }
 uppercaseValues({a:"hi",b:3})
 
@@ -42,17 +46,17 @@ uppercaseValues({a:"hi",b:3})
 function reduce(c,f,a){
 	  if(a===undefined){
 	    a=c[0]
-	    a=c.slice(1)
+	    c=c.slice(1)
 	  }
-	  each(a ,function(item,i){
+	  each(c ,function(item,i){
 	    a = f(a,item,i)
 	  })
 	  return a
 	}
 
 function sum(x){
-  return reduce(x,function(a,item,i){
-    return a+item*item
+  return reduce(x,function(acc,item,i){
+    return acc+item*item
   })
 }
 sum([1,2,3])
