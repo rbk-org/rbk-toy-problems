@@ -12,8 +12,8 @@ function each(coll, f) {
 
 function filter(array, predicate) {
     var acc = []
-    each(array, function (element) {
-        if (predicate(element)) {
+    each(array, function (element, i) {
+        if (predicate(element, i)) {
             acc.push(element)
         }
     })
@@ -27,15 +27,14 @@ and returns an array of only the even numbers in the parameter that are also mul
 evenMult([2,3,1,4,10,0,44]) ====> [2,10,44]
 */
 function evenMult(array) {
-    //all even numbers are multiples of 2 except 0
-    return filter(array, function (num) {
-        return num % 2 === 0 && num !== 0
+    return filter(array, function (num, i) {
+        return ((num % 2 === 0) && (i % 2 === 0))
     })
 
 }
-var arr=[2,3,1,4,10,0,44]
+var arr = [2, 3, 1, 4, 10, 0, 44]
 console.log('evenMult')
-console.log(arr, " >>>> ", evenMult(arr)) //[2,4,10,44]
+console.log(arr, " >>>> ", evenMult(arr)) //[2,10,44]
 
 /*
 Using filter, write a function called endsWithChar that takes two parameters: an array of strings, and a character (e.g. "a"),
@@ -44,13 +43,13 @@ var words=”we just love RBK world"
 endsWithChar(words, “e"); // => [”we”,”love"]
 */
 
-function endsWithChar(string){
+function endsWithChar(string) {
     var words = string.split(" ")
-    return filter(words,function(str){
-        return (str[str.length -1 ] === 'e')
+    return filter(words, function (str) {
+        return (str[str.length - 1] === 'e')
     })
 }
 
-var words='we just love RBK world'
+var words = 'we just love RBK world'
 console.log('endsWithChar')
-console.log(words," >>>>> " ,endsWithChar(words, 'e')); // => [”we”,”love"]
+console.log(words, " >>>>> ", endsWithChar(words, 'e')); // => [”we”,”love"]
