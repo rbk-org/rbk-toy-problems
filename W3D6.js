@@ -6,6 +6,10 @@ and you want to report how many items you bought and how much it cost you.
 Write a function called shoppingSummary that takes an array of shopping items (objects), 
 and returns a string with the number of items you bought, and the total amount you spent.
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> eb9f7292a599bc77ab98753449695e2a737fbc41
 Notes:
 
 You cannot spend more than your budget ($100).
@@ -14,6 +18,10 @@ so there's no item limit -- your only limit is your budget.
 The list is mentioned to be in "decreasing priority" simply because you do not have to sort the input array to optimize for anything else.
  So do not worry about coming up with any other sorting algorithm for the most "bang for your buck" or what not :-)
 Take for example the data below:
+<<<<<<< HEAD
+*/
+=======
+>>>>>>> eb9f7292a599bc77ab98753449695e2a737fbc41
 
 var shoppingList = [
   {
@@ -47,11 +55,32 @@ var shoppingList = [
     weightInPounds: 2
   }
 ];
+<<<<<<< HEAD
+//Calling your function should result in:
+
+shoppingSummary(shoppingList); //"I got 3 items at $99.73"
+
+function shoppingSummary (array){
+
+var price= 0;
+var count=0;
+var str=""
+
+  for(var i=0; i<array.length; i++){
+    if(array[i]["price"] < 100){
+      price+=array[i]["price"]
+      count+=1
+    }
+  }
+str="I got" + count + "items at" 
+}
+=======
 Calling your function should result in:
 
 shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
 
+>>>>>>> eb9f7292a599bc77ab98753449695e2a737fbc41
 
 /*
 Exercise 2
@@ -92,7 +121,31 @@ Would return a new array with the following elements:
 ];
 //notice that the element with "cookware" is missing
 
+<<<<<<< HEAD
+*/
+
+
+// your answer is here
+
+function removeMostExpensive(shoppingList){
+var max = shoppingList[0];
+
+for(var i=0; i<array.length; i++){
+ for (var j=i+1; j<shoppingList.length; i++){
+if (shoppingList[i]["price"]>shoppingList[i]){
+  max = shoppingList[i]["price"]
+  shoppingList[i]["price"]=shoppingList[i]["price"]
+shoppingList[j]["price"]=max
+}
+
+ }
+  
+}
+return shoppingList
+}
+=======
 /*
 
 
 // your answer is here
+>>>>>>> eb9f7292a599bc77ab98753449695e2a737fbc41
