@@ -4,7 +4,7 @@ and you were given a data set with people's meal preferences and dietary restric
 Write a function called orderAVegetarianDish that takes  an array of empoloyee objects, 
 and returns true if at least 1 person is listed "vegetarian" on their "mealPreferences". 
 Otherwise, your function should return false.
-
+*/ 
 var staffA = [
   {
     name: "Lia",
@@ -31,9 +31,19 @@ var staffA = [
     mealPreferences: "non-vegetarian"
   }
 ];
-Calling your function should result in:
+
 
 orderAVegetarianDish(staffA); //true
-*/
+
 
 // your answer is here 
+
+function orderAVegetarianDish (array){
+
+  for(var i=0; i<array.length ; i++){
+    if (array[i]["mealPreferences"] === "vegetarian"){
+      return true
+    } 
+  }  return false
+}
+orderAVegetarianDish(staffA);

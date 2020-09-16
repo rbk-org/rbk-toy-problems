@@ -26,6 +26,12 @@ var groupA = [
     heightInInches: 48
   }
 ]
+<<<<<<< HEAD
+
+function tall enoughtToRide 
+
+=======
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0
 Calling your function should result in:
 tallEnoughToRide(groupA); //["Mia", "Kiana", "Alex"];
 
@@ -36,6 +42,21 @@ I.e. If someone called your function with 10 objects
 */
 
 // your answer is here
+<<<<<<< HEAD
+function tallEnoughtToRide (array){
+var array = []
+for (i=0 ; i<groupA.length; i++){ 
+   if(groupA[i]["heightInInches"] >= 48 ){
+    array.push(groupA[i]["name"]) 
+
+   }
+     return array
+}
+
+}
+
+=======
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0
 
 /*
 2-Working off of the same data structure as tallEnoughToRide, 
@@ -50,4 +71,20 @@ tallestPerson(groupA); //"Kiana at 55 inches"
 
 */
 
+<<<<<<< HEAD
 // your answer is here
+
+function tallestPerson (array){
+  var max = array[0] 
+for (i=0 ; i<groupA.length; i++){
+   
+   if(groupA[i]["heightInInches"] > max["heightInInches"]){
+    max = groupA[i]
+   }
+   } 
+    return max.name + " at " + max.heightInInches + " inches " 
+
+}
+=======
+// your answer is here
+>>>>>>> 1fec366795f0a180299250b09e2518b56c1dcea0
