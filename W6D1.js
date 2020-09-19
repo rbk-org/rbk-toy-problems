@@ -14,3 +14,10 @@
 // you can use this code for the div content: 
 // Heading for the div
 // I'm a simple html paragraph and the css can controll my attributes. The JS will make the page interactive
+b1.onclick = function changeColor() { 
+                document.body.style.background = red; 
+            } 	
+//document.body.style.background :red;
+// var r=document.getElementByid('b1')
+// r.innerHTML=document.body.style.background :red;
+	
