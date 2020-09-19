@@ -1,0 +1,23 @@
+button {
+	border: 1px solid navy;
+	border-radius: 3px;
+	background-color: pink;
+	color: white;
+	text-align: center;
+	margin: 8px;
+	padding: 5px;
+}
+
+#div1 {
+	background-color: gray;
+	color: navy;
+	font-size: 18px;
+	text-align: center;
+}
+
+#div2 {
+	background-color: silver;
+	color: navy;
+	font-size: 18px;
+	text-align: center;
+}
