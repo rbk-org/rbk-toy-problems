@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <script src="data_generator.js"></script>
+    <link rel="stylesheet" type="text/css" href="text.css">
+    <img <img src="tw" alt="alternatetext">
+  <body>
+    <script>
+      $(document).ready(function(){
+        var $body = $('body');
+        $body.html('');
+        var index = streams.home.length - 1;
+        while(index >= 0){
+          var tweet = streams.home[index];
+          var $tweet = $('<div id="container"></div>');
+          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          $tweet.appendTo($body);
+          var $time=$("<p id=\"timeadd\">" + tweet.created_at + "</p>")
+          $time.appendTo($body)
+          index -= 1;
+        }
+        var newindex = streams.home.length - 1;
+        var $button=$("<button id=\"add-tweet\">Add tweet</button>")
+        $button.appendTo($body)
+        $button.on("click",function(){
+        while(newindex>=8){
+        var newtweet=streams.home[newindex];
+        var $newtweet=$('<div id="newcontainer"></div>')
+        $newtweet.text('@' + newtweet.user + ': ' + newtweet.message);
+        $newtweet.appendTo($body);
+        newindex -= 1;
+      }
+      newindex=streams.home.length - 1
+      newtweet=streams.home[newindex];
+        })
+      });
+    </script>
+  </body>
+</html>
