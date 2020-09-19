@@ -1,0 +1,11 @@
+$("#btn1").click(function(){
+	$("#div1").css({"backgroundColor":"red","color":"white"})
+	$("h1").css({"color":"darkred"})
+})
+$("#btn2").click(function(){
+	$("#div1").css({"backgroundColor":"lightBlue","color":"white"})
+	$("h1").css({"color":"darkblue"})
+})
+$("#btn3").click(function(){
+	$("#div1").css({"backgroundColor":"white","color":"darkblue"})
+})
