@@ -14,3 +14,19 @@
 // you can use this code for the div content: 
 // Heading for the div
 // I'm a simple html paragraph and the css can controll my attributes. The JS will make the page interactive
+
+
+$('#btn1').on('click',function(){
+    $('html').css({'background':'red','color':'white'})
+    $('h1').css({'color':'darkred'})
+})
+
+$('#btn2').on('click',function(){
+    $('html').css({'background':'lightblue','color':'white'})
+    $('h1').css({'color':'darkblue'})
+})
+
+$('#btn3').on('click',function(){
+    $('html').css({'background':'white','color':'black'})
+    $('h1').css({'color':'black'})
+})
