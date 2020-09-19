@@ -1,0 +1,33 @@
+container{
+justify-content:center;
+align-items:center;
+background-color:blue;
+margin-left:600px;
+margin-right:100px;
+margin-top:5px;
+font-size:25px
+}
+#newcontainer{
+justify-content:center;
+align-items:center;
+background-color:blue;
+margin-left:600px;
+margin-right:100px;
+margin-top:5px;
+font-size:25px;
+}
+#add-tweet{
+	background-color:red;
+	font-size:20px;
+margin-bottom:400px
+margin-left:20px;
+}
+#timeadd{
+	background-color:orange;
+	font-size:15px;
+	margin-left:600px;
+	margin-right:100px;
+}
+body{
+	background-color:lightblue
+}
