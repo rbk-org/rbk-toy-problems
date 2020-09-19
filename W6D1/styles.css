@@ -1,0 +1,13 @@
+button{
+    border-radius: 12px;
+    background-color: aliceblue;
+}
+div{
+    
+    padding: 5px;
+    margin: 5px;
+    text-decoration-color: white;
+}
+body{
+    text-align: center;
+}
