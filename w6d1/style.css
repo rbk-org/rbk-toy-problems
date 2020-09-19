@@ -1,0 +1,55 @@
+#main-div {
+	background-color: silver;
+	font-size: 250%;
+	 font-style: oblique;
+	 padding: 2%
+}
+
+
+
+
+h1 {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 300%;
+	 text-align: center;
+	 font-style: oblique;
+	 font-weight: bolder;
+    color: #4CAF90;
+  background-color: black;
+  color: white;
+
+}
+
+#important {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+#normal{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+#rest {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
