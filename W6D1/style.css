@@ -1,0 +1,30 @@
+button{
+	border-radius: 5px;
+}
+div{
+	background-color: yellow;
+}
+.red{
+	background-color: red;
+	color:white;
+
+}
+.darkRed{
+	color: black;
+}
+.white{
+	background-color: white;
+	color:black;
+
+}
+.darkWhite{
+	color: yellow;
+}
+.blue{
+	background-color: blue;
+	color:white;
+
+}
+.darkBlue{
+	color: green;
+}
