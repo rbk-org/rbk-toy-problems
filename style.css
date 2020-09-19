@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+}
+
+input{
+    border-radius: 12px;
+    border-width: 1px;
+    height: 35px;
+    width: 85px;
+    margin: 15px 15px 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+}
+
+#important{
+    background-color: #ffb3b3  ;
+}
+
+#normal{
+    background-color: #66a3ff ;
+}
+
+#rest{
+    background-color: white;
+}
