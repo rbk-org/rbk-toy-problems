@@ -1,0 +1,18 @@
+
+	.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#first-div{
+	border-style: solid;
+	padding-top: 50px;
+   padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 600px;
+}
