@@ -1,9 +1,9 @@
-// 1. create new HTML file a with a three buttons and div with heading and paragraph inside it.
+// 1. create new HTML file a with a three buttons and div with heading and paragraph inside it. Done
 //      a. button1 : Important
 //      b. button2 : normal
 //      c. button3 : rest
-// 2. create a new JS file  and link between the js and HTML
-// 3. create a new css file and change the styles of the buttons and div with it's content
+// 2. create a new JS file  and link between the js and HTML Done 
+// 3. create a new css file and change the styles of the buttons and div with it's content Done
 // 4. add Interaction for the buttons as the following: 
 // when the Important button clicked! change the background color to red and text to white and heading to dark red
 // when the normal button clicked! change the background color to lightblue and text to white and heading to dark blue
