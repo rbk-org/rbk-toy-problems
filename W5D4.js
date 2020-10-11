@@ -15,7 +15,13 @@ function each(coll, f) {
 */
 
 function filter() {
-  // your code is here
+  var acc=[];
+  each(array,function(element){
+  	if (predicate(element){
+  		acc.push(element);
+  	});
+  });
+  return acc;
 }
 
 /*
@@ -23,5 +29,12 @@ function filter() {
 */
 
 function reduce() {
-  // your code is here
+  if (acc=undefined){
+  	acc=arr[0];
+  	arr =arr.slice(1)
+  }
+  each(arr,function(element,i){
+  	acc=f(acc,element,i)
+  });
+  return acc;
 }

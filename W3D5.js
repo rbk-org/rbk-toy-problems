@@ -36,4 +36,28 @@ Calling your function should result in:
 orderAVegetarianDish(staffA); //true
 */
 
-// your answer is here 
+// your answer is here
+
+
+		function isavegetirian(object) {
+
+
+       var ar_length = staffA.length;
+       var temp_arr = [];
+       for(var i= 0;i<ar_length;i++){
+       	if (staffA[i].mealPreferences==="vegetarian") {
+
+           return temp_arr.push(staffA[i].name);
+           alert(temp_arr.join(','));
+       	}
+       		else if return var temp_arr;
+       		function checkarray() {
+       			if(temp_arr.length<=0) {
+       				return true;
+       			}
+       			else return false;
+       		}
+       		return checkarray;
+
+       }
+       }

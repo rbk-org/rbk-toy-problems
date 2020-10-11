@@ -1,4 +1,4 @@
-/*
+
 Write a function called onlyPayForHealthyThings, that takes an array of objects.
 
 Each object is a grocery item with the following properties: name, nutritionalValue, price.
@@ -31,4 +31,14 @@ var myCart = [
     price: 0.75 } 
   ];
 Calling onlyPayForHealthyThings(myCart) should return 2.85 from adding the prices of "carrots", "apples", and "avocados"
-*/
+
+
+function counthealthy(object){
+	var result = 0;
+	for(var i in object){
+		if(mycart[ntiritionvalue][lowsugar]&&mycart[nutritionvalue][lowsodium]===true){
+			result+=mycart[i][price]
+		}
+	}
+	return result;
+}

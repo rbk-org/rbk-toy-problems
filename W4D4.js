@@ -1,4 +1,4 @@
-/*
+
 1-Write a function myFavoriteSong which takes in no arguments (input values), 
 but returns an object with the properties title, artist, 
 and durationInSeconds. The values of each property is up to you, 
@@ -7,7 +7,12 @@ but these three properties should exist within the object your function returns.
 
 function myFavoriteSong() {
 
+var x={}
+ song.push(x)
+	)
+return x;
 }
+var song ={title:beatit,artist:michel,duration durationInSeconds:50}
 
 Calling your function should result in something like:
 
@@ -20,7 +25,12 @@ myFavoriteSong(); //{title: "Countdown", artist: "Beyonce", durationInSeconds: 2
 when the busses come for the day. 
 Your function should return a string which denotes when the nearest bus arrives, and the one after that.
 
-function nextTwoBusTimes(timesArr) {
+function nextTwoBusTimes(timesArr,) {
+	return timesArr[0] +timesArr[1];
+	{
+		
+		}
+	}
 
 }
 Calling your function should result in something like:
@@ -37,7 +47,7 @@ when the busses come for the day.
 Your function should return a string which denotes when the nearest bus arrives, and the last for the day.
 
 function nextAndLastBusTimes(timesArr) {
-
+return timesArr[0] +timesArr[timesArr.length-1];
 }
 Calling your function should result in something like:
 
